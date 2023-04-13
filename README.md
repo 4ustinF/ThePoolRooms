@@ -1,15 +1,13 @@
-# Limapp Template
-This is a Unity Project template with the Liminal SDK installed.
+# The Pool Rooms
+This is a Unity Project template with the Liminal SDK installed. The idea is to recreate level 37 of the backrooms for the Liminal platform.
 
-## Requirements
-- [Git setup correctly in your environment path](https://github.com/LiminalVR/LiminalSdk-UnityPackage/blob/develop/README.md#setup-git)
+## Project Team Members:
+- William Clark   (TBD)
+- Leon Borges     (TBD)
+- Aidan Solomon   (TBD)
 
-## TO DO
-- Change package name, com.company.myapp
+## Third-party Tools:
+- Event Bus System By Craig Lacey
 
-## Examples
-Go to Examples -> Scenes -> Example
-- A way to interact with Unity UI using the pointer
-- A way to interact with 3D objects using the pointer
-- Ending Experience
-- Fading the screen
+### Project Documentation:
+ - TODO:
