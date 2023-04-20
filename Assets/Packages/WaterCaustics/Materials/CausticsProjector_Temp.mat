@@ -68,7 +68,7 @@ Material:
     - _BumpScale: 1
     - _CausticSpeed: 8
     - _Cutoff: 0.5
-    - _DepthBlend: 6805.9
+    - _DepthBlend: 405
     - _DepthFade: 75
     - _DetailNormalMapScale: 1
     - _Diffract: 0.007
@@ -82,7 +82,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 11
+    - _Height: 13
     - _LOD: 1509
     - _Metallic: 0
     - _Mode: 0
