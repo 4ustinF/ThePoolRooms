@@ -27,6 +27,8 @@
                     }
             Pass
             {
+                //ZWrite Off
+
                 CGPROGRAM
                 #pragma vertex vert
                 #pragma fragment frag
@@ -46,15 +48,16 @@
                     float2 uv : TEXCOORD3;
                     UNITY_FOG_COORDS(1)
                     float4 vertex : SV_POSITION;
-                    float4 scrPos : TEXCOORD2;//
-                    float4 worldPos : TEXCOORD4;//
+                    float4 scrPos : TEXCOORD2;
+                    float4 worldPos : TEXCOORD4;
                 };
+
                 float _TextureDistort;
                 float4 _Color;
                 sampler2D _CameraDepthTexture; //Depth Texture
-                sampler2D _MainTex, _NoiseTex;//
+                sampler2D _MainTex, _NoiseTex; 
                 float4 _MainTex_ST;
-                float _Speed, _Amount, _Height, _Foam, _Scale;//
+                float _Speed, _Amount, _Height, _Foam, _Scale;
                 float4 _FoamC;
                 sampler2D _MaskInt;
 
@@ -66,8 +69,8 @@
                 {
                     v2f o;
                     UNITY_INITIALIZE_OUTPUT(v2f, o);
-                    float4 tex = tex2Dlod(_NoiseTex, float4(v.uv.xy, 0, 0));//extra noise tex
-                    v.vertex.y += sin(_Time.z * _Speed + (v.vertex.x * v.vertex.z * _Amount * tex)) * _Height;//movement
+                    float4 tex = tex2Dlod(_NoiseTex, float4(v.uv.xy, 0.0f, 0.0f)); //extra noise tex
+                    v.vertex.y += sin(_Time.z * _Speed + (v.vertex.x * v.vertex.z * _Amount * tex)) * _Height; //movement
                     o.vertex = UnityObjectToClipPos(v.vertex);
                     o.worldPos = mul(unity_ObjectToWorld, v.vertex);
 
@@ -82,7 +85,7 @@
                     // rendertexture UV
                     float2 uv = i.worldPos.xz - _Position.xz;
                     uv = uv / (_OrthographicCamSize * 2);
-                    uv += 0.5;
+                    uv += 0.5f;
                     // Ripples
                     float ripples = tex2D(_GlobalEffectRT, uv).b;
 
@@ -90,21 +93,20 @@
                     float4 mask = tex2D(_MaskInt, uv);
                     ripples *= mask.a;
 
-
-                    fixed distortx = tex2D(_NoiseTex, (i.worldPos.xz * _Scale) + (_Time.x * 2)).r;// distortion 
+                    fixed distortx = tex2D(_NoiseTex, (i.worldPos.xz * _Scale) + (_Time.x * 2)).r; // distortion 
                     distortx += (ripples * 2);
 
-                    half4 col = tex2D(_MainTex, (i.worldPos.xz * _Scale) - (distortx * _TextureDistort));// texture times tint;        
+                    half4 col = tex2D(_MainTex, (i.worldPos.xz * _Scale) - (distortx * _TextureDistort)); // texture times tint;        
                     half depth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.scrPos))); // depth
-                    half4 foamLine = 1 - saturate(_Foam * (depth - i.scrPos.w));// foam line by comparing depth and screenposition
+                    half4 foamLine = 1 - saturate(_Foam * (depth - i.scrPos.w)); // foam line by comparing depth and screenposition
                     col *= _Color;
-                    col += (step(0.4 * distortx,foamLine) * _FoamC); // add the foam line and tint to the texture
+                    col += (step(0.4f * distortx,foamLine) * _FoamC); // add the foam line and tint to the texture
                     col = saturate(col) * col.a;
 
-                   ripples = step(0.99, ripples * 3);
+                   ripples = step(0.99f, ripples * 3.0f);
                    float4 ripplesColored = ripples * _FoamC;
 
-                   return   saturate(col + ripplesColored);
+                   return saturate(col + ripplesColored);
                 }
                 ENDCG
             }
