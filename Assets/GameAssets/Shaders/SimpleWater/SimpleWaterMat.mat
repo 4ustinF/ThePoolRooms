@@ -20,11 +20,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6a8478e330a1294468c625fa28e3974d, type: 3}
+        m_Texture: {fileID: 2800000, guid: fddd45f1929b1694ea720aa332a16663, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskInt:
-        m_Texture: {fileID: 8400000, guid: dfedc4b9a0e3c9642ad3aa564284f67c, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
@@ -39,5 +39,5 @@ Material:
     - _Speed: 0.5
     - _TextureDistort: 0.05
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0.5}
-    - _FoamC: {r: 0, g: 1, b: 0.29411766, a: 0.23529412}
+    - _Color: {r: 0.7028302, g: 1, b: 0.7028302, a: 0}
+    - _FoamC: {r: 0, g: 0.54901963, b: 0.6156863, a: 1}
