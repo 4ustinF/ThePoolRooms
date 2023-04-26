@@ -5053,8 +5053,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1523530897}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &524648599
 MonoBehaviour:
@@ -9924,12 +9924,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650168650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 13, z: -0.02}
   m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1523530897}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &650168652
 MeshRenderer:
@@ -19981,7 +19981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523530897}
   m_Layer: 0
-  m_Name: Temp
+  m_Name: RoomDemo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20003,6 +20003,9 @@ Transform:
   - {fileID: 1107637041}
   - {fileID: 1573515398}
   - {fileID: 1431115361}
+  - {fileID: 650168651}
+  - {fileID: 524648598}
+  - {fileID: 5312937712719885354}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34437,13 +34440,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5312937712719885359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.56, y: 13.22, z: 2.24}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1244360916}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1523530897}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 2798.059, z: 0}
 --- !u!23 &5312937712719885356
 MeshRenderer:
@@ -34501,7 +34504,7 @@ GameObject:
   - component: {fileID: 5312937712719885354}
   - component: {fileID: 5312937712719885357}
   - component: {fileID: 5312937712719885356}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: BeachBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34538,7 +34541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!119 &8021059159973940695
 Projector:
   m_ObjectHideFlags: 0
@@ -34557,4 +34560,4 @@ Projector:
   m_Material: {fileID: 2100000, guid: d09390f4ad7b06e428bc728b1ef2c571, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 528
