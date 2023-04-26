@@ -14860,13 +14860,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3638f29b9b5fbb744812c3e65fd37b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameManager: {fileID: 0}
   _waterFallPS: {fileID: 586305820}
   _dustFallPS: {fileID: 925905325}
   _wavesPS: {fileID: 507964492}
   _sprinklesPS: {fileID: 1539053818}
   _surfaceDust1PS: {fileID: 1846101833}
   _surfaceDust2PS: {fileID: 1784077808}
-  _waitTime: 0.1
+  _waitTime: 1.5
 --- !u!1 &1107637038
 GameObject:
   m_ObjectHideFlags: 0

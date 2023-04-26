@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class WaterFallManager : MonoBehaviour
 {
+    [SerializeField] private GameManager _gameManager = null;
     [SerializeField] private ParticleSystem _waterFallPS = null;
     [SerializeField] private ParticleSystem _dustFallPS = null;
     [SerializeField] private ParticleSystem _wavesPS = null;
     [SerializeField] private ParticleSystem _sprinklesPS = null;
     [SerializeField] private ParticleSystem _surfaceDust1PS = null;
     [SerializeField] private ParticleSystem _surfaceDust2PS = null;
-    [SerializeField] private float _waitTime = 0.1f;
+    [SerializeField] private float _waitTime = 1.5f;
 
     public void StartWaterFall()
     {
