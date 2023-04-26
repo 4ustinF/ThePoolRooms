@@ -40,4 +40,4 @@ Material:
     - _TextureDistort: 0.05
     m_Colors:
     - _Color: {r: 0.7028302, g: 1, b: 0.7028302, a: 0}
-    - _FoamC: {r: 0, g: 0.54901963, b: 0.6156863, a: 1}
+    - _FoamC: {r: 0, g: 0.50980395, b: 0.5882353, a: 1}
