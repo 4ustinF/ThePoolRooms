@@ -4,6 +4,7 @@ using UnityEngine;
 public class WaterFallManager : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager = null;
+    [SerializeField] private AudioSource _audioSource = null;
     [SerializeField] private ParticleSystem _waterFallPS = null;
     [SerializeField] private ParticleSystem _dustFallPS = null;
     [SerializeField] private ParticleSystem _wavesPS = null;
@@ -17,6 +18,10 @@ public class WaterFallManager : MonoBehaviour
         _waterFallPS.Play();
         _dustFallPS.Play();
         StartCoroutine(StartWaterDebris());
+
+        // Start Audio
+        _audioSource.volume = 1.0f;
+        _audioSource.Play();
     }
 
     private IEnumerator StartWaterDebris()
@@ -31,12 +36,32 @@ public class WaterFallManager : MonoBehaviour
     public void StopWaterFall()
     {
         // Kill StartWaterDebris routine if its active
-
+        
+        // Stop particle spawning
         _waterFallPS.Stop();
         _dustFallPS.Stop();
         _wavesPS.Stop();
         _sprinklesPS.Stop();
         _surfaceDust1PS.Stop();
         _surfaceDust2PS.Stop();
+
+        // Stop audio
+        _audioSource.Stop();
+        StartCoroutine(WaterFallVolumeFade());
+    }
+
+    private IEnumerator WaterFallVolumeFade()
+    {
+        float currentTime = 0.0f;
+        float maxTime = 5.0f;
+
+        while(currentTime < maxTime)
+        {
+            currentTime += Time.deltaTime; // TODO: Dont call Time.deltaTime
+            _audioSource.volume = 1.0f - (currentTime / maxTime);
+            yield return null;
+        }
+
+        _audioSource.Stop();
     }
 }
