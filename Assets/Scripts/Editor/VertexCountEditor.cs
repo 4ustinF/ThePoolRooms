@@ -13,5 +13,10 @@ public class VertexCountEditor : Editor
         {
             script.LogVertexCount();
         }
+
+        if (GUILayout.Button("Log Total Vertex Count", GUILayout.Height(30)))
+        {
+            script.LogTotalVertexCount();
+        }
     }
 }
