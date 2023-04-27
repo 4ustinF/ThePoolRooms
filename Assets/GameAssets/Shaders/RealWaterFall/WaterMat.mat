@@ -7,22 +7,18 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CausticsProjector_Temp
-  m_Shader: {fileID: 4800000, guid: 4604cdeedf028f84a91b58e3c6b87608, type: 3}
+  m_Name: WaterMat
+  m_Shader: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 0.29, y: 0.24}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -44,16 +40,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fddd45f1929b1694ea720aa332a16663, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
+        m_Texture: {fileID: 2800000, guid: daec05491c627a344bc8842230268e69, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 2960887ed0c15ad4280aa8ff61836fbf, type: 3}
-        m_Scale: {x: 0.05, y: 0.05}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -64,39 +56,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Blend: 1
     - _BumpScale: 1
-    - _CausticSpeed: 5
     - _Cutoff: 0.5
-    - _DepthBlend: 0
-    - _DepthFade: 0
     - _DetailNormalMapScale: 1
-    - _Diffract: 0.007
-    - _Diffraction: 1
-    - _Distance: 100
-    - _DistanceBlend: 500
-    - _Distortion: 6
-    - _DistortionSpeed: 0.1
     - _DstBlend: 0
-    - _EdgeBlend: 3.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 13
-    - _LOD: 100
+    - _InvFade: 1
     - _Metallic: 0
     - _Mode: 0
-    - _Multiply: 1.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Size: 50
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SplitRGB: 0.007
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _waterMagnitude: 1
     m_Colors:
-    - _Color: {r: 0.09803922, g: 0.54901963, b: 0.6862745, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
