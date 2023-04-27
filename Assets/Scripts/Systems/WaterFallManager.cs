@@ -20,8 +20,9 @@ public class WaterFallManager : MonoBehaviour
         StartCoroutine(StartWaterDebris());
 
         // Start Audio
-        _audioSource.volume = 1.0f;
-        _audioSource.Play();
+        StartCoroutine(WaterFallVolumeFadeIn());
+        //_audioSource.volume = 1.0f;
+        //_audioSource.Play();
     }
 
     private IEnumerator StartWaterDebris()
@@ -46,19 +47,27 @@ public class WaterFallManager : MonoBehaviour
         _surfaceDust2PS.Stop();
 
         // Stop audio
-        _audioSource.Stop();
-        StartCoroutine(WaterFallVolumeFade());
+        StartCoroutine(WaterFallVolumeFadeOut());
     }
 
-    private IEnumerator WaterFallVolumeFade()
+    private IEnumerator WaterFallVolumeFadeIn()
     {
-        float currentTime = 0.0f;
-        float maxTime = 5.0f;
+        _audioSource.Play();
+        _audioSource.volume = 0.0f;
 
-        while(currentTime < maxTime)
+        while (_audioSource.volume < 1.0f)
         {
-            currentTime += Time.deltaTime; // TODO: Dont call Time.deltaTime
-            _audioSource.volume = 1.0f - (currentTime / maxTime);
+            _audioSource.volume += 1.0f * Time.deltaTime / _waitTime;
+            yield return null;
+        }
+    }
+
+    private IEnumerator WaterFallVolumeFadeOut()
+    {
+        _audioSource.volume = 1.0f;
+        while (_audioSource.volume > 0.0f)
+        {
+            _audioSource.volume -= 1.0f * Time.deltaTime / _waitTime;
             yield return null;
         }
 
