@@ -70,3 +70,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Examples/SerializableDictionary.meta
+Assets/GameAssets/Fonts.meta
+Assets/GameAssets/Textures.meta
+Assets/Oculus.meta
+Assets/ProBuilder Data.meta
+Assets/Examples/SerializableDictionary.meta
