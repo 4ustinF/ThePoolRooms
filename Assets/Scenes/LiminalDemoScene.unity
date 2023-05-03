@@ -12833,11 +12833,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 635435724}
     m_Modifications:
-    - target: {fileID: 1260162970045296579, guid: 22276a8657744e04cba8ad0a2caf4195,
-        type: 3}
-      propertyPath: m_Name
-      value: VRAvatar
-      objectReference: {fileID: 0}
     - target: {fileID: 1260162969423114810, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12897,6 +12892,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 311
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260162970045296579, guid: 22276a8657744e04cba8ad0a2caf4195,
+        type: 3}
+      propertyPath: m_Name
+      value: VRAvatar
       objectReference: {fileID: 0}
     - target: {fileID: 1260162968470769512, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
@@ -13603,8 +13603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5073f2b1a97fa48a5fc60be1cf0a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.15
-  frequency: 1
+  _amplitude: 0.15
+  _frequency: 1
 --- !u!1001 &7393507435075370492
 PrefabInstance:
   m_ObjectHideFlags: 0
