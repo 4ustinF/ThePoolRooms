@@ -3,11 +3,11 @@
 public class AudioManager : MonoBehaviour
 {
     [Header("Ambience")]
-    [SerializeField] AudioClip _backgroundMusic = null;
-    [SerializeField] AudioClip _waterAmbience = null;
-    [SerializeField] AudioClip _waterFallAmbience = null;
+    [SerializeField] private AudioClip _backgroundMusic = null;
+    [SerializeField] private AudioClip _waterAmbience = null;
 
     [Header("SFX")]
-    [SerializeField] AudioClip _waterSplashSFX= null;
+    [SerializeField] private AudioClip _waterSplashSFX = null;
+
 
 }
