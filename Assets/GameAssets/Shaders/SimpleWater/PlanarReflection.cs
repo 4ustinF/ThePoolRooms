@@ -18,7 +18,7 @@ namespace UnityStandardAssets.Water
         Vector3 m_Oldpos;
         Camera m_ReflectionCamera;
         [SerializeField]
-        Material m_SharedMaterial;
+        Material m_SharedMaterial = null;
         Dictionary<Camera, bool> m_HelperCameras;
 
         public void OnWillRenderObject()
