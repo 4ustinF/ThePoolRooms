@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6543331086768512587}
   - component: {fileID: 2852346792049419389}
   - component: {fileID: 8406280007082530948}
-  - component: {fileID: 7824385518586391643}
   m_Layer: 0
   m_Name: SimplifiedHandrail
   m_TagString: Untagged
@@ -78,15 +77,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7824385518586391643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824385518586391640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b843442962814948869bf1ecc50aa1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
