@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e4526e044b92e4da593b0af241139d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waterFallManager: {fileID: 0}
   _audioSource: {fileID: 5471877001889788838}
+  _ballAnimator: {fileID: 0}
   _dialougeClip1: {fileID: 8300000, guid: 8f82395493451c5449a5d90941285489, type: 3}
   _dialougeClip2: {fileID: 8300000, guid: 8fd2b9dfa16bd504385d36444afa8b9d, type: 3}
   _dialougeClip3: {fileID: 8300000, guid: 6b16a26787851d54aa591a84c446e7d1, type: 3}

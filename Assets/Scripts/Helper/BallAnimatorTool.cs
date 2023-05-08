@@ -39,13 +39,6 @@ public class BallAnimatorTool : MonoBehaviour
     {
         if (_isIdle)
         {
-            if (++_idleCount > 180)
-            {
-                _isIdle = false;
-                _idleCount = 0;
-                return;
-            }
-
             // Rotation
             var ballRot = _ballTransform.rotation;
             ballRot.y = _startYRot + _rotAmplitude * Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Y rotation using a sine wave to mimic x
@@ -59,7 +52,15 @@ public class BallAnimatorTool : MonoBehaviour
             _xPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.x);
             _yPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.y);
             _zPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.z);
-            _yRotCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.rotation.y);
+            _yRotCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.localEulerAngles.y);
+
+            if (++_idleCount > 180)
+            {
+                _isIdle = false;
+                _idleCount = 0;
+                return;
+            }
+
         }
     }
 
@@ -133,7 +134,7 @@ public class BallAnimatorTool : MonoBehaviour
         }
 
         if (_yRotCurve.keys.Length > 0) {
-            _clipToEdit.SetCurve("", typeof(Transform), "localRotation.y", _yRotCurve);
+            _clipToEdit.SetCurve("", typeof(Transform), "localEulerAngles.y", _yRotCurve);
         }
     }
 

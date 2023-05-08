@@ -16,23 +16,10 @@ public class GameManager : MonoBehaviour
         Count
     }
 
-    private static GameManager _instance = null;
-    public static GameManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<GameManager>();
-            }
-            return _instance;
-        }
-    }
-
-
     [Header("References")]
     [SerializeField] private WaterFallManager _waterFallManager = null;
     [SerializeField] private AudioSource _audioSource = null;
+    [SerializeField] private Animator _ballAnimator = null;
 
     //[Header("Ambience")]
     //[SerializeField] private AudioClip _backgroundMusic = null;
@@ -54,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //MoveToNextEvent();
+        MoveToNextEvent();
     }
 
     private void MoveToNextEvent()
@@ -110,19 +97,24 @@ public class GameManager : MonoBehaviour
         switch (_currentEvent)
         {
             case CurrentEvent.Event1: // Ball starts to descend stairs located in the middle of the room
+                _ballAnimator?.Play("Falling");
                 break;
             case CurrentEvent.Event2: // Ball reaches the water and starts to float without moving much
+                _ballAnimator?.Play("Idle");
                 break;
             case CurrentEvent.Event3: // A waterfall located at the left of the player turns on and attracts the attention.
                 _waterFallManager?.StartWaterFall();
                 break;
             case CurrentEvent.Event4: // Due to the waterfall, ball starts to move in the opposite direction and head towards a tunnel
+                _ballAnimator?.Play("EnterTunnel");
                 break;
             case CurrentEvent.Event5: // Ball reaches the tunnel and “swirls” into the darkness. Only music and sound effects will occur during the following 10 seconds to generate suspense
                 break;
             case CurrentEvent.Event6: // Ball shows up at the other end of the tunnel and starts to move towards the player
+                _ballAnimator?.Play("ExitTunnel");
                 break;
             case CurrentEvent.Event7: // Ball reaches the player and they are able to pick it up. Either picking the ball up or 10 seconds pass after it reaches the player will end the experience
+                _ballAnimator?.Play("Idle2");
                 break;
         }
 
