@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallAnimatorTool : MonoBehaviour
 {
     [SerializeField] private float _totalTime = 5.0f;
+    [SerializeField] private bool _isIdle = false;
     [SerializeField] private Transform _ballTransform = null;
     [SerializeField] private List<Transform> _nodes = new List<Transform>();
 
@@ -18,15 +19,62 @@ public class BallAnimatorTool : MonoBehaviour
     [SerializeField] private float _frequency = 3.5f; // The speed at which to move the object up and down
     private float _startYPos; // The object's starting Y position
 
+    [Header("Aniamtion")]
+    [SerializeField] private AnimationClip _clipToEdit = null;
+    [SerializeField] private AnimationCurve _xPosCurve = new AnimationCurve();
+    [SerializeField] private AnimationCurve _yPosCurve = new AnimationCurve();
+    [SerializeField] private AnimationCurve _zPosCurve = new AnimationCurve();
+    [SerializeField] private AnimationCurve _yRotCurve = new AnimationCurve();
+
+    //Idle
+    private int _idleCount = 0;
+
     private void Start()
     {
         _startYRot = _ballTransform.localRotation.y; // Store the object's starting Y rotation
         _startYPos = _ballTransform.position.y; // Store the object's starting Y position
     }
 
+    private void FixedUpdate()
+    {
+        if (_isIdle)
+        {
+            if (++_idleCount > 180)
+            {
+                _isIdle = false;
+                _idleCount = 0;
+                return;
+            }
+
+            // Rotation
+            var ballRot = _ballTransform.rotation;
+            ballRot.y = _startYRot + _rotAmplitude * Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Y rotation using a sine wave to mimic x
+            _ballTransform.rotation = ballRot;
+
+            // Position
+            Vector3 pos = _ballTransform.position; // Get the current position
+            pos.y = _startYPos + _amplitude * Mathf.Sin(_frequency * Time.time); // Calculate the new Y position using a sine wave
+            _ballTransform.position = pos; // Set the new position
+
+            _xPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.x);
+            _yPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.y);
+            _zPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.z);
+            _yRotCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.rotation.y);
+        }
+    }
+
     public void StartAnim()
     {
         StartCoroutine(AnimRoutine(0, 1));
+    }
+
+    public void ObtainNodes()
+    {
+        _nodes.Clear();
+        foreach (Transform child in transform)
+        {
+            _nodes.Add(child);
+        }
     }
 
     private IEnumerator AnimRoutine(int startIndex, int endIndex)
@@ -50,6 +98,11 @@ public class BallAnimatorTool : MonoBehaviour
             ballPos.y = _startYPos + _amplitude * Mathf.Sin(_frequency * Time.time); // Calculate the new Y position using a sine wave to mimic Buoyancy
             _ballTransform.position = ballPos;
 
+            Animator animator;
+            AnimationClip animClip;
+
+            
+
             if (elapsedTime >= _totalTime)
             {
                 break;
@@ -64,12 +117,23 @@ public class BallAnimatorTool : MonoBehaviour
         }
     }
 
-    public void ObtainNodes()
+    public void SetAnimationClips()
     {
-        _nodes.Clear();
-        foreach (Transform child in transform)
-        {
-            _nodes.Add(child);
+        _clipToEdit.ClearCurves();
+        if (_xPosCurve.keys.Length > 0) {
+            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.x", _xPosCurve);
+        }
+
+        if (_yPosCurve.keys.Length > 0) {
+            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.y", _yPosCurve);
+        }
+
+        if (_zPosCurve.keys.Length > 0) {
+            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.z", _zPosCurve);
+        }
+
+        if (_yRotCurve.keys.Length > 0) {
+            _clipToEdit.SetCurve("", typeof(Transform), "localRotation.y", _yRotCurve);
         }
     }
 

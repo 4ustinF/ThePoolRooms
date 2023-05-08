@@ -18,5 +18,10 @@ public class BallAnimatorEditor : Editor
         {
             script.ObtainNodes();
         }
+
+        if (GUILayout.Button("Set Clip", GUILayout.Height(30)))
+        {
+            script.SetAnimationClips();
+        }
     }
 }
