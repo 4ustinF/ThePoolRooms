@@ -78,6 +78,30 @@ public class BallAnimatorTool : MonoBehaviour
         }
     }
 
+    public void SetAnimationClips()
+    {
+        _clipToEdit.ClearCurves();
+        if (_xPosCurve.keys.Length > 0)
+        {
+            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.x", _xPosCurve);
+        }
+
+        if (_yPosCurve.keys.Length > 0)
+        {
+            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.y", _yPosCurve);
+        }
+
+        if (_zPosCurve.keys.Length > 0)
+        {
+            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.z", _zPosCurve);
+        }
+
+        if (_yRotCurve.keys.Length > 0)
+        {
+            _clipToEdit.SetCurve("", typeof(Transform), "localEulerAngles.y", _yRotCurve);
+        }
+    }
+
     private IEnumerator AnimRoutine(int startIndex, int endIndex)
     {
         float elapsedTime = 0.0f;
@@ -99,9 +123,11 @@ public class BallAnimatorTool : MonoBehaviour
             ballPos.y = _startYPos + _amplitude * Mathf.Sin(_frequency * Time.time); // Calculate the new Y position using a sine wave to mimic Buoyancy
             _ballTransform.position = ballPos;
 
-            //Animator animator;
-            //AnimationClip animClip;
-            
+            _xPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.x);
+            _yPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.y);
+            _zPosCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.position.z);
+            _yRotCurve.AddKey((float)_idleCount / 60.0f, _ballTransform.localEulerAngles.y);
+
             if (elapsedTime >= _totalTime)
             {
                 break;
@@ -116,25 +142,7 @@ public class BallAnimatorTool : MonoBehaviour
         }
     }
 
-    public void SetAnimationClips()
-    {
-        _clipToEdit.ClearCurves();
-        if (_xPosCurve.keys.Length > 0) {
-            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.x", _xPosCurve);
-        }
-
-        if (_yPosCurve.keys.Length > 0) {
-            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.y", _yPosCurve);
-        }
-
-        if (_zPosCurve.keys.Length > 0) {
-            _clipToEdit.SetCurve("", typeof(Transform), "localPosition.z", _zPosCurve);
-        }
-
-        if (_yRotCurve.keys.Length > 0) {
-            _clipToEdit.SetCurve("", typeof(Transform), "localEulerAngles.y", _yRotCurve);
-        }
-    }
+    
 
     private void OnDrawGizmos()
     {

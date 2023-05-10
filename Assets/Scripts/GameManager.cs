@@ -4,19 +4,6 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private enum CurrentEvent
-    {
-        None = -1,
-        Event1,
-        Event2,
-        Event3,
-        Event4,
-        Event5,
-        Event6,
-        Event7,
-        Count
-    }
-
     [Header("References")]
     [SerializeField] private WaterFallManager _waterFallManager = null;
     [SerializeField] private AudioSource _audioSource = null;
@@ -38,90 +25,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _dialougeClip6 = null;
     [SerializeField] private AudioClip _dialougeClip7 = null;
 
-    [SerializeField] private CurrentEvent _currentEvent = CurrentEvent.None;
-
     private void Start()
     {
-        //MoveToNextEvent();
-        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
-    }
-
-    private void MoveToNextEvent()
-    {
-        int newEvent = (int)_currentEvent + 1;
-        int maxEvent = (int)CurrentEvent.Count;
-        _currentEvent = (CurrentEvent)Mathf.Min(newEvent, maxEvent);
-        PlayAudio();
-    }
-
-    private void PlayAudio()
-    {
-        switch (_currentEvent)
-        {
-            case CurrentEvent.Event1:
-                PlayEvent(_dialougeClip1, _dialougeClip1.length + 0.0f);
-                break;
-            case CurrentEvent.Event2:
-                PlayEvent(_dialougeClip2, _dialougeClip2.length + 1.0f);
-                break;
-            case CurrentEvent.Event3:
-                PlayEvent(_dialougeClip3, _dialougeClip3.length + 1.0f);
-                break;
-            case CurrentEvent.Event4:
-                PlayEvent(_dialougeClip4, _dialougeClip4.length + 1.0f);
-                break;
-            case CurrentEvent.Event5:
-                PlayEvent(_dialougeClip5, _dialougeClip5.length + 1.0f);
-                break;
-            case CurrentEvent.Event6:
-                PlayEvent(_dialougeClip6, _dialougeClip6.length + 1.0f);
-                break;
-            case CurrentEvent.Event7:
-                PlayEvent(_dialougeClip7, _dialougeClip7.length + 1.0f);
-                break;
-        }
-    }
-
-    private void PlayEvent(AudioClip clip, float eventWaitTime)
-    {
-        _audioSource.PlayOneShot(clip);
-        StartCoroutine(PlayEventAnimationRoutine(eventWaitTime));
-    }
-
-    private IEnumerator PlayEventAnimationRoutine(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        PlayEventAnimation();
-    }
-
-    private void PlayEventAnimation()
-    {
-        switch (_currentEvent)
-        {
-            case CurrentEvent.Event1: // Ball starts to descend stairs located in the middle of the room
-                _ballAnimator?.Play("Falling");
-                break;
-            case CurrentEvent.Event2: // Ball reaches the water and starts to float without moving much
-                _ballAnimator?.Play("Idle");
-                break;
-            case CurrentEvent.Event3: // A waterfall located at the left of the player turns on and attracts the attention.
-                _waterFallManager?.StartWaterFall();
-                break;
-            case CurrentEvent.Event4: // Due to the waterfall, ball starts to move in the opposite direction and head towards a tunnel
-                _ballAnimator?.Play("EnterTunnel");
-                break;
-            case CurrentEvent.Event5: // Ball reaches the tunnel and “swirls” into the darkness. Only music and sound effects will occur during the following 10 seconds to generate suspense
-                break;
-            case CurrentEvent.Event6: // Ball shows up at the other end of the tunnel and starts to move towards the player
-                _ballAnimator?.Play("ExitTunnel");
-                break;
-            case CurrentEvent.Event7: // Ball reaches the player and they are able to pick it up. Either picking the ball up or 10 seconds pass after it reaches the player will end the experience
-                _ballAnimator?.Play("Idle2");
-                break;
-        }
-
-        Debug.Log($"Played event: {_currentEvent}");
-        MoveToNextEvent();
+        //StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
