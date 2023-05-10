@@ -99,11 +99,9 @@ public class BallAnimatorTool : MonoBehaviour
             ballPos.y = _startYPos + _amplitude * Mathf.Sin(_frequency * Time.time); // Calculate the new Y position using a sine wave to mimic Buoyancy
             _ballTransform.position = ballPos;
 
-            Animator animator;
-            AnimationClip animClip;
-
+            //Animator animator;
+            //AnimationClip animClip;
             
-
             if (elapsedTime >= _totalTime)
             {
                 break;

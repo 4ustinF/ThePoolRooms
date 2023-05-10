@@ -10,6 +10,9 @@ public class WaterFallManager : MonoBehaviour
     [SerializeField] private ParticleSystem _sprinklesPS = null;
     [SerializeField] private ParticleSystem _surfaceDust1PS = null;
     [SerializeField] private ParticleSystem _surfaceDust2PS = null;
+    [SerializeField] private float _maxVolume = 0.25f;
+    [SerializeField] private float _fadeInMultiplier = 0.75f;
+    [SerializeField] private float _fadeOutMultiplier = 0.5f;
     [SerializeField] private float _waitTime = 1.5f;
 
     public void StartWaterFall()
@@ -50,19 +53,19 @@ public class WaterFallManager : MonoBehaviour
         _audioSource.Play();
         _audioSource.volume = 0.0f;
 
-        while (_audioSource.volume < 1.0f)
+        while (_audioSource.volume < _maxVolume)
         {
-            _audioSource.volume += 1.0f * Time.deltaTime / _waitTime;
+            _audioSource.volume += _fadeInMultiplier * Time.deltaTime / _waitTime;
             yield return null;
         }
     }
 
     private IEnumerator WaterFallVolumeFadeOut()
     {
-        _audioSource.volume = 1.0f;
+        _audioSource.volume = _maxVolume;
         while (_audioSource.volume > 0.0f)
         {
-            _audioSource.volume -= 1.0f * Time.deltaTime / _waitTime;
+            _audioSource.volume -= _fadeOutMultiplier * Time.deltaTime / _waitTime;
             yield return null;
         }
 

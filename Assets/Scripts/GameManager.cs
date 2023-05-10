@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        MoveToNextEvent();
+        //MoveToNextEvent();
+        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
     }
 
     private void MoveToNextEvent()
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour
         switch (_currentEvent)
         {
             case CurrentEvent.Event1:
-                PlayEvent(_dialougeClip1, _dialougeClip1.length + 1.0f);
+                PlayEvent(_dialougeClip1, _dialougeClip1.length + 0.0f);
                 break;
             case CurrentEvent.Event2:
                 PlayEvent(_dialougeClip2, _dialougeClip2.length + 1.0f);
@@ -121,6 +123,128 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Played event: {_currentEvent}");
         MoveToNextEvent();
     }
+
+    private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
+    {
+        yield return new WaitForSeconds(waitTime);
+        func.Invoke();
+    }
+
+    #region ---AudioEvents---
+
+    private void PlayDialog1()
+    {
+        Debug.Log("PlayDialog1");
+        _audioSource.PlayOneShot(_dialougeClip1);
+        float waitTime = _dialougeClip1.length;
+        StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallFallingAnim));
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog2));
+    }
+
+    private void PlayDialog2()
+    {
+        _audioSource.PlayOneShot(_dialougeClip2);
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 2.0f, PlayDialog3));
+    }
+
+    private void PlayDialog3()
+    {
+        _audioSource.PlayOneShot(_dialougeClip3);
+        float waitTime = _dialougeClip3.length;
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
+        StartCoroutine(WaitAndInvokeFunc(waitTime+ 0.25f, PlayDialog4));
+    }
+
+    private void PlayDialog4()
+    {
+        _audioSource.PlayOneShot(_dialougeClip4);
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 0.25f, PlayDialog5));
+    }
+
+    private void PlayDialog5()
+    {
+        _audioSource.PlayOneShot(_dialougeClip5);
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 5.0f, PlayDialog6));
+    }
+
+    private void PlayDialog6()
+    {
+        _audioSource.PlayOneShot(_dialougeClip6);
+        float waitTime = _dialougeClip6.length;
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayBallExitTunnel));
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog7));
+    }
+
+    private void PlayDialog7()
+    {
+        _audioSource.PlayOneShot(_dialougeClip7);
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
+    }
+
+    #endregion ---AudioEvents---
+
+    #region ---AnimEvents---
+
+    private void PlayBallFallingAnim()
+    {
+        AnimationClip[] clips = _ballAnimator?.runtimeAnimatorController.animationClips;
+        float waitTime = 0.0f;
+        foreach (AnimationClip clip in clips)
+        {
+            if(clip.name == "Falling")
+            {
+                waitTime = clip.length;
+                break;
+            }
+        }
+
+        Debug.Log($"PlayBallFallingAnim: {waitTime}");
+
+        _ballAnimator?.Play("Falling");
+        StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle1));
+    }
+
+    private void PlayBallIdle1()
+    {
+        _ballAnimator?.Play("Idle");
+        // TODO: Play ball splash particles
+    }
+
+    private void TurnOnWaterFall()
+    {
+        _waterFallManager?.StartWaterFall();
+        StartCoroutine(WaitAndInvokeFunc(0.5f, PlayBallEnterTunnel)); // Time for waterfall to finish full throttle
+    }
+
+    private void PlayBallEnterTunnel()
+    {
+        _ballAnimator?.Play("EnterTunnel");
+    }
+
+    private void PlayBallExitTunnel()
+    {
+        AnimationClip[] clips = _ballAnimator?.runtimeAnimatorController.animationClips;
+        float waitTime = 0.0f;
+        foreach (AnimationClip clip in clips)
+        {
+            if (clip.name == "ExitTunnel")
+            {
+                waitTime = clip.length;
+                break;
+            }
+        }
+
+        Debug.Log($"PlayBallExitTunnel: {waitTime}");
+        _ballAnimator?.Play("ExitTunnel");
+        StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle2));
+    }
+
+    private void PlayBallIdle2()
+    {
+        _ballAnimator?.Play("Idle2");
+    }
+
+    #endregion ---Events---
 
 
 }
