@@ -28,6 +28,8 @@ public class BallAnimatorTool : MonoBehaviour
     [SerializeField] private AnimationCurve _yRotCurve = new AnimationCurve();
     [SerializeField] private AnimationCurve _zRotCurve = new AnimationCurve();
 
+    private int bounceCount = 0;
+
     //Idle
     private int _idleCount = 0;
 
@@ -68,11 +70,23 @@ public class BallAnimatorTool : MonoBehaviour
 
     public void StartEnterTunnelAnim()
     {
+        _xPosCurve = new AnimationCurve();
+        _yPosCurve = new AnimationCurve();
+        _zPosCurve = new AnimationCurve();
+        _xRotCurve = new AnimationCurve();
+        _yRotCurve = new AnimationCurve();
+        _zRotCurve = new AnimationCurve();
         StartCoroutine(EnterTunnelRoutine(0, 1));
     }
 
     public void StartExitTunnelAnim()
     {
+        _xPosCurve = new AnimationCurve();
+        _yPosCurve = new AnimationCurve();
+        _zPosCurve = new AnimationCurve();
+        _xRotCurve = new AnimationCurve();
+        _yRotCurve = new AnimationCurve();
+        _zRotCurve = new AnimationCurve();
         StartCoroutine(ExitTunnelRoutine(0, 1));
     }
 
@@ -141,9 +155,9 @@ public class BallAnimatorTool : MonoBehaviour
 
             // Rotation
             var ballRot = _ballTransform.localRotation;
-            ballRot.x = _startYRot + (_rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Y rotation using a sine wave to mimic x
+            ballRot.x = _startYRot + (_rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new X rotation using a sine wave to mimic x
             ballRot.y = _startYRot + (_rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Y rotation using a sine wave to mimic x
-            ballRot.z = _startYRot + (_rotAmplitude * -Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Y rotation using a sine wave to mimic x
+            ballRot.z = _startYRot + (_rotAmplitude * -Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Z rotation using a sine wave to mimic x
             _ballTransform.localRotation = ballRot;
 
             // Position
@@ -151,14 +165,37 @@ public class BallAnimatorTool : MonoBehaviour
             ballPos.y = _startYPos + (_amplitude * Mathf.Sin(_frequency * Time.time) * inverseT); // Calculate the new Y position using a sine wave to mimic Buoyancy
             _ballTransform.position = ballPos;
 
+            // Position Frames
             float keyPos = (float)currentFrame / 60.0f;
             _xPosCurve.AddKey(keyPos, _ballTransform.position.x);
             _yPosCurve.AddKey(keyPos, _ballTransform.position.y);
             _zPosCurve.AddKey(keyPos, _ballTransform.position.z);
-            _xRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.x);
-            _yRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.y);
-            _zRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.z);
 
+            // Rotation Frames
+            float xRot = _ballTransform.localEulerAngles.x;
+            float yRot = _ballTransform.localEulerAngles.y;
+            float zRot = _ballTransform.localEulerAngles.z;
+
+            if(xRot > 300.0f)
+            {
+                xRot -= 360.0f;
+            }
+
+            if (yRot > 300.0f)
+            {
+                yRot -= 360.0f;
+            }
+
+            if (zRot > 300.0f)
+            {
+                zRot -= 360.0f;
+            }
+
+            _xRotCurve.AddKey(keyPos, xRot);
+            _yRotCurve.AddKey(keyPos, yRot);
+            _zRotCurve.AddKey(keyPos, zRot);
+
+            // Exit Condition
             if (elapsedTime >= _totalTime)
             {
                 Debug.Log("Time exit");
@@ -172,45 +209,57 @@ public class BallAnimatorTool : MonoBehaviour
         }
     }
 
-    private IEnumerator ExitTunnelRoutine(int startIndex, int endIndex)
+    private IEnumerator ExitTunnelRoutine(int startIndex, int endIndex, int currentFrame = 0)
     {
-        int currentFrame = 0;
         float elapsedTime = 0.0f;
         Vector3 startPosition = _nodes[startIndex].position;
         Vector3 endPosition = _nodes[endIndex].position;
 
-        _xPosCurve = new AnimationCurve();
-        _yPosCurve = new AnimationCurve();
-        _zPosCurve = new AnimationCurve();
-        _xRotCurve = new AnimationCurve();
-        _yRotCurve = new AnimationCurve();
-        _zRotCurve = new AnimationCurve();
-
         while (true)
         {
             float t = Mathf.Clamp01(elapsedTime / _totalTime);
-            float inverseT = 1.0f - Mathf.Sin((t * Mathf.PI) * 0.5f); // 1.0f - t;
-            inverseT = Mathf.Clamp(inverseT, 0.25f, 1.0f);
 
             // Rotation
             var ballRot = _ballTransform.localRotation;
-            ballRot.x = _startYRot + (_rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Y rotation using a sine wave to mimic x
-            ballRot.y = _startYRot + (_rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Y rotation using a sine wave to mimic x
-            ballRot.z = _startYRot + (_rotAmplitude * -Mathf.Sin(_rotFrequency * Time.time) * inverseT); // Calculate the new Y rotation using a sine wave to mimic x
+            ballRot.x = _startYRot + _rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time); // Calculate the new X rotation using a sine wave to mimic x
+            ballRot.y = _startYRot + _rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Y rotation using a sine wave to mimic x
+            ballRot.z = _startYRot + _rotAmplitude * -Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Z rotation using a sine wave to mimic x
             _ballTransform.localRotation = ballRot;
 
             // Position
             Vector3 ballPos = Vector3.Lerp(startPosition, endPosition, t) + transform.up * Mathf.Sin(t * Mathf.PI) * 0.1f;
-            ballPos.y = _startYPos + (_amplitude * Mathf.Sin(_frequency * Time.time) * inverseT); // Calculate the new Y position using a sine wave to mimic Buoyancy
+            ballPos.y = _startYPos + _amplitude * Mathf.Sin(_frequency * Time.time); // Calculate the new Y position using a sine wave to mimic Buoyancy
             _ballTransform.position = ballPos;
 
+            // Position Frames
             float keyPos = (float)currentFrame / 60.0f;
             _xPosCurve.AddKey(keyPos, _ballTransform.position.x);
             _yPosCurve.AddKey(keyPos, _ballTransform.position.y);
             _zPosCurve.AddKey(keyPos, _ballTransform.position.z);
-            _xRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.x);
-            _yRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.y);
-            _zRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.z);
+
+            // Rotation Frames
+            float xRot = _ballTransform.localEulerAngles.x;
+            float yRot = _ballTransform.localEulerAngles.y;
+            float zRot = _ballTransform.localEulerAngles.z;
+
+            if (xRot > 300.0f)
+            {
+                xRot -= 360.0f;
+            }
+
+            if (yRot > 300.0f)
+            {
+                yRot -= 360.0f;
+            }
+
+            if (zRot > 300.0f)
+            {
+                zRot -= 360.0f;
+            }
+
+            _xRotCurve.AddKey(keyPos, xRot);
+            _yRotCurve.AddKey(keyPos, yRot);
+            _zRotCurve.AddKey(keyPos, zRot);
 
             if (elapsedTime >= _totalTime)
             {
@@ -226,7 +275,17 @@ public class BallAnimatorTool : MonoBehaviour
 
         if (endIndex < _nodes.Count - 1)
         {
-            StartCoroutine(EnterTunnelRoutine(startIndex + 1, endIndex + 1));
+            bounceCount++;
+            if (bounceCount == 1)
+            {
+                _totalTime *= 0.25f;
+            }
+            else if (bounceCount == 2)
+            {
+                _totalTime *= 1.25f;
+            }
+
+            StartCoroutine(ExitTunnelRoutine(startIndex + 1, endIndex + 1, currentFrame));
         }
     }
 
