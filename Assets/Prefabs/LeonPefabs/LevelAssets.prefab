@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &82715595
 Transform:
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 4.68, y: 3, z: 3.1200001}
   m_Children: []
   m_Father: {fileID: 1740205630550520875}
-  m_RootOrder: 21
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &82715594
 MeshFilter:
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 758ea3fd19f761145b812e31bbeb8222, type: 2}
+  - {fileID: 2100000, guid: c09d7fb90d527f04a8e3ec00ef6384f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13016,7 +13016,7 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
-  m_SelectedVertices: 31000000
+  m_SelectedVertices: 
 --- !u!23 &1773464238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15026,31 +15026,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 00000000
-  m_SelectedEdges:
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  - a: 0
-    b: 0
-  m_SelectedVertices: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1812178399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17154,7 +17132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1740205630550520875}
-  m_RootOrder: 20
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &6213692194235760740
 MonoBehaviour:
@@ -20755,11 +20733,11 @@ Transform:
   - {fileID: 1502049186}
   - {fileID: 422208813}
   - {fileID: 1572932895}
+  - {fileID: 6367404449148020038}
+  - {fileID: 82715595}
   - {fileID: 3400962817271498488}
   - {fileID: 1575602658579344375}
   - {fileID: 3400962816366964362}
-  - {fileID: 6367404449148020038}
-  - {fileID: 82715595}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22044,17 +22022,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 11000000
-  m_SelectedEdges:
-  - a: 68
-    b: 69
-  - a: 70
-    b: 68
-  - a: 69
-    b: 71
-  - a: 71
-    b: 70
-  m_SelectedVertices: 44000000450000004600000047000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &8501724473798933692
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22169,7 +22139,7 @@ PrefabInstance:
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
@@ -22264,7 +22234,7 @@ PrefabInstance:
     - target: {fileID: 6926988229668184341, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6926988229668184341, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
@@ -22404,7 +22374,7 @@ PrefabInstance:
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
