@@ -29,6 +29,8 @@ public class BallAnimatorTool : MonoBehaviour
     [SerializeField] private AnimationCurve _zRotCurve = new AnimationCurve();
 
     private int bounceCount = 0;
+    private bool _isRecording = false;
+
 
     //Idle
     private int _idleCount = 0;
@@ -176,7 +178,7 @@ public class BallAnimatorTool : MonoBehaviour
             float yRot = _ballTransform.localEulerAngles.y;
             float zRot = _ballTransform.localEulerAngles.z;
 
-            if(xRot > 300.0f)
+            if (xRot > 300.0f)
             {
                 xRot -= 360.0f;
             }
@@ -289,6 +291,63 @@ public class BallAnimatorTool : MonoBehaviour
         }
     }
 
+    public void StartRecording()
+    {
+        // -13.7, 13.89, 14.377
+        _isRecording = true;
+        _ballTransform.gameObject.SetActive(true);
+        StartCoroutine(RecordBall());
+    }
+
+    public void StopRecording()
+    {
+        _isRecording = false;
+    }
+
+    private IEnumerator RecordBall()
+    {
+        int currentFrame = 0;
+        float rotationThreshold = 180.0f;
+        Quaternion previousRotation = _ballTransform.rotation;
+
+        yield return null;
+
+        while (_isRecording)
+        {
+            // Position Frames
+            float keyPos = (float)currentFrame / 60.0f;
+            _xPosCurve.AddKey(keyPos, _ballTransform.position.x);
+            _yPosCurve.AddKey(keyPos, _ballTransform.position.y);
+            _zPosCurve.AddKey(keyPos, _ballTransform.position.z);
+
+            // Rotation Frames
+            //float xRot = _ballTransform.localEulerAngles.x;
+            //float yRot = _ballTransform.localEulerAngles.y;
+            //float zRot = _ballTransform.localEulerAngles.z;
+
+            Quaternion rotation = _ballTransform.rotation;
+            var rotationDiff = Quaternion.Angle(previousRotation, rotation);
+            if (rotationDiff > rotationThreshold)
+            {
+                Quaternion adjustedRotation = Quaternion.RotateTowards(previousRotation, rotation, rotationDiff - rotationThreshold);
+                _xRotCurve.AddKey(keyPos, adjustedRotation.eulerAngles.x);
+                _yRotCurve.AddKey(keyPos, adjustedRotation.eulerAngles.y);
+                _zRotCurve.AddKey(keyPos, adjustedRotation.eulerAngles.z);
+                previousRotation = adjustedRotation;
+            }
+            else
+            {
+                _xRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.x);
+                _yRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.y);
+                _zRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.z);
+                previousRotation = rotation;
+            }
+
+            ++currentFrame;
+            yield return new WaitForSeconds(0.01f);
+        }
+
+    }
 
 
     private void OnDrawGizmos()

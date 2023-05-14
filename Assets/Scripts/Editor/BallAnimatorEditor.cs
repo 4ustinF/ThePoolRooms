@@ -28,5 +28,15 @@ public class BallAnimatorEditor : Editor
         {
             script.SetAnimationClips();
         }
+
+        if (GUILayout.Button("Start Recording", GUILayout.Height(30)))
+        {
+            script.StartRecording();
+        }
+
+        if (GUILayout.Button("Stop Recording", GUILayout.Height(30)))
+        {
+            script.StopRecording();
+        }
     }
 }
