@@ -307,8 +307,12 @@ public class BallAnimatorTool : MonoBehaviour
     private IEnumerator RecordBall()
     {
         int currentFrame = 0;
-        float rotationThreshold = 180.0f;
+        float rotationThreshold = 100.0f;
         Quaternion previousRotation = _ballTransform.rotation;
+
+        float xPrevRot = _ballTransform.localEulerAngles.x;
+        float yPrevRot = _ballTransform.localEulerAngles.y;
+        float zPrevRot = _ballTransform.localEulerAngles.z;
 
         yield return null;
 
@@ -321,27 +325,31 @@ public class BallAnimatorTool : MonoBehaviour
             _zPosCurve.AddKey(keyPos, _ballTransform.position.z);
 
             // Rotation Frames
-            //float xRot = _ballTransform.localEulerAngles.x;
-            //float yRot = _ballTransform.localEulerAngles.y;
-            //float zRot = _ballTransform.localEulerAngles.z;
+            float xRot = _ballTransform.localEulerAngles.x;
+            float yRot = _ballTransform.localEulerAngles.y;
+            float zRot = _ballTransform.localEulerAngles.z;
 
-            Quaternion rotation = _ballTransform.rotation;
-            var rotationDiff = Quaternion.Angle(previousRotation, rotation);
-            if (rotationDiff > rotationThreshold)
+            if(Mathf.Abs(xRot - xPrevRot) > rotationThreshold)
             {
-                Quaternion adjustedRotation = Quaternion.RotateTowards(previousRotation, rotation, rotationDiff - rotationThreshold);
-                _xRotCurve.AddKey(keyPos, adjustedRotation.eulerAngles.x);
-                _yRotCurve.AddKey(keyPos, adjustedRotation.eulerAngles.y);
-                _zRotCurve.AddKey(keyPos, adjustedRotation.eulerAngles.z);
-                previousRotation = adjustedRotation;
+                xRot -= 360.0f;
             }
-            else
+            if (Mathf.Abs(yRot - yPrevRot) > rotationThreshold)
             {
-                _xRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.x);
-                _yRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.y);
-                _zRotCurve.AddKey(keyPos, _ballTransform.localEulerAngles.z);
-                previousRotation = rotation;
+                yRot -= 360.0f;
             }
+            if (Mathf.Abs(zRot - zPrevRot) > rotationThreshold)
+            {
+                zRot -= 360.0f;
+            }
+
+            _xRotCurve.AddKey(keyPos, xRot);
+            _yRotCurve.AddKey(keyPos, yRot);
+            _zRotCurve.AddKey(keyPos, zRot);
+
+            // Set Prev
+            xPrevRot = xRot;
+            yPrevRot = yRot;
+            zPrevRot = zRot;
 
             ++currentFrame;
             yield return new WaitForSeconds(0.01f);
