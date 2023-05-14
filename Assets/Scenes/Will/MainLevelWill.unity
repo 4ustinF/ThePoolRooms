@@ -3138,11 +3138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeachBall
       objectReference: {fileID: 0}
-    - target: {fileID: 964662674967381093, guid: f33719485ee3a8a489b3be611dd0a6c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 964662674967381088, guid: f33719485ee3a8a489b3be611dd0a6c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3198,29 +3193,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1095428756, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1095428756, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960841590552182937, guid: f33719485ee3a8a489b3be611dd0a6c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960841591447355129, guid: f33719485ee3a8a489b3be611dd0a6c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960841591447355135, guid: f33719485ee3a8a489b3be611dd0a6c7,
-        type: 3}
-      propertyPath: stopAction
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
 --- !u!4 &604251834 stripped
@@ -3229,26 +3201,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 604251833}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &604251835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 964662674967381093, guid: f33719485ee3a8a489b3be611dd0a6c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 604251833}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &604251836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604251835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc3e9ec86799bd4e83e87c9e8b0a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ripples: {fileID: 1297791745}
-  _waterSplashPS: {fileID: 1878986731}
 --- !u!1001 &754026086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6047,12 +5999,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278831936}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1297791745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4960841590552182937, guid: f33719485ee3a8a489b3be611dd0a6c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 604251833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1304299291
 GameObject:
   m_ObjectHideFlags: 0
@@ -8249,12 +8195,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!198 &1878986731 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4960841591447355135, guid: f33719485ee3a8a489b3be611dd0a6c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 604251833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1883724442
 GameObject:
   m_ObjectHideFlags: 0
