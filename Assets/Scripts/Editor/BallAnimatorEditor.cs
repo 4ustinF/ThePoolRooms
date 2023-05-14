@@ -38,5 +38,10 @@ public class BallAnimatorEditor : Editor
         {
             script.StopRecording();
         }
+
+        if (GUILayout.Button("Play Ball Animation", GUILayout.Height(30)))
+        {
+            script.PlayBallAnimation();
+        }
     }
 }

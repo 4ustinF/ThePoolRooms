@@ -31,6 +31,8 @@ public class BallAnimatorTool : MonoBehaviour
     private int bounceCount = 0;
     private bool _isRecording = false;
 
+    [SerializeField] private Animator _ballAnimator = null;
+
 
     //Idle
     private int _idleCount = 0;
@@ -357,6 +359,11 @@ public class BallAnimatorTool : MonoBehaviour
 
     }
 
+    public void PlayBallAnimation()
+    {
+        _ballAnimator?.Play("Idle");
+        _ballAnimator?.Play("Falling");
+    }
 
     private void OnDrawGizmos()
     {

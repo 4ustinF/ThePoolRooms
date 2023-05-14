@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -112,7 +112,8 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallIdle1()
     {
-        _ballAnimator?.Play("Idle");
+        //_ballAnimator?.Play("Idle");
+        _ballAnimator?.CrossFadeInFixedTime("Idle", 0.75f);
         // TODO: Play ball splash particles
     }
 
@@ -124,7 +125,8 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallEnterTunnel()
     {
-        _ballAnimator?.Play("EnterTunnel");
+        //_ballAnimator?.Play("EnterTunnel");
+        _ballAnimator?.CrossFadeInFixedTime("EnterTunnel", 0.5f);
     }
 
     private void PlayBallExitTunnel()

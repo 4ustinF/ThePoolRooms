@@ -3200,7 +3200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095428756, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1095428756, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -3216,6 +3216,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4960841591447355135, guid: f33719485ee3a8a489b3be611dd0a6c7,
+        type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
 --- !u!4 &604251834 stripped
@@ -3230,35 +3235,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 604251833}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &604251836
-Rigidbody:
+--- !u!114 &604251836
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604251835}
-  serializedVersion: 2
-  m_Mass: 5000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!135 &604251837
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604251835}
-  m_Material: {fileID: 13400000, guid: bc085d6a144cc014a924a1e5bc133a19, type: 2}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc3e9ec86799bd4e83e87c9e8b0a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waterSplashPS: {fileID: 1878986731}
 --- !u!1001 &754026086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6666,6 +6655,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _ballAnimator: {fileID: 352913222}
 --- !u!1 &1382313762
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,6 +8241,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!198 &1878986731 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4960841591447355135, guid: f33719485ee3a8a489b3be611dd0a6c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 604251833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1912381936
 GameObject:
   m_ObjectHideFlags: 0
@@ -8539,7 +8535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2022186515
 Transform:
   m_ObjectHideFlags: 0
@@ -9054,6 +9050,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _ballAnimator: {fileID: 0}
 --- !u!1 &9065889059295926864
 GameObject:
   m_ObjectHideFlags: 0
@@ -9132,6 +9129,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _ballAnimator: {fileID: 0}
 --- !u!4 &9065889059295926871
 Transform:
   m_ObjectHideFlags: 0
