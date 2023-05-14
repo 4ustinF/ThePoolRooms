@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 964662674967381094}
   - component: {fileID: 964662674967381114}
   - component: {fileID: 1095428756}
+  - component: {fileID: 604251836}
   m_Layer: 4
   m_Name: BeachBall
   m_TagString: Untagged
@@ -116,6 +117,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &604251836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964662674967381093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc3e9ec86799bd4e83e87c9e8b0a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ripples: {fileID: 4960841590552182937}
+  _waterSplashPS: {fileID: 4960841591447355135}
 --- !u!1 &4960841590375929189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,7 +4724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4960841590552182942
 Transform:
   m_ObjectHideFlags: 0
@@ -9479,7 +9494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4960841591447355132
 Transform:
   m_ObjectHideFlags: 0
@@ -9505,7 +9520,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 1
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
