@@ -297,7 +297,9 @@ public class BallAnimatorTool : MonoBehaviour
     {
         // -13.7, 13.89, 14.377 - Roof
         // -14, 1.75, 10 - Idle 1
-        // -0.72, 1.75, -2.53 - Idle 1
+        // -0.72, 1.75, -2.53 - Idle 2
+        // -2, 1.75, -2.53 - end of tunnel
+
         _isRecording = true;
         _ballTransform.gameObject.SetActive(true);
         StartCoroutine(RecordBall());
