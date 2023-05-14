@@ -221,21 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _subtitleText: {fileID: 7010196817252074132}
-  _textSpeed: 1.45
-  _dialouge1Length: 4
-  _dialouge2aLength: 8
-  _dialouge2bLength: 8
-  _dialouge3aLength: 10
-  _dialouge3bLength: 6
-  _dialouge4Length: 12
-  _dialouge5aLength: 10
-  _dialouge5bLength: 4
-  _dialouge5cLength: 10
-  _dialouge6aLength: 12
-  _dialouge6bLength: 5
-  _dialouge7aLength: 4
-  _dialouge7bLength: 8
-  _dialouge7cLength: 6
+  _textSlowness: 1
 --- !u!23 &7010196817301720724
 MeshRenderer:
   m_ObjectHideFlags: 0
