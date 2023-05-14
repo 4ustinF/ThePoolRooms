@@ -149,7 +149,8 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallIdle2()
     {
-        _ballAnimator?.Play("Idle2");
+        //_ballAnimator?.Play("Idle2");
+        _ballAnimator?.CrossFadeInFixedTime("Idle2", 0.5f);
     }
 
     #endregion ---Events---

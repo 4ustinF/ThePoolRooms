@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 5891222123477282646, guid: bb97dbb2ac9714145b3658299d561293,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5891222123477282646, guid: bb97dbb2ac9714145b3658299d561293,
         type: 3}
@@ -3181,7 +3181,7 @@ PrefabInstance:
     - target: {fileID: 964662674967381088, guid: f33719485ee3a8a489b3be611dd0a6c7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 964662674967381088, guid: f33719485ee3a8a489b3be611dd0a6c7,
         type: 3}
@@ -3247,6 +3247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc3e9ec86799bd4e83e87c9e8b0a9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ripples: {fileID: 1297791745}
   _waterSplashPS: {fileID: 1878986731}
 --- !u!1001 &754026086
 PrefabInstance:
@@ -3674,7 +3675,7 @@ PrefabInstance:
     - target: {fileID: 6590902186508690129, guid: a52384f069e6cc94fb1427540ce6d116,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6590902186508690129, guid: a52384f069e6cc94fb1427540ce6d116,
         type: 3}
@@ -6046,6 +6047,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278831936}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1297791745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4960841590552182937, guid: f33719485ee3a8a489b3be611dd0a6c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 604251833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1304299291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,6 +6477,7 @@ Transform:
   - {fileID: 9065889058830577846}
   - {fileID: 9065889059295926871}
   - {fileID: 1368959366}
+  - {fileID: 1883724443}
   - {fileID: 43307586}
   - {fileID: 896544766}
   - {fileID: 604251834}
@@ -6583,7 +6591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1368959366
 Transform:
   m_ObjectHideFlags: 0
@@ -8247,6 +8255,95 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 604251833}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883724442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883724443}
+  - component: {fileID: 1883724444}
+  m_Layer: 0
+  m_Name: BallAnimatorIdle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1883724443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883724442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1340940256}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883724444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883724442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b68692f1f2b54a45a47167cbc50109d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalTime: 10
+  _isIdle: 0
+  _ballTransform: {fileID: 604251834}
+  _nodes: []
+  _rotAmplitude: 0.2
+  _rotFrequency: 1
+  _amplitude: 0.1
+  _frequency: 3.5
+  _clipToEdit: {fileID: 7400000, guid: 25477aefd229dd54d9e1835ddc59d9c1, type: 2}
+  _xPosCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _yPosCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _zPosCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _xRotCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _yRotCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _zRotCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _ballAnimator: {fileID: 352913222}
 --- !u!1 &1912381936
 GameObject:
   m_ObjectHideFlags: 0

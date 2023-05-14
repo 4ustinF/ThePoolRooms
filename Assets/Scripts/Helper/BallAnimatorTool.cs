@@ -295,7 +295,9 @@ public class BallAnimatorTool : MonoBehaviour
 
     public void StartRecording()
     {
-        // -13.7, 13.89, 14.377
+        // -13.7, 13.89, 14.377 - Roof
+        // -14, 1.75, 10 - Idle 1
+        // -0.72, 1.75, -2.53 - Idle 1
         _isRecording = true;
         _ballTransform.gameObject.SetActive(true);
         StartCoroutine(RecordBall());
@@ -362,7 +364,7 @@ public class BallAnimatorTool : MonoBehaviour
     public void PlayBallAnimation()
     {
         _ballAnimator?.Play("Idle");
-        _ballAnimator?.Play("Falling");
+        _ballAnimator?.Play(_clipToEdit.name);
     }
 
     private void OnDrawGizmos()
