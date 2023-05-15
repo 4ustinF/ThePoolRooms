@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LiminalDemoScene.unity
-    guid: 62b8384b4c38a0c4295e4958fe77001d
+    path: Assets/Scenes/Will/MainLevelWill.unity
+    guid: d59e3a6ac5b02dd49bedbdaec21a7e51
   m_configObjects: {}
