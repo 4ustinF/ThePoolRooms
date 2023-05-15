@@ -22,7 +22,10 @@ public class Buoyancy : MonoBehaviour
     {
         // Rotation
         var ballRot = transform.rotation;
-        ballRot.y = _startYRot + _rotAmplitude * Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Y rotation using a sine wave to mimic x
+        //ballRot.y = _startYRot + _rotAmplitude * Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Y rotation using a sine wave to mimic x
+        ballRot.x = _startYRot + _rotAmplitude * 0.2f * +Mathf.Sin(_rotFrequency * Time.time); // Calculate the new X rotation using a sine wave to mimic x
+        ballRot.y = _startYRot + _rotAmplitude * +Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Y rotation using a sine wave to mimic x
+        ballRot.z = _startYRot + _rotAmplitude * 0.2f * Mathf.Sin(_rotFrequency * Time.time); // Calculate the new Z rotation using a sine wave to mimic x
         transform.rotation = ballRot;
 
         // Position

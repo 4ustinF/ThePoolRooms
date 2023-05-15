@@ -4,30 +4,11 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private enum CurrentEvent
-    {
-        None = -1,
-        Event1,
-        Event2,
-        Event3,
-        Event4,
-        Event5,
-        Event6,
-        Event7,
-        Count
-    }
-
     [Header("References")]
     [SerializeField] private WaterFallManager _waterFallManager = null;
+    [SerializeField] private SubtitleManager _subtitleManager = null;
     [SerializeField] private AudioSource _audioSource = null;
     [SerializeField] private Animator _ballAnimator = null;
-
-    //[Header("Ambience")]
-    //[SerializeField] private AudioClip _backgroundMusic = null;
-    //[SerializeField] private AudioClip _waterAmbience = null;
-
-    //[Header("SFX")]
-    //[SerializeField] private AudioClip _waterSplashSFX = null;
 
     [Header("DialougeAudioClips")]
     [SerializeField] private AudioClip _dialougeClip1 = null;
@@ -38,90 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _dialougeClip6 = null;
     [SerializeField] private AudioClip _dialougeClip7 = null;
 
-    [SerializeField] private CurrentEvent _currentEvent = CurrentEvent.None;
-
     private void Start()
     {
-        //MoveToNextEvent();
         StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
-    }
-
-    private void MoveToNextEvent()
-    {
-        int newEvent = (int)_currentEvent + 1;
-        int maxEvent = (int)CurrentEvent.Count;
-        _currentEvent = (CurrentEvent)Mathf.Min(newEvent, maxEvent);
-        PlayAudio();
-    }
-
-    private void PlayAudio()
-    {
-        switch (_currentEvent)
-        {
-            case CurrentEvent.Event1:
-                PlayEvent(_dialougeClip1, _dialougeClip1.length + 0.0f);
-                break;
-            case CurrentEvent.Event2:
-                PlayEvent(_dialougeClip2, _dialougeClip2.length + 1.0f);
-                break;
-            case CurrentEvent.Event3:
-                PlayEvent(_dialougeClip3, _dialougeClip3.length + 1.0f);
-                break;
-            case CurrentEvent.Event4:
-                PlayEvent(_dialougeClip4, _dialougeClip4.length + 1.0f);
-                break;
-            case CurrentEvent.Event5:
-                PlayEvent(_dialougeClip5, _dialougeClip5.length + 1.0f);
-                break;
-            case CurrentEvent.Event6:
-                PlayEvent(_dialougeClip6, _dialougeClip6.length + 1.0f);
-                break;
-            case CurrentEvent.Event7:
-                PlayEvent(_dialougeClip7, _dialougeClip7.length + 1.0f);
-                break;
-        }
-    }
-
-    private void PlayEvent(AudioClip clip, float eventWaitTime)
-    {
-        _audioSource.PlayOneShot(clip);
-        StartCoroutine(PlayEventAnimationRoutine(eventWaitTime));
-    }
-
-    private IEnumerator PlayEventAnimationRoutine(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        PlayEventAnimation();
-    }
-
-    private void PlayEventAnimation()
-    {
-        switch (_currentEvent)
-        {
-            case CurrentEvent.Event1: // Ball starts to descend stairs located in the middle of the room
-                _ballAnimator?.Play("Falling");
-                break;
-            case CurrentEvent.Event2: // Ball reaches the water and starts to float without moving much
-                _ballAnimator?.Play("Idle");
-                break;
-            case CurrentEvent.Event3: // A waterfall located at the left of the player turns on and attracts the attention.
-                _waterFallManager?.StartWaterFall();
-                break;
-            case CurrentEvent.Event4: // Due to the waterfall, ball starts to move in the opposite direction and head towards a tunnel
-                _ballAnimator?.Play("EnterTunnel");
-                break;
-            case CurrentEvent.Event5: // Ball reaches the tunnel and “swirls” into the darkness. Only music and sound effects will occur during the following 10 seconds to generate suspense
-                break;
-            case CurrentEvent.Event6: // Ball shows up at the other end of the tunnel and starts to move towards the player
-                _ballAnimator?.Play("ExitTunnel");
-                break;
-            case CurrentEvent.Event7: // Ball reaches the player and they are able to pick it up. Either picking the ball up or 10 seconds pass after it reaches the player will end the experience
-                _ballAnimator?.Play("Idle2");
-                break;
-        }
-
-        Debug.Log($"Played event: {_currentEvent}");
-        MoveToNextEvent();
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -136,6 +36,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("PlayDialog1");
         _audioSource.PlayOneShot(_dialougeClip1);
+        _subtitleManager?.ReadSpecificLine(1);
+
         float waitTime = _dialougeClip1.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallFallingAnim));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog2));
@@ -144,32 +46,41 @@ public class GameManager : MonoBehaviour
     private void PlayDialog2()
     {
         _audioSource.PlayOneShot(_dialougeClip2);
+        _subtitleManager?.ReadSpecificLine(2);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 2.0f, PlayDialog3));
     }
 
     private void PlayDialog3()
     {
         _audioSource.PlayOneShot(_dialougeClip3);
+        _subtitleManager?.ReadSpecificLine(3);
+
         float waitTime = _dialougeClip3.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
-        StartCoroutine(WaitAndInvokeFunc(waitTime+ 0.25f, PlayDialog4));
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog4));
     }
 
     private void PlayDialog4()
     {
         _audioSource.PlayOneShot(_dialougeClip4);
+        _subtitleManager?.ReadSpecificLine(4);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 0.25f, PlayDialog5));
     }
 
     private void PlayDialog5()
     {
         _audioSource.PlayOneShot(_dialougeClip5);
+        _subtitleManager?.ReadSpecificLine(5);
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 4.5f, _waterFallManager.StopWaterFall));
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 5.0f, PlayDialog6));
+
     }
 
     private void PlayDialog6()
     {
         _audioSource.PlayOneShot(_dialougeClip6);
+        _subtitleManager?.ReadSpecificLine(6);
+
         float waitTime = _dialougeClip6.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayBallExitTunnel));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog7));
@@ -178,7 +89,9 @@ public class GameManager : MonoBehaviour
     private void PlayDialog7()
     {
         _audioSource.PlayOneShot(_dialougeClip7);
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
+        _subtitleManager?.ReadSpecificLine(7);
+
+        //StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
     }
 
     #endregion ---AudioEvents---
@@ -198,16 +111,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"PlayBallFallingAnim: {waitTime}");
-
         _ballAnimator?.Play("Falling");
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle1));
     }
 
     private void PlayBallIdle1()
     {
-        _ballAnimator?.Play("Idle");
-        // TODO: Play ball splash particles
+        _ballAnimator?.CrossFadeInFixedTime("Idle", 0.75f);
     }
 
     private void TurnOnWaterFall()
@@ -218,7 +128,7 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallEnterTunnel()
     {
-        _ballAnimator?.Play("EnterTunnel");
+        _ballAnimator?.CrossFadeInFixedTime("EnterTunnel", 0.5f);
     }
 
     private void PlayBallExitTunnel()
@@ -234,14 +144,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"PlayBallExitTunnel: {waitTime}");
         _ballAnimator?.Play("ExitTunnel");
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle2));
     }
 
     private void PlayBallIdle2()
     {
-        _ballAnimator?.Play("Idle2");
+        _ballAnimator?.CrossFadeInFixedTime("Idle2", 0.5f);
     }
 
     #endregion ---Events---

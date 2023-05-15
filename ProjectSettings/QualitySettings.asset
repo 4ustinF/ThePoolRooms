@@ -23,7 +23,7 @@ QualitySettings:
     anisotropicTextures: 1
     antiAliasing: 2
     softParticles: 0
-    softVegetation: 1
+    softVegetation: 0
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 0
     vSyncCount: 0
@@ -44,10 +44,8 @@ QualitySettings:
   m_PerPlatformDefaultQuality:
     Android: 0
     Lumin: 0
-    Nintendo 3DS: 0
     Nintendo Switch: 0
     PS4: 0
-    PSP2: 0
     Standalone: 0
     WebGL: 0
     Windows Store Apps: 0
