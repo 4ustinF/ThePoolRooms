@@ -13,7 +13,7 @@ public class SubtitleManager : MonoBehaviour
     [Header("Variables")]
     [SerializeField] private float _textSlowness = 1f;
 
-    private string _currentSubtitle;
+    private string _currentSubtitle = "";
     private List<List<string>> _subtitles;
     private int _currentLine = 0;
     private int _currentLinePart = 0;
@@ -104,14 +104,14 @@ public class SubtitleManager : MonoBehaviour
         }
         _readLine = true;
         _startedReadingLine = false;
-        _currentLine = lineNum-1;
+        _currentLine = lineNum - 1;
         _currentLinePart = 0;
         StartCoroutine(ReadText());
     }
 
     private IEnumerator ReadText()
     {
-        while (_readLine == true) 
+        while (_readLine == true)
         {
             if (_startedReadingLine == false)
             {
@@ -164,7 +164,7 @@ public class SubtitleManager : MonoBehaviour
         _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1f);
         while (_subtitleText.color.a > 0.0f)
         {
-            if(_readLine == true)
+            if (_readLine == true)
             {
                 yield break;
             }
@@ -173,7 +173,7 @@ public class SubtitleManager : MonoBehaviour
             yield return null;
         }
 
-        if(_currentLinePart > 0)
+        if (_currentLinePart > 0)
         {
             ReadNextLine();
         }
