@@ -6,15 +6,9 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private WaterFallManager _waterFallManager = null;
+    [SerializeField] private SubtitleManager _subtitleManager = null;
     [SerializeField] private AudioSource _audioSource = null;
     [SerializeField] private Animator _ballAnimator = null;
-
-    //[Header("Ambience")]
-    //[SerializeField] private AudioClip _backgroundMusic = null;
-    //[SerializeField] private AudioClip _waterAmbience = null;
-
-    //[Header("SFX")]
-    //[SerializeField] private AudioClip _waterSplashSFX = null;
 
     [Header("DialougeAudioClips")]
     [SerializeField] private AudioClip _dialougeClip1 = null;
@@ -42,6 +36,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("PlayDialog1");
         _audioSource.PlayOneShot(_dialougeClip1);
+        _subtitleManager?.ReadSpecificLine(1);
+
         float waitTime = _dialougeClip1.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallFallingAnim));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog2));
@@ -50,32 +46,41 @@ public class GameManager : MonoBehaviour
     private void PlayDialog2()
     {
         _audioSource.PlayOneShot(_dialougeClip2);
+        _subtitleManager?.ReadSpecificLine(2);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 2.0f, PlayDialog3));
     }
 
     private void PlayDialog3()
     {
         _audioSource.PlayOneShot(_dialougeClip3);
+        _subtitleManager?.ReadSpecificLine(3);
+
         float waitTime = _dialougeClip3.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
-        StartCoroutine(WaitAndInvokeFunc(waitTime+ 0.25f, PlayDialog4));
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog4));
     }
 
     private void PlayDialog4()
     {
         _audioSource.PlayOneShot(_dialougeClip4);
+        _subtitleManager?.ReadSpecificLine(4);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 0.25f, PlayDialog5));
     }
 
     private void PlayDialog5()
     {
         _audioSource.PlayOneShot(_dialougeClip5);
+        _subtitleManager?.ReadSpecificLine(5);
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 4.5f, _waterFallManager.StopWaterFall));
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 5.0f, PlayDialog6));
+
     }
 
     private void PlayDialog6()
     {
         _audioSource.PlayOneShot(_dialougeClip6);
+        _subtitleManager?.ReadSpecificLine(6);
+
         float waitTime = _dialougeClip6.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayBallExitTunnel));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog7));
@@ -84,7 +89,9 @@ public class GameManager : MonoBehaviour
     private void PlayDialog7()
     {
         _audioSource.PlayOneShot(_dialougeClip7);
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
+        _subtitleManager?.ReadSpecificLine(7);
+
+        //StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
     }
 
     #endregion ---AudioEvents---
@@ -104,17 +111,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"PlayBallFallingAnim: {waitTime}");
-
         _ballAnimator?.Play("Falling");
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle1));
     }
 
     private void PlayBallIdle1()
     {
-        //_ballAnimator?.Play("Idle");
         _ballAnimator?.CrossFadeInFixedTime("Idle", 0.75f);
-        // TODO: Play ball splash particles
     }
 
     private void TurnOnWaterFall()
@@ -125,7 +128,6 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallEnterTunnel()
     {
-        //_ballAnimator?.Play("EnterTunnel");
         _ballAnimator?.CrossFadeInFixedTime("EnterTunnel", 0.5f);
     }
 
@@ -142,14 +144,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"PlayBallExitTunnel: {waitTime}");
         _ballAnimator?.Play("ExitTunnel");
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle2));
     }
 
     private void PlayBallIdle2()
     {
-        //_ballAnimator?.Play("Idle2");
         _ballAnimator?.CrossFadeInFixedTime("Idle2", 0.5f);
     }
 
