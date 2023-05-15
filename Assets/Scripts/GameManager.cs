@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("PlayDialog1");
         _audioSource.PlayOneShot(_dialougeClip1);
-        _subtitleManager?.ReadSpecificLine(1);
+        _subtitleManager?.ReadSpecificLine(1, 1, 3.0f);
 
         float waitTime = _dialougeClip1.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallFallingAnim));
@@ -46,14 +46,14 @@ public class GameManager : MonoBehaviour
     private void PlayDialog2()
     {
         _audioSource.PlayOneShot(_dialougeClip2);
-        _subtitleManager?.ReadSpecificLine(2);
+        _subtitleManager?.ReadSpecificLine(2, 1, 3.0f);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 2.0f, PlayDialog3));
     }
 
     private void PlayDialog3()
     {
         _audioSource.PlayOneShot(_dialougeClip3);
-        _subtitleManager?.ReadSpecificLine(3);
+        _subtitleManager?.ReadSpecificLine(3, 1, 3.0f);
 
         float waitTime = _dialougeClip3.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
@@ -63,14 +63,14 @@ public class GameManager : MonoBehaviour
     private void PlayDialog4()
     {
         _audioSource.PlayOneShot(_dialougeClip4);
-        _subtitleManager?.ReadSpecificLine(4);
+        _subtitleManager?.ReadSpecificLine(4, 1, 3.0f);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 0.25f, PlayDialog5));
     }
 
     private void PlayDialog5()
     {
         _audioSource.PlayOneShot(_dialougeClip5);
-        _subtitleManager?.ReadSpecificLine(5);
+        _subtitleManager?.ReadSpecificLine(5, 1, 3.0f);
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 4.5f, _waterFallManager.StopWaterFall));
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 5.0f, PlayDialog6));
 
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     private void PlayDialog6()
     {
         _audioSource.PlayOneShot(_dialougeClip6);
-        _subtitleManager?.ReadSpecificLine(6);
+        _subtitleManager?.ReadSpecificLine(6, 1, 3.0f);
 
         float waitTime = _dialougeClip6.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayBallExitTunnel));
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
     private void PlayDialog7()
     {
         _audioSource.PlayOneShot(_dialougeClip7);
-        _subtitleManager?.ReadSpecificLine(7);
+        _subtitleManager?.ReadSpecificLine(7, 1, 3.0f);
 
         //StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
     }

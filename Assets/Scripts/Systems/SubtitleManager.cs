@@ -11,7 +11,20 @@ public class SubtitleManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _subtitleText = null;
 
     [Header("Variables")]
-    [SerializeField] private float _textSlowness = 1f;
+    [SerializeField] private float lineTimeLength1 = 0.0f;
+    [SerializeField] private float lineTimeLength2a = 0.0f;
+    [SerializeField] private float lineTimeLength2b = 0.0f;
+    [SerializeField] private float lineTimeLength3a = 0.0f;
+    [SerializeField] private float lineTimeLength3b = 0.0f;
+    [SerializeField] private float lineTimeLength4 = 0.0f;
+    [SerializeField] private float lineTimeLength5a = 0.0f;
+    [SerializeField] private float lineTimeLength5b = 0.0f;
+    [SerializeField] private float lineTimeLength5c = 0.0f;
+    [SerializeField] private float lineTimeLength6a = 0.0f;
+    [SerializeField] private float lineTimeLength6b = 0.0f;
+    [SerializeField] private float lineTimeLength7a = 0.0f;
+    [SerializeField] private float lineTimeLength7b = 0.0f;
+    [SerializeField] private float lineTimeLength7c = 0.0f;
 
     private string _currentSubtitle = "";
     private List<List<string>> _subtitles;
@@ -20,10 +33,8 @@ public class SubtitleManager : MonoBehaviour
     private int _characterProgress = 1;
     private bool _readLine = false;
     private bool _startedReadingLine = false;
-    private float _timePerLine = 0f;
+    private float _timePerCharacter = 0f;
     private float _timeSinceLastLine = 0f;
-
-    private float _frame = 1 / 60f;
 
     public void Start()
     {
@@ -76,12 +87,12 @@ public class SubtitleManager : MonoBehaviour
         StartCoroutine(ReadText());
     }
 
-    public void ReadSpecificLine(int lineNum)
+    public void ReadSpecificLine(int lineNum, int linePartNum, float lineSpeed)
     {
-        StartCoroutine(ReadSpecificLineFunc(lineNum));
+        StartCoroutine(ReadSpecificLineFunc(lineNum, linePartNum, lineSpeed));
     }
 
-    private IEnumerator ReadSpecificLineFunc(int lineNum)
+    private IEnumerator ReadSpecificLineFunc(int lineNum, int linePartNum, float lineSpeed)
     {
         if (lineNum - 1 > 6)
         {
@@ -90,26 +101,17 @@ public class SubtitleManager : MonoBehaviour
 
         if (_readLine == true)
         {
-            if (_subtitles[_currentLine].Count - 1 == _currentLinePart)
-            {
-                _currentLine++;
-                _currentLinePart = 0;
-            }
-            else
-            {
-                _currentLinePart++;
-            }
             _readLine = false;
             yield return null;
         }
         _readLine = true;
         _startedReadingLine = false;
         _currentLine = lineNum - 1;
-        _currentLinePart = 0;
-        StartCoroutine(ReadText());
+        _currentLinePart = linePartNum - 1;
+        StartCoroutine(ReadText(lineSpeed));
     }
 
-    private IEnumerator ReadText()
+    private IEnumerator ReadText(float lineSpeed = -1f)
     {
         while (_readLine == true)
         {
@@ -120,13 +122,21 @@ public class SubtitleManager : MonoBehaviour
                 _characterProgress = 1;
                 _timeSinceLastLine = 0f;
                 _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1);
-                _timePerLine = ((_currentSubtitle.Length / 11f) / _currentSubtitle.Length) + (_textSlowness / 10f);
+                if(lineSpeed != -1f)
+                {
+                    Debug.Log($"Reading line over {lineSpeed} seconds");
+                    _timePerCharacter = lineSpeed / _currentSubtitle.Length;
+                }
+                else
+                {
+                    _timePerCharacter = GetLineTimeLength() / _currentSubtitle.Length;
+                }
                 ShowText();
             }
             else
             {
-                _timeSinceLastLine += _frame;
-                if (_timeSinceLastLine > _timePerLine)
+                _timeSinceLastLine += Time.deltaTime;
+                if (_timeSinceLastLine > _timePerCharacter)
                 {
                     _timeSinceLastLine = 0f;
                     ShowText();
@@ -172,11 +182,6 @@ public class SubtitleManager : MonoBehaviour
             _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, _subtitleText.color.a - (Time.deltaTime / t));
             yield return null;
         }
-
-        if (_currentLinePart > 0)
-        {
-            ReadNextLine();
-        }
     }
 
     private void ShowText()
@@ -192,5 +197,99 @@ public class SubtitleManager : MonoBehaviour
         string notVisible = _currentSubtitle.Substring(_characterProgress, Mathf.Max(_currentSubtitle.Length - (_characterProgress), 0));
         _subtitleText.text = $"{visible}<color=#00000000>{notVisible}</color>";
         _characterProgress++;
+    }
+
+
+    private float GetLineTimeLength()
+    {
+        switch (_currentLine)
+        {
+            case 0:
+                Debug.Log($"Running Line 1 for {lineTimeLength1} seconds");
+                return lineTimeLength1;
+            case 1:
+                switch (_currentLinePart)
+                {
+                    case 0:
+                        Debug.Log($"Running Line 2a for {lineTimeLength2a} seconds");
+                        return lineTimeLength2a;
+                    case 1:
+                        Debug.Log($"Running Line 2b for {lineTimeLength2b} seconds");
+                        return lineTimeLength2b;
+                    default:
+                        Debug.LogError("Uninitialized line part time trying to be found");
+                        break;
+                }
+                break;
+            case 2:
+                switch (_currentLinePart)
+                {
+                    case 0:
+                        Debug.Log($"Running Line 3a for {lineTimeLength3a} seconds");
+                        return lineTimeLength3a;
+                    case 1:
+                        Debug.Log($"Running Line 3b for {lineTimeLength3b} seconds");
+                        return lineTimeLength3b;
+                    default:
+                        Debug.LogError("Uninitialized line part time trying to be found");
+                        break;
+                }
+                break;
+            case 3:
+                Debug.Log($"Running Line 4 for {lineTimeLength4} seconds");
+                return lineTimeLength4;
+            case 4:
+                switch (_currentLinePart)
+                {
+                    case 0:
+                        Debug.Log($"Running Line 5a for {lineTimeLength5a} seconds");
+                        return lineTimeLength5a;
+                    case 1:
+                        Debug.Log($"Running Line 5b for {lineTimeLength5b} seconds");
+                        return lineTimeLength5b;
+                    case 2:
+                        Debug.Log($"Running Line 5c for {lineTimeLength5c} seconds");
+                        return lineTimeLength5c;
+                    default:
+                        Debug.LogError("Uninitialized line part time trying to be found");
+                        break;
+                }
+                break;
+            case 5:
+                switch (_currentLinePart)
+                {
+                    case 0:
+                        Debug.Log($"Running Line 6a for {lineTimeLength6a} seconds");
+                        return lineTimeLength6a;
+                    case 1:
+                        Debug.Log($"Running Line 6b for {lineTimeLength6b} seconds");
+                        return lineTimeLength6b;
+                    default:
+                        Debug.LogError("Uninitialized line part time trying to be found");
+                        break;
+                }
+                break;
+            case 6:
+                switch (_currentLinePart)
+                {
+                    case 0:
+                        Debug.Log($"Running Line 7a for {lineTimeLength7a} seconds");
+                        return lineTimeLength7a;
+                    case 1:
+                        Debug.Log($"Running Line 7b for {lineTimeLength7b} seconds");
+                        return lineTimeLength7b;
+                    case 2:
+                        Debug.Log($"Running Line 7c for {lineTimeLength7c} seconds");
+                        return lineTimeLength7c;
+                    default:
+                        Debug.LogError("Uninitialized line part time trying to be found");
+                        break;
+                }
+                break;
+            default:
+                Debug.LogError("Uninitialized line time trying to be found");
+                break;
+        }
+        return 1f;
     }
 }
