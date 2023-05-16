@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: Insert random text here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f3b0fb51b0506844b6f43af1bef935e, type: 2}
   m_sharedMaterial: {fileID: 893232708259277076, guid: 3f3b0fb51b0506844b6f43af1bef935e,
@@ -135,13 +135,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 7010196817252074132}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -182,7 +182,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7010196817301720718}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 2.6}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.3}
   m_Children:
@@ -190,10 +190,10 @@ RectTransform:
   - {fileID: 7010196817252074131}
   m_Father: {fileID: 7010196818266474273}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -576.33, y: -211.5}
+  m_AnchoredPosition: {x: -576.5, y: -211.5}
   m_SizeDelta: {x: 10000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7010196817301720720
@@ -209,20 +209,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _subtitleText: {fileID: 7010196817252074132}
-  lineSlowness1: 3
-  lineSlowness2a: 3
-  lineSlowness2b: 3
-  lineSlowness3a: 3
-  lineSlowness3b: 3
-  lineSlowness4: 3
-  lineSlowness5a: 3
-  lineSlowness5b: 3
-  lineSlowness5c: 3
-  lineSlowness6a: 3
-  lineSlowness6b: 3
-  lineSlowness7a: 3
-  lineSlowness7b: 3
-  lineSlowness7c: 3
+  lineTimeLength1: 0
+  lineTimeLength2a: 0
+  lineTimeLength2b: 0
+  lineTimeLength3a: 0
+  lineTimeLength3b: 0
+  lineTimeLength4: 0
+  lineTimeLength5a: 0
+  lineTimeLength5b: 0
+  lineTimeLength5c: 0
+  lineTimeLength6a: 0
+  lineTimeLength6b: 0
+  lineTimeLength7a: 0
+  lineTimeLength7b: 0
+  lineTimeLength7c: 0
 --- !u!1 &7010196817337644482
 GameObject:
   m_ObjectHideFlags: 0
