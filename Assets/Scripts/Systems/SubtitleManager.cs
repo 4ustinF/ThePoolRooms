@@ -54,7 +54,7 @@ public class SubtitleManager : MonoBehaviour
         _subtitles[4].Add("The future is obscured and only by going forward can we find the answer to these questions.");
         _subtitles[5].Add("But ambiguity cannot last forever. Eventually everyone comes to an understanding of who they are and what they want out of life.");
         _subtitles[5].Add("The darkness is gone and a clear road lies ahead.");
-        _subtitles[6].Add("Will you be able to make your way through them?");
+        _subtitles[6].Add("There may be troubles in your future. Anything could happen. Will you be able to make your way through them?");
         _subtitles[6].Add("Once you know who you are, the tools to deal with whatever may come are right there for you.");
         _subtitles[6].Add("All you need . . . is to pick them up");
         _subtitleText.text = "";
