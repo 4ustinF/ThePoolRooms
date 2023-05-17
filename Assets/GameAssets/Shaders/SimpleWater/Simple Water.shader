@@ -102,10 +102,6 @@
 				   float4 ripplesColored = ripples * _FoamC;
 
 				   return saturate(col + ripplesColored);
-				   //return ripplesColored;
-				   //return col;
-
-				   //return half4(1.0f, 0.0f, 0.0f, 1.0f);
 				}
 				ENDCG
 			}
