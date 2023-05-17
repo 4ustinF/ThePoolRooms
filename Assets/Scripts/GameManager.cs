@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(5.0f, PlayDialog1));
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)

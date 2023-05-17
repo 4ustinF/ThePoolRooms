@@ -84,7 +84,7 @@ public class SubtitleManager : MonoBehaviour
         }
         _readLine = true;
         _startedReadingLine = false;
-        StartCoroutine(ReadText());
+        StartCoroutine(ReadText(-1f));
     }
 
     public void ReadSpecificLine(int lineNum, int linePartNum, float lineSpeed)
@@ -111,7 +111,7 @@ public class SubtitleManager : MonoBehaviour
         StartCoroutine(ReadText(lineSpeed));
     }
 
-    private IEnumerator ReadText(float lineSpeed = -1f)
+    private IEnumerator ReadText(float lineSpeed)
     {
         while (_readLine == true)
         {
@@ -122,7 +122,7 @@ public class SubtitleManager : MonoBehaviour
                 _characterProgress = 1;
                 _timeSinceLastLine = 0f;
                 _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1);
-                if(lineSpeed != -1f)
+                if (lineSpeed != -1f)
                 {
                     Debug.Log($"Reading line over {lineSpeed} seconds");
                     _timePerCharacter = lineSpeed / _currentSubtitle.Length;
@@ -189,13 +189,13 @@ public class SubtitleManager : MonoBehaviour
         if (_characterProgress >= _currentSubtitle.Length)
         {
             _characterProgress++;
-            _subtitleText.text = _currentSubtitle;
+            _subtitleText.text = "<line-height=150%>" + _currentSubtitle;
             return;
         }
 
         string visible = _currentSubtitle.Substring(0, _characterProgress);
         string notVisible = _currentSubtitle.Substring(_characterProgress, Mathf.Max(_currentSubtitle.Length - (_characterProgress), 0));
-        _subtitleText.text = $"{visible}<color=#00000000>{notVisible}</color>";
+        _subtitleText.text = $"<line-height=150%>{visible}<color=#00000000>{notVisible}</color>";
         _characterProgress++;
     }
 
