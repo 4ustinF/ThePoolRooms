@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Liminal.SDK.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,7 +20,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _dialougeClip6 = null;
     [SerializeField] private AudioClip _dialougeClip7 = null;
 
-    private void Start()
+    private void Awake()
+    {
+        ExperienceApp.Initializing += Initialize;
+    }
+
+    public void Initialize()
     {
         StartCoroutine(WaitAndInvokeFunc(5.0f, PlayDialog1));
     }
