@@ -22954,7 +22954,7 @@ PrefabInstance:
     - target: {fileID: 8406280007082530948, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6bc5b754e80d54ca682b19aa83124d, type: 3}
@@ -23054,47 +23054,47 @@ PrefabInstance:
     - target: {fileID: 2687561713923028379, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7619924500977085790, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6237128187303067499, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4728687621031998210, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3301504280187422958, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3422584552557404366, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2807936500892320829, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3517794005470078937, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6852388061272389246, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec701fc80c5e6e4c9d4703534715e2f, type: 3}
@@ -23189,7 +23189,7 @@ PrefabInstance:
     - target: {fileID: 8406280007082530948, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6bc5b754e80d54ca682b19aa83124d, type: 3}
