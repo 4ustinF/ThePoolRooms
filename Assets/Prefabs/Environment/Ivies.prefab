@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3377217612274512601}
   m_Layer: 0
-  m_Name: Joe's Ivies
+  m_Name: Ivies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

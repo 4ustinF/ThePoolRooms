@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3194172827711554786}
   m_Layer: 0
-  m_Name: ivy
+  m_Name: Ivy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3194172827711554786
 Transform:
   m_ObjectHideFlags: 0
@@ -2501,11 +2501,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3194172827711554786}
     m_Modifications:
-    - target: {fileID: 2099629405193489892, guid: be33bba3f32b7b84e83e215e14e4c2bc,
-        type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Draped_Flowers_04
-      objectReference: {fileID: 0}
     - target: {fileID: 3132315153066049527, guid: be33bba3f32b7b84e83e215e14e4c2bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2575,6 +2570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099629405193489892, guid: be33bba3f32b7b84e83e215e14e4c2bc,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Draped_Flowers_04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be33bba3f32b7b84e83e215e14e4c2bc, type: 3}
@@ -2861,11 +2861,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3194172827711554786}
     m_Modifications:
-    - target: {fileID: 168334404662142250, guid: 4812a2c4bda85594c8945b76a0729862,
-        type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Pillar_Flowers_08
-      objectReference: {fileID: 0}
     - target: {fileID: 3750745217411307321, guid: 4812a2c4bda85594c8945b76a0729862,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2935,6 +2930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 168334404662142250, guid: 4812a2c4bda85594c8945b76a0729862,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Pillar_Flowers_08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4812a2c4bda85594c8945b76a0729862, type: 3}
