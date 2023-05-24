@@ -9601,7 +9601,7 @@ MonoBehaviour:
   _sprinklesPS: {fileID: 7393507433513726539}
   _surfaceDust1PS: {fileID: 7393507434480393071}
   _surfaceDust2PS: {fileID: 7393507433803134691}
-  _maxVolume: 0.25
+  _maxVolume: 0.2
   _fadeInMultiplier: 0.75
   _fadeOutMultiplier: 0.5
   _waitTime: 0.5
