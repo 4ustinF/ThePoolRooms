@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3377217612274512601}
   m_Layer: 0
-  m_Name: Ivies
+  m_Name: Ivy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,6 +171,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2930256874297365505, guid: 47617add38d05fa408f5dbe0e74e1e32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501138689763188957, guid: 47617add38d05fa408f5dbe0e74e1e32,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501138689763188957, guid: 47617add38d05fa408f5dbe0e74e1e32,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47617add38d05fa408f5dbe0e74e1e32, type: 3}
 --- !u!4 &2229568525857701026 stripped
@@ -261,6 +276,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059253856385205 stripped
@@ -280,6 +310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594391207640046753, guid: bac190556e4b45a4d8fa125e864d410f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7915254489858109106, guid: bac190556e4b45a4d8fa125e864d410f,
         type: 3}
@@ -350,6 +385,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881670900334340221, guid: bac190556e4b45a4d8fa125e864d410f,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881670900334340221, guid: bac190556e4b45a4d8fa125e864d410f,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bac190556e4b45a4d8fa125e864d410f, type: 3}
@@ -441,6 +486,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059253698334458 stripped
@@ -530,6 +590,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
@@ -621,6 +696,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_22
       objectReference: {fileID: 0}
+    - target: {fileID: 3525620891089743656, guid: bfb81aa36af245a4ca027561db4bdba0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941223883544173556, guid: bfb81aa36af245a4ca027561db4bdba0,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941223883544173556, guid: bfb81aa36af245a4ca027561db4bdba0,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb81aa36af245a4ca027561db4bdba0, type: 3}
 --- !u!4 &483816305067510342 stripped
@@ -711,6 +801,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059253764967019 stripped
@@ -730,6 +835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_10 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027232024323633274, guid: c36827caf78d56a479ec908d2bfb5103,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5412326653080748649, guid: c36827caf78d56a479ec908d2bfb5103,
         type: 3}
@@ -800,6 +910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312717412842144934, guid: c36827caf78d56a479ec908d2bfb5103,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7312717412842144934, guid: c36827caf78d56a479ec908d2bfb5103,
         type: 3}
@@ -896,6 +1011,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059254105879171 stripped
@@ -986,6 +1116,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059254139634907 stripped
@@ -1005,6 +1150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_06 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747305052591837404, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4325052290076615375, guid: 8ed5cd9684ffb864d8d06b633627ac33,
         type: 3}
@@ -1075,6 +1225,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5cd9684ffb864d8d06b633627ac33, type: 3}
@@ -1166,6 +1326,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059253939395746 stripped
@@ -1185,6 +1360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_06 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747305052591837404, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4325052290076615375, guid: 8ed5cd9684ffb864d8d06b633627ac33,
         type: 3}
@@ -1255,6 +1435,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5cd9684ffb864d8d06b633627ac33, type: 3}
@@ -1346,6 +1536,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_04
       objectReference: {fileID: 0}
+    - target: {fileID: 2099629405193489892, guid: be33bba3f32b7b84e83e215e14e4c2bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 369215856113613112, guid: be33bba3f32b7b84e83e215e14e4c2bc,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369215856113613112, guid: be33bba3f32b7b84e83e215e14e4c2bc,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be33bba3f32b7b84e83e215e14e4c2bc, type: 3}
 --- !u!4 &3132315152504531655 stripped
@@ -1436,6 +1641,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059253208320437 stripped
@@ -1455,6 +1675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_10 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027232024323633274, guid: c36827caf78d56a479ec908d2bfb5103,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5412326653080748649, guid: c36827caf78d56a479ec908d2bfb5103,
         type: 3}
@@ -1525,6 +1750,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312717412842144934, guid: c36827caf78d56a479ec908d2bfb5103,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7312717412842144934, guid: c36827caf78d56a479ec908d2bfb5103,
         type: 3}
@@ -1621,6 +1851,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_05
       objectReference: {fileID: 0}
+    - target: {fileID: 7834659885390115512, guid: 8a061f3f8f1342d42ad51700654601e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8396569715517687396, guid: 8a061f3f8f1342d42ad51700654601e8,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8396569715517687396, guid: 8a061f3f8f1342d42ad51700654601e8,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a061f3f8f1342d42ad51700654601e8, type: 3}
 --- !u!4 &6548537869672820492 stripped
@@ -1710,6 +1955,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_23 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525536421943198373, guid: 858d849ade2aeab4cad1a8212e7190f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092059836698752633, guid: 858d849ade2aeab4cad1a8212e7190f5,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092059836698752633, guid: 858d849ade2aeab4cad1a8212e7190f5,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858d849ade2aeab4cad1a8212e7190f5, type: 3}
@@ -1801,6 +2061,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059252766019573 stripped
@@ -1820,6 +2095,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 747305052591837404, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4325052290076615375, guid: 8ed5cd9684ffb864d8d06b633627ac33,
         type: 3}
@@ -1891,6 +2171,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.500001
       objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5cd9684ffb864d8d06b633627ac33, type: 3}
 --- !u!4 &4325052291059742496 stripped
@@ -1910,6 +2200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594391207640046753, guid: bac190556e4b45a4d8fa125e864d410f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7915254489858109106, guid: bac190556e4b45a4d8fa125e864d410f,
         type: 3}
@@ -1981,6 +2276,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4881670900334340221, guid: bac190556e4b45a4d8fa125e864d410f,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881670900334340221, guid: bac190556e4b45a4d8fa125e864d410f,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bac190556e4b45a4d8fa125e864d410f, type: 3}
 --- !u!4 &7915254490753272271 stripped
@@ -2000,6 +2305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_06 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747305052591837404, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4325052290076615375, guid: 8ed5cd9684ffb864d8d06b633627ac33,
         type: 3}
@@ -2071,6 +2381,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.500001
       objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5cd9684ffb864d8d06b633627ac33, type: 3}
 --- !u!4 &4325052291403428784 stripped
@@ -2090,6 +2410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_06 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747305052591837404, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4325052290076615375, guid: 8ed5cd9684ffb864d8d06b633627ac33,
         type: 3}
@@ -2161,6 +2486,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5cd9684ffb864d8d06b633627ac33, type: 3}
 --- !u!4 &4325052291520365903 stripped
@@ -2180,6 +2515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 950855864883151122, guid: b63806ff8a7a67845a62191825c3ace6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4281031569787056897, guid: b63806ff8a7a67845a62191825c3ace6,
         type: 3}
@@ -2250,6 +2590,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517370386489488846, guid: b63806ff8a7a67845a62191825c3ace6,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517370386489488846, guid: b63806ff8a7a67845a62191825c3ace6,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b63806ff8a7a67845a62191825c3ace6, type: 3}
@@ -2341,6 +2691,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_06
       objectReference: {fileID: 0}
+    - target: {fileID: 2930256874297365505, guid: 47617add38d05fa408f5dbe0e74e1e32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501138689763188957, guid: 47617add38d05fa408f5dbe0e74e1e32,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501138689763188957, guid: 47617add38d05fa408f5dbe0e74e1e32,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47617add38d05fa408f5dbe0e74e1e32, type: 3}
 --- !u!4 &2229568524451694587 stripped
@@ -2430,6 +2795,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
@@ -2521,6 +2901,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_23
       objectReference: {fileID: 0}
+    - target: {fileID: 7525536421943198373, guid: 858d849ade2aeab4cad1a8212e7190f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092059836698752633, guid: 858d849ade2aeab4cad1a8212e7190f5,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092059836698752633, guid: 858d849ade2aeab4cad1a8212e7190f5,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858d849ade2aeab4cad1a8212e7190f5, type: 3}
 --- !u!4 &6785599007194152748 stripped
@@ -2540,6 +2935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_Flowers_06 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747305052591837404, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4325052290076615375, guid: 8ed5cd9684ffb864d8d06b633627ac33,
         type: 3}
@@ -2610,6 +3010,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324660757639816192, guid: 8ed5cd9684ffb864d8d06b633627ac33,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5cd9684ffb864d8d06b633627ac33, type: 3}
@@ -2701,6 +3111,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_20 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3798377941787906481, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209477266281112941, guid: d924d04d8f4b82241936a6f6408ae093,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d924d04d8f4b82241936a6f6408ae093, type: 3}
 --- !u!4 &211059252405896575 stripped
@@ -2716,6 +3141,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 3946648857154442937, guid: 3ebc4e79f9fc33440880994e75b95777,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946648857154442937, guid: 3ebc4e79f9fc33440880994e75b95777,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 44483909373830314, guid: 3ebc4e79f9fc33440880994e75b95777,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2786,10 +3221,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3946648857154442937, guid: 3ebc4e79f9fc33440880994e75b95777,
+    - target: {fileID: 3384884157580993125, guid: 3ebc4e79f9fc33440880994e75b95777,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_09
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3384884157580993125, guid: 3ebc4e79f9fc33440880994e75b95777,
         type: 3}
@@ -2815,6 +3250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702699604279368508, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7737074346009553199, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
@@ -2873,6 +3313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -2895,6 +3340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615383990287797482, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6914185124193763065, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
         type: 3}
@@ -2968,6 +3418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8184044826222606390, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184044826222606390, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -2986,6 +3441,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 1849794288631091551, guid: 324179dd7bfc912438f87b316334918b,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849794288631091551, guid: 324179dd7bfc912438f87b316334918b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3454423376547930956, guid: 324179dd7bfc912438f87b316334918b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3056,10 +3521,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1849794288631091551, guid: 324179dd7bfc912438f87b316334918b,
+    - target: {fileID: 114591198164100483, guid: 324179dd7bfc912438f87b316334918b,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_11
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114591198164100483, guid: 324179dd7bfc912438f87b316334918b,
         type: 3}
@@ -3085,6 +3550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_12 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690429761845329714, guid: f301bc77aea9dc242b9366d1150c9cef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1372764756250397985, guid: f301bc77aea9dc242b9366d1150c9cef,
         type: 3}
@@ -3158,6 +3628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425496444119534574, guid: f301bc77aea9dc242b9366d1150c9cef,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425496444119534574, guid: f301bc77aea9dc242b9366d1150c9cef,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -3180,6 +3655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_07 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702699604279368508, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7737074346009553199, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
@@ -3253,6 +3733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -3271,6 +3756,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 3946648857154442937, guid: 3ebc4e79f9fc33440880994e75b95777,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_09 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946648857154442937, guid: 3ebc4e79f9fc33440880994e75b95777,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 44483909373830314, guid: 3ebc4e79f9fc33440880994e75b95777,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3341,10 +3836,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3946648857154442937, guid: 3ebc4e79f9fc33440880994e75b95777,
+    - target: {fileID: 3384884157580993125, guid: 3ebc4e79f9fc33440880994e75b95777,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_09 (1)
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3384884157580993125, guid: 3ebc4e79f9fc33440880994e75b95777,
         type: 3}
@@ -3366,6 +3861,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 3525620891089743656, guid: f73c4dec878c9544ba1fe5ec77aabccc,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525620891089743656, guid: f73c4dec878c9544ba1fe5ec77aabccc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 483816305025047867, guid: f73c4dec878c9544ba1fe5ec77aabccc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3436,10 +3941,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3525620891089743656, guid: f73c4dec878c9544ba1fe5ec77aabccc,
+    - target: {fileID: 2941223883544173556, guid: f73c4dec878c9544ba1fe5ec77aabccc,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_09
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2941223883544173556, guid: f73c4dec878c9544ba1fe5ec77aabccc,
         type: 3}
@@ -3465,6 +3970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027232024323633274, guid: c36827caf78d56a479ec908d2bfb5103,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5412326653080748649, guid: c36827caf78d56a479ec908d2bfb5103,
         type: 3}
@@ -3538,6 +4048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7312717412842144934, guid: c36827caf78d56a479ec908d2bfb5103,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312717412842144934, guid: c36827caf78d56a479ec908d2bfb5103,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -3560,6 +4075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525536421943198373, guid: 3e6766cd1a1549d4795ce0b7cbe18bea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6785599005811716278, guid: 3e6766cd1a1549d4795ce0b7cbe18bea,
         type: 3}
@@ -3633,6 +4153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8092059836698752633, guid: 3e6766cd1a1549d4795ce0b7cbe18bea,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092059836698752633, guid: 3e6766cd1a1549d4795ce0b7cbe18bea,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -3655,6 +4180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691904114683394420, guid: 9bb550eec6d5218478948a6acacc3c93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5675803703179955047, guid: 9bb550eec6d5218478948a6acacc3c93,
         type: 3}
@@ -3728,6 +4258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963425602970291624, guid: 9bb550eec6d5218478948a6acacc3c93,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963425602970291624, guid: 9bb550eec6d5218478948a6acacc3c93,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -3746,6 +4281,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_05 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1078652045880793507, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3816,10 +4361,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+    - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_05 (3)
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
@@ -3845,6 +4390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998883008761727831, guid: 0418c41d91215d14ba7c90b05c1e874b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6303454923792349508, guid: 0418c41d91215d14ba7c90b05c1e874b,
         type: 3}
@@ -3918,6 +4468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8727361517354270603, guid: 0418c41d91215d14ba7c90b05c1e874b,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727361517354270603, guid: 0418c41d91215d14ba7c90b05c1e874b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -3940,6 +4495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_07 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702699604279368508, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7737074346009553199, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
@@ -4013,6 +4573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4035,6 +4600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998883008761727831, guid: 0418c41d91215d14ba7c90b05c1e874b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6303454923792349508, guid: 0418c41d91215d14ba7c90b05c1e874b,
         type: 3}
@@ -4108,6 +4678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8727361517354270603, guid: 0418c41d91215d14ba7c90b05c1e874b,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727361517354270603, guid: 0418c41d91215d14ba7c90b05c1e874b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4130,6 +4705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_06 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998883008761727831, guid: 0418c41d91215d14ba7c90b05c1e874b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6303454923792349508, guid: 0418c41d91215d14ba7c90b05c1e874b,
         type: 3}
@@ -4203,6 +4783,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8727361517354270603, guid: 0418c41d91215d14ba7c90b05c1e874b,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727361517354270603, guid: 0418c41d91215d14ba7c90b05c1e874b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4225,6 +4810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690429761845329714, guid: f301bc77aea9dc242b9366d1150c9cef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1372764756250397985, guid: f301bc77aea9dc242b9366d1150c9cef,
         type: 3}
@@ -4298,6 +4888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425496444119534574, guid: f301bc77aea9dc242b9366d1150c9cef,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425496444119534574, guid: f301bc77aea9dc242b9366d1150c9cef,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4321,40 +4916,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_03
       objectReference: {fileID: 0}
+    - target: {fileID: 2930256874297365505, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.566
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.124
+      value: 3.1661036
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.104
+      value: 1.0427039
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07255309
+      value: -0.03548965
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.013923038
+      value: 0.014093698
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.002334838
+      value: 0.00081871107
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9972646
+      value: 0.9992703
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
@@ -4364,17 +4964,17 @@ PrefabInstance:
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 8.317
+      value: -4.0690002
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.628
+      value: 1.6150001
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.38700002
+      value: 0.037
       objectReference: {fileID: 0}
     - target: {fileID: 2229568525867083282, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
@@ -4390,6 +4990,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501138689763188957, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3501138689763188957, guid: 78c63ac0e4e6fe04a91eb23e4fc9cef9,
         type: 3}
@@ -4415,6 +5020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691904114683394420, guid: 9bb550eec6d5218478948a6acacc3c93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5675803703179955047, guid: 9bb550eec6d5218478948a6acacc3c93,
         type: 3}
@@ -4488,6 +5098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963425602970291624, guid: 9bb550eec6d5218478948a6acacc3c93,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963425602970291624, guid: 9bb550eec6d5218478948a6acacc3c93,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4510,6 +5125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Draped_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834659885390115512, guid: 642252a07cc015d40800f7a4da157ec5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6548537868920864939, guid: 642252a07cc015d40800f7a4da157ec5,
         type: 3}
@@ -4583,6 +5203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8396569715517687396, guid: 642252a07cc015d40800f7a4da157ec5,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8396569715517687396, guid: 642252a07cc015d40800f7a4da157ec5,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4601,6 +5226,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1078652045880793507, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4671,10 +5306,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+    - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_05 (1)
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
@@ -4700,6 +5335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615383990287797482, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6914185124193763065, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
         type: 3}
@@ -4773,6 +5413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8184044826222606390, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184044826222606390, guid: 66462de5528b2a9488d71d6b2ddc3f0b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -4791,6 +5436,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 3809394851891822497, guid: de00e0c6445865f4a87d040e16a6edaa,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809394851891822497, guid: de00e0c6445865f4a87d040e16a6edaa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4581956065130112283, guid: de00e0c6445865f4a87d040e16a6edaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4861,10 +5516,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3809394851891822497, guid: de00e0c6445865f4a87d040e16a6edaa,
+    - target: {fileID: 3448996587720220276, guid: de00e0c6445865f4a87d040e16a6edaa,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_13
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3448996587720220276, guid: de00e0c6445865f4a87d040e16a6edaa,
         type: 3}
@@ -4886,6 +5541,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 950855864883151122, guid: dc89649592181944bb1230ee6b7aff7b,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Draped_Flowers_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 950855864883151122, guid: dc89649592181944bb1230ee6b7aff7b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4281031569787056897, guid: dc89649592181944bb1230ee6b7aff7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4956,10 +5621,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 950855864883151122, guid: dc89649592181944bb1230ee6b7aff7b,
+    - target: {fileID: 1517370386489488846, guid: dc89649592181944bb1230ee6b7aff7b,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Draped_Flowers_02
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1517370386489488846, guid: dc89649592181944bb1230ee6b7aff7b,
         type: 3}
@@ -4981,6 +5646,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_05 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1078652045880793507, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5051,10 +5726,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+    - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_05 (2)
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
@@ -5080,6 +5755,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691904114683394420, guid: 9bb550eec6d5218478948a6acacc3c93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5675803703179955047, guid: 9bb550eec6d5218478948a6acacc3c93,
         type: 3}
@@ -5153,6 +5833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6963425602970291624, guid: 9bb550eec6d5218478948a6acacc3c93,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963425602970291624, guid: 9bb550eec6d5218478948a6acacc3c93,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -5175,6 +5860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Ivy_Flowers_07 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702699604279368508, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7737074346009553199, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
@@ -5248,6 +5938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987758352607686624, guid: 9c9f6366ea1d5e64eaf45b597bc7f12a,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c2a279c9d932644b8f15be74d373759, type: 2}
@@ -5266,6 +5961,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 4601864557863928617, guid: f3cca32c29c80f14a8197b787962270e,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601864557863928617, guid: f3cca32c29c80f14a8197b787962270e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 686309350933164346, guid: f3cca32c29c80f14a8197b787962270e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5336,10 +6041,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4601864557863928617, guid: f3cca32c29c80f14a8197b787962270e,
+    - target: {fileID: 2873803865384466421, guid: f3cca32c29c80f14a8197b787962270e,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_06
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2873803865384466421, guid: f3cca32c29c80f14a8197b787962270e,
         type: 3}
@@ -5361,6 +6066,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 950855864883151122, guid: dc89649592181944bb1230ee6b7aff7b,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Draped_Flowers_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950855864883151122, guid: dc89649592181944bb1230ee6b7aff7b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4281031569787056897, guid: dc89649592181944bb1230ee6b7aff7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5431,10 +6146,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 950855864883151122, guid: dc89649592181944bb1230ee6b7aff7b,
+    - target: {fileID: 1517370386489488846, guid: dc89649592181944bb1230ee6b7aff7b,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Draped_Flowers_02 (1)
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1517370386489488846, guid: dc89649592181944bb1230ee6b7aff7b,
         type: 3}
@@ -5456,6 +6171,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3377217612274512601}
     m_Modifications:
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Env_Ivy_Flowers_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1078652045880793507, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5526,10 +6251,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4081243723037404080, guid: baf8284bc959ef8459540f5206883272,
+    - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
-      propertyPath: m_Name
-      value: SM_Env_Ivy_Flowers_05
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350786123682144108, guid: baf8284bc959ef8459540f5206883272,
         type: 3}
