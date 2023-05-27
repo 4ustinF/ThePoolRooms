@@ -6150,7 +6150,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.8
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7273,7 +7273,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.6
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8127,7 +8127,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.9
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8582,7 +8582,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.9
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -13109,7 +13109,7 @@ GameObject:
   - component: {fileID: 1239374985099658902}
   - component: {fileID: 5155865033463906243}
   - component: {fileID: 6730028670502292007}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: FloorPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13642,7 +13642,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.8
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -20615,7 +20615,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.4
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -20657,11 +20657,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
-    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
-        type: 3}
-      propertyPath: m_Name
-      value: SimplifiedHandrail (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20732,6 +20727,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
+        type: 3}
+      propertyPath: m_Name
+      value: SimplifiedHandrail (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6bc5b754e80d54ca682b19aa83124d, type: 3}
 --- !u!4 &3400962816366964362 stripped
@@ -20747,16 +20747,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
-    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
-        type: 3}
-      propertyPath: m_Name
-      value: Ladder_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6926988229668184341, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20827,6 +20817,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
+        type: 3}
+      propertyPath: m_Name
+      value: Ladder_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec701fc80c5e6e4c9d4703534715e2f, type: 3}
 --- !u!4 &1575602658579344375 stripped
@@ -20842,11 +20842,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
-    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
-        type: 3}
-      propertyPath: m_Name
-      value: SimplifiedHandrail
-      objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20916,6 +20911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
+        type: 3}
+      propertyPath: m_Name
+      value: SimplifiedHandrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6bc5b754e80d54ca682b19aa83124d, type: 3}
