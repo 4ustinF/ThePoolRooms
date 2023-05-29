@@ -124,7 +124,7 @@ public class SubtitleManager : MonoBehaviour
                 _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1);
                 if (lineSpeed != -1f)
                 {
-                    Debug.Log($"Reading line over {lineSpeed} seconds");
+                    //Debug.Log($"Reading line over {lineSpeed} seconds");
                     _timePerCharacter = lineSpeed / _currentSubtitle.Length;
                 }
                 else

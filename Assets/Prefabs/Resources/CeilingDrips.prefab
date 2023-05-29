@@ -40,7 +40,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292232856565398675}
   serializedVersion: 6
-  lengthInSec: 3
+  lengthInSec: 1.5
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 3
@@ -4702,7 +4702,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292232856835734208}
   serializedVersion: 6
-  lengthInSec: 3
+  lengthInSec: 1.5
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 3
@@ -9372,7 +9372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05242bb0aeff76249baad29b57993fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitTime: {x: 1, y: 3}
+  _waitTime: {x: 2, y: 5}
   _waterDriplets:
   - {fileID: 8010325757104202183}
   - {fileID: 7292232856835734208}
@@ -9419,7 +9419,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292232857367314710}
   serializedVersion: 6
-  lengthInSec: 3
+  lengthInSec: 1.5
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 3
@@ -14081,7 +14081,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292232857862133876}
   serializedVersion: 6
-  lengthInSec: 3
+  lengthInSec: 1.5
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 3
@@ -18743,7 +18743,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8010325757104202183}
   serializedVersion: 6
-  lengthInSec: 3
+  lengthInSec: 1.5
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 3

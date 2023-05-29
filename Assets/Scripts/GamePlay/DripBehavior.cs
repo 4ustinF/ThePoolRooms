@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Liminal.SDK.Core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,11 +10,16 @@ public class DripBehavior : MonoBehaviour
 
     private void Awake()
     {
-        foreach(var drip in _waterDriplets)
+        foreach (var drip in _waterDriplets)
         {
             drip.SetActive(false);
         }
 
+        ExperienceApp.Initializing += Initialize;
+    }
+
+    public void Initialize()
+    {
         StartCoroutine(DripRandomRoutine(Random.Range(_waitTime.x, _waitTime.y)));
     }
 
