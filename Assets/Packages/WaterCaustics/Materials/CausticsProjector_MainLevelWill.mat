@@ -66,7 +66,7 @@ Material:
     m_Floats:
     - _Blend: 1
     - _BumpScale: 1
-    - _CausticSpeed: 5
+    - _CausticSpeed: 1
     - _Cutoff: 0.5
     - _DepthBlend: 420
     - _DepthFade: 0

@@ -6,31 +6,26 @@ using UnityEngine;
 public class WaterHandInteraction : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _waterSplashes = new List<GameObject>();
-    [SerializeField] private Transform _handTransform = null;
-
+    [SerializeField] private AudioSource _audioSource = null;
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (string.Compare(other.tag, "Player", System.StringComparison.OrdinalIgnoreCase) == 0)
-        //{
-        //    foreach (GameObject p in _waterSplashes)
-        //    {
-        //        if(p.activeInHierarchy == false)
-        //        {
-        //            // Controller Shake
-        //            //var device = VRDevice.Device;
-        //            //var rightHand = device.PrimaryHand;
-        //            //var leftHand = device.SecondaryHand;
+        if (string.Compare(other.tag, "Player", System.StringComparison.OrdinalIgnoreCase) == 0)
+        {
+            _audioSource.Play();
+            foreach (GameObject p in _waterSplashes)
+            {
+                if (p.activeInHierarchy == false)
+                {
+                    OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+                    OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
 
-        //            //var primaryInput = device.PrimaryInputDevice;
-        //            //var secondaryInput = device.SecondaryInputDevice;
-
-        //            p.transform.position = new Vector3(_handTransform.position.x, 0.0f, _handTransform.position.z);
-        //            p.SetActive(true);
-        //            break;
-        //        }
-        //    }
-        //}
+                    p.transform.position = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
+                    p.SetActive(true);
+                    break;
+                }
+            }
+        }
     }
 
 }

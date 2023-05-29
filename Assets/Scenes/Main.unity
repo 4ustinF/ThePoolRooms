@@ -803,10 +803,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1081486961}
-    - target: {fileID: 1599915649, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
-      propertyPath: _handTransform
-      value: 
-      objectReference: {fileID: 895096356}
+    - target: {fileID: 1146795359, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
 --- !u!4 &119913241 stripped
@@ -4252,11 +4252,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Projectors
-      objectReference: {fileID: 0}
-    - target: {fileID: 1669622154312625717, guid: 43922ba794035d240be70a97942b305b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1669622154312625718, guid: 43922ba794035d240be70a97942b305b,
         type: 3}
