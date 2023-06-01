@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _dialougeClip5 = null;
     [SerializeField] private AudioClip _dialougeClip6 = null;
     [SerializeField] private AudioClip _dialougeClip7 = null;
+    [SerializeField] private AudioClip _dialougeClip8 = null;
+    [SerializeField] private AudioClip _dialougeClip9 = null;
+    [SerializeField] private AudioClip _dialougeClip10 = null;
+    [SerializeField] private AudioClip _dialougeClip11 = null;
+    [SerializeField] private AudioClip _dialougeClip12 = null;
+    [SerializeField] private AudioClip _dialougeClip13 = null;
 
     private void Awake()
     {
@@ -27,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void Initialize()
     {
+        ///make this 5 again before pushing
         StartCoroutine(WaitAndInvokeFunc(5.0f, PlayDialog1));
     }
 
@@ -34,6 +41,12 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         func.Invoke();
+    }
+
+    private IEnumerator WaitAndInvokeAudio(float waitTime, AudioClip clip)
+    {
+        yield return new WaitForSeconds(waitTime);
+        _audioSource.PlayOneShot(clip);
     }
 
     #region ---AudioEvents---
@@ -57,7 +70,7 @@ public class GameManager : MonoBehaviour
         float time1 = 5.25f;
         float time2 = time1 + 0.75f;
         StartCoroutine(PlaySubtitle(2, 1, time1, 0.5f));
-        StartCoroutine(PlaySubtitle(2, 2, 3.0f, time2));
+        StartCoroutine(PlaySubtitle(2, 2, 5.0f, time2));
 
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 2.0f, PlayDialog3));
     }
@@ -65,56 +78,65 @@ public class GameManager : MonoBehaviour
     private void PlayDialog3()
     {
         _audioSource.PlayOneShot(_dialougeClip3);
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip3.length + 0.25f, _dialougeClip4));
 
         StartCoroutine(PlaySubtitle(3, 1, 5.5f, 0.5f));
-        StartCoroutine(PlaySubtitle(3, 2, 3.0f, 6.5f));
+        StartCoroutine(PlaySubtitle(3, 2, _dialougeClip4.length - 2.0f, _dialougeClip3.length + 0.75f));
 
-        float waitTime = _dialougeClip3.length;
+        float waitTime = _dialougeClip3.length + _dialougeClip4.length;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog4));
     }
 
     private void PlayDialog4()
     {
-        _audioSource.PlayOneShot(_dialougeClip4);
+        _audioSource.PlayOneShot(_dialougeClip5);
 
-        _subtitleManager?.ReadSpecificLine(4, 1, 5.5f);
+        _subtitleManager?.ReadSpecificLine(4, 1, _dialougeClip5.length - 2.0f);
 
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 0.25f, PlayDialog5));
     }
 
     private void PlayDialog5()
     {
-        _audioSource.PlayOneShot(_dialougeClip5);
+        _audioSource.PlayOneShot(_dialougeClip6);
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip6.length + 0.25f, _dialougeClip7));
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip7.length + _dialougeClip6.length + 0.5f, _dialougeClip8));
 
-        _subtitleManager?.ReadSpecificLine(5, 1, 6.0f);
-        StartCoroutine(PlaySubtitle(5, 2, 3.0f, 7.0f));
-        StartCoroutine(PlaySubtitle(5, 3, 5.0f, 10.5f));
+        _subtitleManager?.ReadSpecificLine(5, 1, _dialougeClip6.length - 2f);
+        StartCoroutine(PlaySubtitle(5, 2, _dialougeClip7.length - 2f, _dialougeClip6.length + 0.25f));
+        StartCoroutine(PlaySubtitle(5, 3, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 0.5f));
+        StartCoroutine(PlaySubtitle(5, 4, 7.0f, _dialougeClip7.length + _dialougeClip6.length + 7.5f));
 
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 4.5f, _waterFallManager.StopWaterFall));
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5.length + 5.0f, PlayDialog6));
+        float waitTime = _dialougeClip6.length + _dialougeClip7.length + _dialougeClip8.length + 0.5f;
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 4.5f, _waterFallManager.StopWaterFall));
+        StartCoroutine(WaitAndInvokeFunc(waitTime + 5.0f, PlayDialog6));
 
     }
 
     private void PlayDialog6()
     {
-        _audioSource.PlayOneShot(_dialougeClip6);
+        _audioSource.PlayOneShot(_dialougeClip9);
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip9.length + 0.25f, _dialougeClip10));
 
-        StartCoroutine(PlaySubtitle(6, 1, 7.5f, 0.5f));
-        StartCoroutine(PlaySubtitle(6, 2, 3.0f, 9.5f));
+        StartCoroutine(PlaySubtitle(6, 1, _dialougeClip9.length - 2.0f, 0.5f));
+        StartCoroutine(PlaySubtitle(6, 2, _dialougeClip10.length - 2.0f, _dialougeClip9.length + 0.25f));
 
-        float waitTime = _dialougeClip6.length;
+        float waitTime = _dialougeClip9.length + _dialougeClip10.length + 0.25f;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayBallExitTunnel));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog7));
     }
 
     private void PlayDialog7()
     {
-        _audioSource.PlayOneShot(_dialougeClip7);
+        _audioSource.PlayOneShot(_dialougeClip11);
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip11.length + 0.25f, _dialougeClip12));
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip11.length + _dialougeClip12.length + 0.5f, _dialougeClip13));
 
-        StartCoroutine(PlaySubtitle(7, 1, 5.0f, 0.5f));
-        StartCoroutine(PlaySubtitle(7, 2, 6.0f, 6.0f));
-        StartCoroutine(PlaySubtitle(7, 3, 3.0f, 12.25f));
+        StartCoroutine(PlaySubtitle(7, 1, _dialougeClip11.length - 2f, 0.5f));
+        StartCoroutine(PlaySubtitle(7, 2, _dialougeClip12.length - 2f, _dialougeClip11.length + 0.25f));
+        StartCoroutine(PlaySubtitle(7, 3, 6.0f, _dialougeClip11.length + _dialougeClip12.length + 0.5f));
+        StartCoroutine(PlaySubtitle(7, 4, 4.0f, _dialougeClip11.length + _dialougeClip12.length + 8.5f));
 
         //StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
     }
