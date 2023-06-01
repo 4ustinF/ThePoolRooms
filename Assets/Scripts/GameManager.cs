@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public void Initialize()
     {
         ///make this 5 again before pushing
-        StartCoroutine(WaitAndInvokeFunc(0.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(3, 1, 5.5f, 0.5f));
         StartCoroutine(PlaySubtitle(3, 2, _dialougeClip4.length - 2.0f, _dialougeClip3.length + 0.75f));
 
-        float waitTime = _dialougeClip3.length + _dialougeClip4.length;
+        float waitTime = _dialougeClip3.length + _dialougeClip4.length + 5.0f;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog4));
     }
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 
         _subtitleManager?.ReadSpecificLine(4, 1, _dialougeClip5.length - 2.0f);
 
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 0.25f, PlayDialog5));
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 5.25f, PlayDialog5));
     }
 
     private void PlayDialog5()
@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(6, 1, _dialougeClip9.length - 2.0f, 0.5f));
         StartCoroutine(PlaySubtitle(6, 2, _dialougeClip10.length - 2.0f, _dialougeClip9.length + 0.25f));
 
-        float waitTime = _dialougeClip9.length + _dialougeClip10.length + 0.25f;
+        float waitTime = _dialougeClip9.length + _dialougeClip10.length + 5.25f;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayBallExitTunnel));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog7));
     }
