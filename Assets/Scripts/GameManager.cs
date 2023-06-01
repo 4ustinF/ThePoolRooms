@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
 
     public void Initialize()
     {
-        ///make this 5 again before pushing
         StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
     }
 
@@ -56,7 +55,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("PlayDialog1");
         _audioSource.PlayOneShot(_dialougeClip1);
 
-        float waitTime = _dialougeClip1.length;
+        float waitTime = _dialougeClip1.length + 1f;
         StartCoroutine(PlaySubtitle(1, 1, 2.0f, 0.5f));
 
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallFallingAnim));
@@ -108,7 +107,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(5, 3, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 0.5f));
         StartCoroutine(PlaySubtitle(5, 4, 7.0f, _dialougeClip7.length + _dialougeClip6.length + 7.5f));
 
-        float waitTime = _dialougeClip6.length + _dialougeClip7.length + _dialougeClip8.length + 0.5f;
+        float waitTime = _dialougeClip6.length + _dialougeClip7.length + _dialougeClip8.length + 1.5f;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 4.5f, _waterFallManager.StopWaterFall));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 5.0f, PlayDialog6));
 
