@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     public void Initialize()
     {
-        StartCoroutine(WaitAndInvokeFunc(5.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(0.0f, PlayDialog1));
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallIdle1()
     {
-        _ballAnimator?.CrossFadeInFixedTime("Idle", 0.75f);
+        _ballAnimator?.CrossFadeInFixedTime("Idle", .1f);
     }
 
     private void TurnOnWaterFall()
