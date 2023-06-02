@@ -10,31 +10,31 @@ public class SubtitleManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private TextMeshProUGUI _subtitleText = null;
 
-    [Header("Variables")]
-    [SerializeField] private float lineTimeLength1 = 0.0f;
-    [SerializeField] private float lineTimeLength2a = 0.0f;
-    [SerializeField] private float lineTimeLength2b = 0.0f;
-    [SerializeField] private float lineTimeLength3a = 0.0f;
-    [SerializeField] private float lineTimeLength3b = 0.0f;
-    [SerializeField] private float lineTimeLength4 = 0.0f;
-    [SerializeField] private float lineTimeLength5a = 0.0f;
-    [SerializeField] private float lineTimeLength5b = 0.0f;
-    [SerializeField] private float lineTimeLength5c = 0.0f;
-    [SerializeField] private float lineTimeLength6a = 0.0f;
-    [SerializeField] private float lineTimeLength6b = 0.0f;
-    [SerializeField] private float lineTimeLength7a = 0.0f;
-    [SerializeField] private float lineTimeLength7b = 0.0f;
-    [SerializeField] private float lineTimeLength7c = 0.0f;
+    [Header("Speed")]
+    [SerializeField] private AnimationCurve LineCurve1 = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve2a = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve2b = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve3a = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve3b = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve4 = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve5a = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve5b = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve5c = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve5d = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve6a = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve6b = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve7a = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve7b = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve7c = new AnimationCurve();
+    [SerializeField] private AnimationCurve LineCurve7d = new AnimationCurve();
 
     private string _currentSubtitle = "";
     private List<List<string>> _subtitles;
     private int _currentLine = 0;
     private int _currentLinePart = 0;
-    private int _characterProgress = 1;
     private bool _readLine = false;
     private bool _startedReadingLine = false;
-    private float _timePerCharacter = 0f;
-    private float _timeSinceLastLine = 0f;
+    private float _timeSinceBeginningOfLine = 0f;
 
     public void Start()
     {
@@ -46,14 +46,16 @@ public class SubtitleManager : MonoBehaviour
         _subtitles[0].Add("Life begins with a stumble");
         _subtitles[1].Add("Just as this ball awkwardly descends the stairs, everyone begins their journey clumsily,");
         _subtitles[1].Add("Relying on momentum and instinct over purposeful smooth decision making.");
-        _subtitles[2].Add("Everything is a first, but your destination is clear and although there may be bumps along your road,");
-        _subtitles[2].Add("You know where you are going and there is a comfort in that.");
+        _subtitles[2].Add("Everything is a first and the inexperience that comes with youth is often frightening,");
+        _subtitles[2].Add("However, your destination is clear and although there may be bumps along your road, you know where you are going and there is a comfort in that.");
         _subtitles[3].Add("But once you’ve adjusted to the basics of life, adolescence begins and everything you thought you knew changes once again.");
-        _subtitles[4].Add("Your life can begin to drift in a direction you never expected and your destination can become more and more unclear.");
-        _subtitles[4].Add("Who are you? Where are you going?");
+        _subtitles[4].Add("Friends come, and go. Mentors and idols get replaced. Family members disappear.");
+        _subtitles[4].Add("You can begin to drift in a direction you never expected and your destination can become more and more unclear.");
+        _subtitles[4].Add("Who are you? Where are you going? Will you be someone else when you arrive?");
         _subtitles[4].Add("The future is obscured and only by going forward can we find the answer to these questions.");
         _subtitles[5].Add("But ambiguity cannot last forever. Eventually everyone comes to an understanding of who they are and what they want out of life.");
-        _subtitles[5].Add("The darkness is gone and a clear road lies ahead.");
+        _subtitles[5].Add("When that becomes true for you the mist will part, the darkness will end, and a clear road will lie ahead.");
+        _subtitles[6].Add("That doesn’t mean you will know every turn life will take you on.");
         _subtitles[6].Add("There may be troubles in your future. Anything could happen. Will you be able to make your way through them?");
         _subtitles[6].Add("Once you know who you are, the tools to deal with whatever may come are right there for you.");
         _subtitles[6].Add("All you need . . . is to pick them up");
@@ -84,7 +86,7 @@ public class SubtitleManager : MonoBehaviour
         }
         _readLine = true;
         _startedReadingLine = false;
-        StartCoroutine(ReadText(-1f));
+        StartCoroutine(ReadText(5f));
     }
 
     public void ReadSpecificLine(int lineNum, int linePartNum, float lineSpeed)
@@ -92,7 +94,7 @@ public class SubtitleManager : MonoBehaviour
         StartCoroutine(ReadSpecificLineFunc(lineNum, linePartNum, lineSpeed));
     }
 
-    private IEnumerator ReadSpecificLineFunc(int lineNum, int linePartNum, float lineSpeed)
+    private IEnumerator ReadSpecificLineFunc(int lineNum, int linePartNum, float lineTime)
     {
         if (lineNum - 1 > 6)
         {
@@ -108,10 +110,10 @@ public class SubtitleManager : MonoBehaviour
         _startedReadingLine = false;
         _currentLine = lineNum - 1;
         _currentLinePart = linePartNum - 1;
-        StartCoroutine(ReadText(lineSpeed));
+        StartCoroutine(ReadText(lineTime));
     }
 
-    private IEnumerator ReadText(float lineSpeed)
+    private IEnumerator ReadText(float lineTime)
     {
         while (_readLine == true)
         {
@@ -119,31 +121,17 @@ public class SubtitleManager : MonoBehaviour
             {
                 _currentSubtitle = _subtitles[_currentLine][_currentLinePart];
                 _startedReadingLine = true;
-                _characterProgress = 1;
-                _timeSinceLastLine = 0f;
+                _timeSinceBeginningOfLine = 0f;
                 _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1);
-                if (lineSpeed != -1f)
-                {
-                    //Debug.Log($"Reading line over {lineSpeed} seconds");
-                    _timePerCharacter = lineSpeed / _currentSubtitle.Length;
-                }
-                else
-                {
-                    _timePerCharacter = GetLineTimeLength() / _currentSubtitle.Length;
-                }
-                ShowText();
+                ShowText(lineTime);
             }
             else
             {
-                _timeSinceLastLine += Time.deltaTime;
-                if (_timeSinceLastLine > _timePerCharacter)
-                {
-                    _timeSinceLastLine = 0f;
-                    ShowText();
-                }
+                _timeSinceBeginningOfLine += Time.deltaTime;
+                ShowText(lineTime);
 
-                //after 5 timePerLine seconds with all text fully displayed the text fade begins
-                if (_characterProgress > _currentSubtitle.Length + 5)
+                //after 1 second with all text fully displayed the text fade begins
+                if (_timeSinceBeginningOfLine >= lineTime + 1f)
                 {
                     _startedReadingLine = false;
                     _readLine = false;
@@ -184,40 +172,36 @@ public class SubtitleManager : MonoBehaviour
         }
     }
 
-    private void ShowText()
+    private void ShowText(float lineTime)
     {
-        if (_characterProgress >= _currentSubtitle.Length)
+        float linearProgress = _timeSinceBeginningOfLine / lineTime;
+        float easeProgress = GetLineCurve().Evaluate(linearProgress);
+        if (linearProgress >= 1)
         {
-            _characterProgress++;
             _subtitleText.text = "<line-height=150%>" + _currentSubtitle;
             return;
         }
-
-        string visible = _currentSubtitle.Substring(0, _characterProgress);
-        string notVisible = _currentSubtitle.Substring(_characterProgress, Mathf.Max(_currentSubtitle.Length - (_characterProgress), 0));
+        int characterProgress = (int)(easeProgress * _currentSubtitle.Length);
+        string visible = _currentSubtitle.Substring(0, characterProgress);
+        string notVisible = _currentSubtitle.Substring(characterProgress, Mathf.Max(_currentSubtitle.Length - (characterProgress), 0));
         _subtitleText.text = $"<line-height=150%>{visible}<color=#00000000>{notVisible}</color>";
-        _characterProgress++;
     }
 
-
-    private float GetLineTimeLength()
+    private AnimationCurve GetLineCurve()
     {
         switch (_currentLine)
         {
             case 0:
-                Debug.Log($"Running Line 1 for {lineTimeLength1} seconds");
-                return lineTimeLength1;
+                return LineCurve1;
             case 1:
                 switch (_currentLinePart)
                 {
                     case 0:
-                        Debug.Log($"Running Line 2a for {lineTimeLength2a} seconds");
-                        return lineTimeLength2a;
+                        return LineCurve2a;
                     case 1:
-                        Debug.Log($"Running Line 2b for {lineTimeLength2b} seconds");
-                        return lineTimeLength2b;
+                        return LineCurve2b;
                     default:
-                        Debug.LogError("Uninitialized line part time trying to be found");
+                        Debug.LogError("Uninitialized line curve trying to be found");
                         break;
                 }
                 break;
@@ -225,33 +209,29 @@ public class SubtitleManager : MonoBehaviour
                 switch (_currentLinePart)
                 {
                     case 0:
-                        Debug.Log($"Running Line 3a for {lineTimeLength3a} seconds");
-                        return lineTimeLength3a;
+                        return LineCurve3a;
                     case 1:
-                        Debug.Log($"Running Line 3b for {lineTimeLength3b} seconds");
-                        return lineTimeLength3b;
+                        return LineCurve3b;
                     default:
-                        Debug.LogError("Uninitialized line part time trying to be found");
+                        Debug.LogError("Uninitialized line curve trying to be found");
                         break;
                 }
                 break;
             case 3:
-                Debug.Log($"Running Line 4 for {lineTimeLength4} seconds");
-                return lineTimeLength4;
+                return LineCurve4;
             case 4:
                 switch (_currentLinePart)
                 {
                     case 0:
-                        Debug.Log($"Running Line 5a for {lineTimeLength5a} seconds");
-                        return lineTimeLength5a;
+                        return LineCurve5a;
                     case 1:
-                        Debug.Log($"Running Line 5b for {lineTimeLength5b} seconds");
-                        return lineTimeLength5b;
+                        return LineCurve5b;
                     case 2:
-                        Debug.Log($"Running Line 5c for {lineTimeLength5c} seconds");
-                        return lineTimeLength5c;
+                        return LineCurve5c;
+                    case 3:
+                        return LineCurve5d;
                     default:
-                        Debug.LogError("Uninitialized line part time trying to be found");
+                        Debug.LogError("Uninitialized line curve trying to be found");
                         break;
                 }
                 break;
@@ -259,13 +239,11 @@ public class SubtitleManager : MonoBehaviour
                 switch (_currentLinePart)
                 {
                     case 0:
-                        Debug.Log($"Running Line 6a for {lineTimeLength6a} seconds");
-                        return lineTimeLength6a;
+                        return LineCurve6a;
                     case 1:
-                        Debug.Log($"Running Line 6b for {lineTimeLength6b} seconds");
-                        return lineTimeLength6b;
+                        return LineCurve6b;
                     default:
-                        Debug.LogError("Uninitialized line part time trying to be found");
+                        Debug.LogError("Uninitialized line curve trying to be found");
                         break;
                 }
                 break;
@@ -273,23 +251,22 @@ public class SubtitleManager : MonoBehaviour
                 switch (_currentLinePart)
                 {
                     case 0:
-                        Debug.Log($"Running Line 7a for {lineTimeLength7a} seconds");
-                        return lineTimeLength7a;
+                        return LineCurve7a;
                     case 1:
-                        Debug.Log($"Running Line 7b for {lineTimeLength7b} seconds");
-                        return lineTimeLength7b;
+                        return LineCurve7b;
                     case 2:
-                        Debug.Log($"Running Line 7c for {lineTimeLength7c} seconds");
-                        return lineTimeLength7c;
+                        return LineCurve7c;
+                    case 3:
+                        return LineCurve7d;
                     default:
-                        Debug.LogError("Uninitialized line part time trying to be found");
+                        Debug.LogError("Uninitialized line curve trying to be found");
                         break;
                 }
                 break;
             default:
-                Debug.LogError("Uninitialized line time trying to be found");
+                Debug.LogError("Uninitialized line curve trying to be found");
                 break;
         }
-        return 1f;
+        return new AnimationCurve();
     }
 }

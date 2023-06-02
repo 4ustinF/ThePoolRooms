@@ -49,6 +49,10 @@ public class SubtitleEditor : Editor
         {
             script.ReadSpecificLine(5, 3, 3.0f);
         }
+        if (GUILayout.Button("Read Line 5d", GUILayout.Height(30)))
+        {
+            script.ReadSpecificLine(5, 4, 3.0f);
+        }
         if (GUILayout.Button("Read Line 6a", GUILayout.Height(30)))
         {
             script.ReadSpecificLine(6, 1, 3.0f);
@@ -68,6 +72,10 @@ public class SubtitleEditor : Editor
         if (GUILayout.Button("Read Line 7c", GUILayout.Height(30)))
         {
             script.ReadSpecificLine(7, 3, 3.0f);
+        }
+        if (GUILayout.Button("Read Line 7d", GUILayout.Height(30)))
+        {
+            script.ReadSpecificLine(7, 4, 3.0f);
         }
     }
 }
