@@ -513,7 +513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321549c20ad6a5c49b2bfb1bf1c4e50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handMat: {fileID: 2100000, guid: de2e60bb843238544b93999d05bdc13d, type: 2}
+  _isRightHand: 1
+  _handAnimator: {fileID: 7608165235505232047}
+  _handTransformTarget: {fileID: 0}
+  _smoothingFactor: 0.85
 --- !u!1 &3607850654597004992
 GameObject:
   m_ObjectHideFlags: 0
