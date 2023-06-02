@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Liminal.Core.Fader;
 using Liminal.SDK.Core;
 using UnityEngine;
 using UnityEngine.Events;
@@ -28,11 +29,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        AudioListener.volume = 0.0f; // Prevent any sound from the scene. This is so we can fade audio in.
         ExperienceApp.Initializing += Initialize;
     }
 
     public void Initialize()
     {
+        StartCoroutine(FadeInAudioListener(2.0f));
         StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
     }
 
@@ -46,6 +49,47 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         _audioSource.PlayOneShot(clip);
+    }
+
+    IEnumerator FadeInAudioListener(float fadeTime)
+    {
+        var elapsedTime = 0.0f; // Instantiate a float with a value of 0 for use as a timer.
+        var startingVolume = 0.0f; // This gets the current volume of the audio listener so that we can fade it to 1 over time.
+
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime; // Count up
+            AudioListener.volume = Mathf.Lerp(startingVolume, 1.0f, elapsedTime / fadeTime); // This uses linear interpolation to change the volume of AudioListener over time.
+            yield return new WaitForEndOfFrame(); // Tell the coroutine to wait for a frame to avoid completing this loop in a single frame.
+        }
+
+        AudioListener.volume = 1.0f;
+    }
+
+    private void EndExperience()
+    {
+        StartCoroutine(FadeAndExit(2.0f));
+
+        // This coroutine fades the camera and audio simultaneously over the same length of time.
+        IEnumerator FadeAndExit(float fadeTime)
+        {
+            var elapsedTime = 0.0f; // Instantiate a float with a value of 0 for use as a timer.
+            var startingVolume = AudioListener.volume; // This gets the current volume of the audio listener so that we can fade it to 0 over time.
+
+            ScreenFader.Instance.FadeTo(Color.black, fadeTime); // Tell the system to fade the camera to black over X seconds where X is the value of fadeTime.
+
+            while (elapsedTime < fadeTime)
+            {
+                elapsedTime += Time.deltaTime; // Count up
+                AudioListener.volume = Mathf.Lerp(startingVolume, 0.0f, elapsedTime / fadeTime); // This uses linear interpolation to change the volume of AudioListener over time.
+                yield return new WaitForEndOfFrame(); // Tell the coroutine to wait for a frame to avoid completing this loop in a single frame.
+            }
+
+            // When the while-loop has ended, the audiolistener volume should be 0 and the screen completely black. However, for safety's sake, we should manually set AudioListener volume to 0.
+            AudioListener.volume = 0.0f;
+
+            ExperienceApp.End(); // This tells the platform to exit the experience.
+        }
     }
 
     #region ---AudioEvents---
