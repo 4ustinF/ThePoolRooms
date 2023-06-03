@@ -1,44 +1,28 @@
-﻿using Liminal.SDK.Core;
-using Liminal.SDK.VR;
+﻿using Liminal.SDK.VR;
 using Liminal.SDK.VR.Input;
-using System.Collections.Generic;
 using UnityEngine;
-
-enum HandPose
-{
-    Idle, // No Buttons
-    Point, // Middle Finger 
-    Rounded, // Index Finger 
-    Four, // Thumb 
-    ThumbsUp, // Middle Finger, Index Finger 
-    Pinch, // Index finger, thumb
-    Sign, // Middle finger, thumb ----------
-    Closed, // Middle Finger, Index Finger, and thumb
-}
 
 public class HandController : MonoBehaviour
 {
-    private IVRInputDevice _inputDevice = null;
-    [SerializeField] private bool _isRightHand = true;
+    [Header("References")]
+    [SerializeField] private HandManager _handManager = null;
     [SerializeField] private Animator _handAnimator = null;
     [SerializeField] private Transform _handTransformTarget = null; // The transform the hand smoothly lerps towards
+
+    [Header("Varibles")]
+    [SerializeField] private bool _isRightHand = true;
     [SerializeField] private float _smoothingFactor = 0.85f; // Adjust this value to control the amount of smoothing
+
+    private IVRInputDevice _inputDevice = null;
+    private bool _isInitialized = false;
 
     private Vector3 _currentHandPosition = Vector3.zero;
     private Quaternion _currentHandRotation = Quaternion.identity;
     private Vector3 _smoothedHandPosition = Vector3.zero;
     private Quaternion _smoothedHandRotation = Quaternion.identity;
 
-    private bool _isInitialized = false;
-
     // Hand Animations
     private HandPose _handpose = HandPose.Idle;
-    private Dictionary<(bool, bool, bool), HandPose> _buttonCombinationToAnimation = new Dictionary<(bool, bool, bool), HandPose>(); // In order: Index, Middle, Thumb | TODO: We have 2 instances of this dictonary make it only 1
-
-    private void Awake()
-    {
-        ExperienceApp.Initializing += Initialize;
-    }
 
     public void Initialize()
     {
@@ -49,14 +33,6 @@ public class HandController : MonoBehaviour
             return;
         }
 #endif
-        _buttonCombinationToAnimation[(false, false, false)] = HandPose.Idle;
-        _buttonCombinationToAnimation[(false, true, false)] = HandPose.Point;
-        _buttonCombinationToAnimation[(true, false, false)] = HandPose.Rounded;
-        _buttonCombinationToAnimation[(false, false, true)] = HandPose.Four;
-        _buttonCombinationToAnimation[(true, true, false)] = HandPose.ThumbsUp;
-        _buttonCombinationToAnimation[(true, false, true)] = HandPose.Pinch;
-        _buttonCombinationToAnimation[(false, true, true)] = HandPose.Sign;
-        _buttonCombinationToAnimation[(true, true, true)] = HandPose.Closed;
 
         _inputDevice = _isRightHand ? VRDevice.Device.PrimaryInputDevice : VRDevice.Device.SecondaryInputDevice;
         _isInitialized = true;
@@ -80,17 +56,15 @@ public class HandController : MonoBehaviour
         bool isMiddle = _inputDevice.GetButton(VRButton.Three);
         bool isThumb = (_inputDevice.GetButton(VRButton.Seconday) || _inputDevice.GetButton(VRButton.Four));
 
-        HandPose newHandPose = HandPose.Idle;
-        if (_buttonCombinationToAnimation.TryGetValue((isIndex, isMiddle, isThumb), out newHandPose))
-        {
-            if(_handpose == newHandPose)
-            {
-                return;
-            }
+        HandPose newHandPose = _handManager.GetHandPose(isIndex, isMiddle, isThumb);
 
-            _handpose = newHandPose;
-            _handAnimator.CrossFade(_handpose.ToString(), 0.1f);
+        if (_handpose == newHandPose)
+        {
+            return;
         }
+
+        _handpose = newHandPose;
+        _handAnimator.CrossFade(_handpose.ToString(), 0.1f);
     }
 
     private void UpdateHandTransform()
