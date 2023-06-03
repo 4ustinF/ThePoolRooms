@@ -568,6 +568,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2922906849159203406}
     m_Modifications:
+    - target: {fileID: 1683692489138330968, guid: b899e92842e2aac458d654e36f279183,
+        type: 3}
+      propertyPath: m_Name
+      value: WindowEmission
+      objectReference: {fileID: 0}
     - target: {fileID: 1683692489138330964, guid: b899e92842e2aac458d654e36f279183,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -627,11 +632,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1683692489138330968, guid: b899e92842e2aac458d654e36f279183,
-        type: 3}
-      propertyPath: m_Name
-      value: WindowEmission
       objectReference: {fileID: 0}
     - target: {fileID: 1683692489138330966, guid: b899e92842e2aac458d654e36f279183,
         type: 3}
