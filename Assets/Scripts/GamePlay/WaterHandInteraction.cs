@@ -8,20 +8,10 @@ public class WaterHandInteraction : MonoBehaviour, IPointerClickHandler
     [SerializeField] private List<GameObject> _waterRipples = new List<GameObject>();
     [SerializeField] private AudioSource _audioSource = null;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (string.Compare(other.tag, "Player", System.StringComparison.OrdinalIgnoreCase) == 0)
-        {
-            _audioSource.Play();
-            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
-            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
-
-            SplashWater(new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z));
-        }
-    }
-
     public void SplashWater(Vector3 pos)
     {
+        _audioSource.Play();
+
         foreach (GameObject p in _waterSplashes)
         {
             if (p.activeInHierarchy == false)
@@ -48,3 +38,6 @@ public class WaterHandInteraction : MonoBehaviour, IPointerClickHandler
         SplashWater(eventData.pointerCurrentRaycast.worldPosition);
     }
 }
+
+// OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+// OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
