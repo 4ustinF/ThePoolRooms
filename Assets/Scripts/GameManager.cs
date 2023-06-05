@@ -254,32 +254,3 @@ public class GameManager : MonoBehaviour
 
 }
 
-//Plot: Path through maturity and self understanding
-
-// Event1
-// Audio: Life begins with a stumble. 
-// Action: Ball starts to descend stairs located in the middle of the room
-
-// Event2
-// Audio: Just as this ball awkwardly descends the stairs, everyone begins their journey clumsily, relying on momentum and instinct over purposeful smooth decision making. 
-// Action: Ball reaches the water and starts to float without moving much
-
-// Event3
-// Audio: Everything is a first, but your destination is clear and although there may be bumps along your road, you know where you are going and there is a comfort in that.
-// Action: A waterfall located at the left of the player turns on and attracts the attention.
-
-// Event4
-// Audio: But once you’ve adjusted to the basics of life, adolescence begins and everything you thought you knew changes once again. 
-// Action: Due to the waterfall, ball starts to move in the opposite direction and head towards a tunnel
-
-// Event5
-// Audio: Your life can begin to drift in a direction you never expected and your destination can become more and more unclear. Who are you? Where are you going? The future is obscured and only by going forward can we find the answer to these questions
-// Action: Ball reaches the tunnel and “swirls” into the darkness. Only music and sound effects will occur during the following 10 seconds to generate suspense
-
-// Event6
-// Audio: Ambiguity cannot last forever. Eventually everyone comes to an understanding of who they are and what they want out of life. The darkness is gone and a clear road lies ahead. 
-// Action: Ball shows up at the other end of the tunnel and starts to move towards the player
-
-// Event7
-// Audio: There may be troubles ahead. Anything could happen. Will you be able to make your way through them? Once you know who you are, the tools to deal with whatever may come are right there for you. All you need … is to pick them up
-// Action: Ball reaches the player and they are able to pick it up. Either picking the ball up or 10 seconds pass after it reaches the player will end the experience
