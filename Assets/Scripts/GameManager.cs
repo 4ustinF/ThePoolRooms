@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _dialougeClip12 = null;
     [SerializeField] private AudioClip _dialougeClip13 = null;
 
+    private bool _canEndExpereince = false;
+    private bool _endingExpereince = false;
+
     private void Awake()
     {
         AudioListener.volume = 0.0f; // Prevent any sound from the scene. This is so we can fade audio in.
@@ -67,8 +70,14 @@ public class GameManager : MonoBehaviour
         AudioListener.volume = 1.0f;
     }
 
-    private void EndExperience()
+    public void EndExperience()
     {
+        if(_canEndExpereince == false || _endingExpereince == true)
+        {
+            return;
+        }
+        _endingExpereince = true;
+
         StartCoroutine(FadeAndExit(2.0f));
 
         // This coroutine fades the camera and audio simultaneously over the same length of time.
@@ -250,6 +259,7 @@ public class GameManager : MonoBehaviour
     private void PlayBallIdle2()
     {
         _ballAnimator?.CrossFadeInFixedTime("Idle2", 0.5f);
+        _canEndExpereince = true;
     }
 
     #endregion ---Events---

@@ -1,5 +1,7 @@
 ﻿using Liminal.SDK.VR;
 using Liminal.SDK.VR.Input;
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class HandController : MonoBehaviour
@@ -81,7 +83,6 @@ public class HandController : MonoBehaviour
         transform.position = _smoothedHandPosition;
         transform.rotation = _smoothedHandRotation;
     }
-
 }
 
 // _handTransformTarget Rotation = 0.0f, 7.56f, 270.0f
