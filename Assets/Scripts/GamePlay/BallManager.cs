@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BallManager : MonoBehaviour
+public class BallManager : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private GameManager _gameManager = null;
     [SerializeField] private GameObject _ripples = null;
     [SerializeField] private ParticleSystem _waterSplashPS = null;
     [SerializeField] private AudioSource _audioSource = null;
@@ -35,5 +37,8 @@ public class BallManager : MonoBehaviour
         _audioSource.Play();
     }
 
-
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        _gameManager.EndExperience();
+    }
 }

@@ -9602,8 +9602,8 @@ MonoBehaviour:
   _surfaceDust1PS: {fileID: 7393507434480393071}
   _surfaceDust2PS: {fileID: 7393507433803134691}
   _maxVolume: 0.2
-  _fadeInMultiplier: 0.75
-  _fadeOutMultiplier: 0.5
+  _fadeInMultiplier: 0.3
+  _fadeOutMultiplier: 0.1
   _waitTime: 0.5
 --- !u!82 &8001531098003890733
 AudioSource:
