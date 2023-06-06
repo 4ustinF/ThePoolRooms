@@ -1062,7 +1062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &401693439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3639,7 +3639,7 @@ PrefabInstance:
     - target: {fileID: 4096093151202164771, guid: 93eef2a8e03633e4f82e4320a03deef4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93eef2a8e03633e4f82e4320a03deef4, type: 3}
@@ -4234,7 +4234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11764706, g: 0.60784316, b: 0.50980395, a: 0.11764706}
+  m_Color: {r: 0.11764706, g: 0.60784316, b: 0.50980395, a: 0.078431375}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4345,6 +4345,10 @@ PrefabInstance:
       propertyPath: _fishManager
       value: 
       objectReference: {fileID: 1666790190}
+    - target: {fileID: 1771589646, guid: a52384f069e6cc94fb1427540ce6d116, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52384f069e6cc94fb1427540ce6d116, type: 3}
 --- !u!4 &2044475997 stripped
