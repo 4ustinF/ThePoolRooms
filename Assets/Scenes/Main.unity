@@ -3639,7 +3639,7 @@ PrefabInstance:
     - target: {fileID: 4096093151202164771, guid: 93eef2a8e03633e4f82e4320a03deef4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93eef2a8e03633e4f82e4320a03deef4, type: 3}
@@ -4345,6 +4345,10 @@ PrefabInstance:
       propertyPath: _fishManager
       value: 
       objectReference: {fileID: 1666790190}
+    - target: {fileID: 1771589646, guid: a52384f069e6cc94fb1427540ce6d116, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52384f069e6cc94fb1427540ce6d116, type: 3}
 --- !u!4 &2044475997 stripped

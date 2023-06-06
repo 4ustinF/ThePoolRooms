@@ -1,7 +1,5 @@
 ﻿using Liminal.SDK.VR;
 using Liminal.SDK.VR.Input;
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class HandController : MonoBehaviour
