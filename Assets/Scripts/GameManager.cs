@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
     private void PlayDialog3()
     {
         _audioSource.PlayOneShot(_dialougeClip3);
-        StartCoroutine(WaitAndInvokeAudio(_dialougeClip3.length + 0.25f, _dialougeClip4));
+        StartCoroutine(WaitAndInvokeAudio(_dialougeClip3.length + 1.25f, _dialougeClip4));
 
         StartCoroutine(PlaySubtitle(3, 1, _dialougeClip3.length - 2.0f, 0.5f));
         StartCoroutine(PlaySubtitle(3, 2, _dialougeClip4.length - 2.0f, _dialougeClip3.length + 1.75f));
