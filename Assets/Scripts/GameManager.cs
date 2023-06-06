@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
         _audioSource.PlayOneShot(_dialougeClip3);
         StartCoroutine(WaitAndInvokeAudio(_dialougeClip3.length + 0.25f, _dialougeClip4));
 
-        StartCoroutine(PlaySubtitle(3, 1, 5.5f, 0.5f));
+        StartCoroutine(PlaySubtitle(3, 1, _dialougeClip3.length - 2.0f, 0.5f));
         StartCoroutine(PlaySubtitle(3, 2, _dialougeClip4.length - 2.0f, _dialougeClip3.length + 0.75f));
 
         float waitTime = _dialougeClip3.length + _dialougeClip4.length + 5.0f;
