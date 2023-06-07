@@ -62,33 +62,6 @@ public class SubtitleManager : MonoBehaviour
         _subtitleText.text = "";
     }
 
-
-    public void ReadNextLine()
-    {
-        StartCoroutine(ReadNextLineFunc());
-    }
-
-    public IEnumerator ReadNextLineFunc()
-    {
-        if (_readLine == true)
-        {
-            if (_subtitles[_currentLine].Count - 1 == _currentLinePart)
-            {
-                _currentLine++;
-                _currentLinePart = 0;
-            }
-            else
-            {
-                _currentLinePart++;
-            }
-            _readLine = false;
-            yield return null;
-        }
-        _readLine = true;
-        _startedReadingLine = false;
-        StartCoroutine(ReadText(5f));
-    }
-
     public void ReadSpecificLine(int lineNum, int linePartNum, float lineSpeed)
     {
         StartCoroutine(ReadSpecificLineFunc(lineNum, linePartNum, lineSpeed));
