@@ -479,7 +479,6 @@ Transform:
   m_Children:
   - {fileID: 1086988415071420022}
   - {fileID: 9145910031448253941}
-  - {fileID: 7022461537075951177}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 7.56, z: 270}
@@ -514,9 +513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321549c20ad6a5c49b2bfb1bf1c4e50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRightHand: 1
+  _handManager: {fileID: 0}
   _handAnimator: {fileID: 7608165235505232047}
   _handTransformTarget: {fileID: 0}
+  _isRightHand: 1
   _smoothingFactor: 0.85
 --- !u!1 &3607850654597004992
 GameObject:
@@ -765,67 +765,6 @@ Transform:
   m_Father: {fileID: 3679672465868435256}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6793984297813207930
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7022461537075951177}
-  - component: {fileID: 5716224830738656226}
-  - component: {fileID: 2402706920128779161}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7022461537075951177
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793984297813207930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03787, y: 0.02305, z: 0.01053}
-  m_LocalScale: {x: 0.122536846, y: 0.09944107, z: 0.19742863}
-  m_Children: []
-  m_Father: {fileID: 513307249865086421}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5716224830738656226
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793984297813207930}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2402706920128779161
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793984297813207930}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6796375051441493457
 GameObject:
   m_ObjectHideFlags: 0

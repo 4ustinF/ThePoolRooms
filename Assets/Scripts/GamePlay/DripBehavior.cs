@@ -18,7 +18,7 @@ public class DripBehavior : MonoBehaviour
         ExperienceApp.Initializing += Initialize;
     }
 
-    public void Initialize()
+    private void Initialize()
     {
         StartCoroutine(DripRandomRoutine(Random.Range(_waitTime.x, _waitTime.y)));
     }

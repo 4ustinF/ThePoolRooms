@@ -4834,7 +4834,7 @@ GameObject:
   - component: {fileID: 4960841590552182942}
   - component: {fileID: 4960841590552182940}
   - component: {fileID: 4960841590552182943}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: RippleParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -58,6 +58,8 @@ public class WaterFallManager : MonoBehaviour
             _audioSource.volume += _fadeInMultiplier * Time.deltaTime / _waitTime;
             yield return null;
         }
+
+        _audioSource.volume = _maxVolume;
     }
 
     private IEnumerator WaterFallVolumeFadeOut()
@@ -69,6 +71,7 @@ public class WaterFallManager : MonoBehaviour
             yield return null;
         }
 
+        _audioSource.volume = 0.0f;
         _audioSource.Stop();
     }
 }

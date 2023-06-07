@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         ExperienceApp.Initializing += Initialize;
     }
 
-    public void Initialize()
+    private void Initialize()
     {
         StartCoroutine(FadeInAudioListener(2.0f));
         StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
