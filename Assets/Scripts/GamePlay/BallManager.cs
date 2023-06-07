@@ -3,11 +3,14 @@ using UnityEngine.EventSystems;
 
 public class BallManager : MonoBehaviour, IPointerClickHandler
 {
+    [Header("References")]
     [SerializeField] private GameManager _gameManager = null;
     [SerializeField] private GameObject _ripples = null;
     [SerializeField] private ParticleSystem _waterSplashPS = null;
+
+    [Header("Audio")]
     [SerializeField] private AudioSource _audioSource = null;
-    [SerializeField] private AudioClip _splashAudioClip = null;
+    [SerializeField] private AudioClip _impactAudioClip = null;
     [SerializeField] private AudioClip _ballBounceAudioClip = null;
 
     private void PlayWaterSplash()
@@ -17,8 +20,8 @@ public class BallManager : MonoBehaviour, IPointerClickHandler
         _waterSplashPS.gameObject.SetActive(true);
 
         _audioSource.pitch = Random.Range(0.85f, 1.15f);
-        _audioSource.volume = 0.15f;
-        _audioSource.clip = _splashAudioClip;
+        _audioSource.volume = 0.2f;
+        _audioSource.clip = _impactAudioClip;
         _audioSource.Play();
 
         _waterSplashPS.Play();
