@@ -8,7 +8,12 @@ public class WaterHandInteraction : MonoBehaviour, IPointerClickHandler
     [SerializeField] private List<GameObject> _waterRipples = new List<GameObject>();
     [SerializeField] private AudioSource _audioSource = null;
 
-    public void SplashWater(Vector3 pos)
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        SplashWater(eventData.pointerCurrentRaycast.worldPosition);
+    }
+
+    private void SplashWater(Vector3 pos)
     {
         _audioSource.Play();
 
@@ -31,11 +36,6 @@ public class WaterHandInteraction : MonoBehaviour, IPointerClickHandler
                 break;
             }
         }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        SplashWater(eventData.pointerCurrentRaycast.worldPosition);
     }
 }
 
