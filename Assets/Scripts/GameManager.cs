@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
     {
         _audioSource.PlayOneShot(_dialougeClip5);
 
-        _subtitleManager?.ReadSpecificLine(4, 1, _dialougeClip5.length - 2.0f);
+        StartCoroutine(PlaySubtitle(4, 1, _dialougeClip5.length - 2.0f, 1f));
 
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip4.length + 6f, PlayDialog5));
     }
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
         _subtitleManager?.ReadSpecificLine(5, 1, _dialougeClip6.length - 2f);
         StartCoroutine(PlaySubtitle(5, 2, _dialougeClip7.length - 2f, _dialougeClip6.length + 0.25f));
         StartCoroutine(PlaySubtitle(5, 3, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 0.5f));
-        StartCoroutine(PlaySubtitle(5, 4, 7.0f, _dialougeClip7.length + _dialougeClip6.length + 8.5f));
+        StartCoroutine(PlaySubtitle(5, 4, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 8f));
 
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length + _dialougeClip6.length + 8.5f, _fishManager.StartFishParticles));
 
@@ -190,8 +190,8 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(PlaySubtitle(7, 1, _dialougeClip11.length - 2f, 0.5f));
         StartCoroutine(PlaySubtitle(7, 2, _dialougeClip12.length - 2f, _dialougeClip11.length + 0.25f));
-        StartCoroutine(PlaySubtitle(7, 3, 6.0f, _dialougeClip11.length + _dialougeClip12.length + 0.5f));
-        StartCoroutine(PlaySubtitle(7, 4, 4.0f, _dialougeClip11.length + _dialougeClip12.length + 9.5f));
+        StartCoroutine(PlaySubtitle(7, 3, 6.0f, _dialougeClip11.length + _dialougeClip12.length + 1f));
+        StartCoroutine(PlaySubtitle(7, 4, 4.0f, _dialougeClip11.length + _dialougeClip12.length + 8.5f));
 
         //StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length, _waterFallManager.StopWaterFall));
     }
