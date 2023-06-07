@@ -47,12 +47,12 @@ public class SubtitleManager : MonoBehaviour
         _subtitles[1].Add("Just as this ball awkwardly descends the stairs, everyone begins their journey clumsily,");
         _subtitles[1].Add("Relying on momentum and instinct over purposeful smooth decision making.");
         _subtitles[2].Add("Everything is a first and the inexperience that comes with youth is often frightening,");
-        _subtitles[2].Add("However, your destination is clear and although there may be bumps along your road, you know where you are going and there is a comfort in that.");
+        _subtitles[2].Add("However, your destination is clear and although there may be bumps along your road, you know where you are going and there is comfort in that.");
         _subtitles[3].Add("But once you’ve adjusted to the basics of life, adolescence begins and everything you thought you knew changes once again.");
-        _subtitles[4].Add("Friends come, and go. Mentors and idols get replaced. Family members disappear.");
+        _subtitles[4].Add("Friends come and go. Mentors and idols get replaced. Family members disappear.");
         _subtitles[4].Add("You can begin to drift in a direction you never expected and your destination can become more and more unclear.");
         _subtitles[4].Add("Who are you? Where are you going? Will you be someone else when you arrive?");
-        _subtitles[4].Add("The future is obscured and only by going forward can we find the answer to these questions.");
+        _subtitles[4].Add("The future is obscured and only by going forward can we find the answers to these questions.");
         _subtitles[5].Add("But ambiguity cannot last forever. Eventually everyone comes to an understanding of who they are and what they want out of life.");
         _subtitles[5].Add("When that becomes true for you the mist will part, the darkness will end, and a clear road will lie ahead.");
         _subtitles[6].Add("That doesn’t mean you will know every turn life will take you on.");
@@ -130,8 +130,8 @@ public class SubtitleManager : MonoBehaviour
                 _timeSinceBeginningOfLine += Time.deltaTime;
                 ShowText(lineTime);
 
-                //after 1 second with all text fully displayed the text fade begins
-                if (_timeSinceBeginningOfLine >= lineTime + 1f)
+                //after 2 seconds with all text fully displayed the text fade begins
+                if (_timeSinceBeginningOfLine >= lineTime + 2f)
                 {
                     _startedReadingLine = false;
                     _readLine = false;
