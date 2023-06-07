@@ -27,7 +27,7 @@ public class HandManager : MonoBehaviour
         ExperienceApp.Initializing += Initialize;
     }
 
-    public void Initialize()
+    private void Initialize()
     {
         _buttonCombinationToAnimation[(false, false, false)] = HandPose.Idle;
         _buttonCombinationToAnimation[(false, true, false)] = HandPose.Point;
