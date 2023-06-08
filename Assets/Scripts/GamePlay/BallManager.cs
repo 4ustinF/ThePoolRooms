@@ -35,7 +35,7 @@ public class BallManager : MonoBehaviour, IPointerClickHandler
     private void PlayBounce()
     {
         _audioSource.pitch = Random.Range(0.85f, 1.15f);
-        _audioSource.volume = 0.07f;
+        _audioSource.volume = 0.1f;
         _audioSource.clip = _ballBounceAudioClip;
         _audioSource.Play();
     }
