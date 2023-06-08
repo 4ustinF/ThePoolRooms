@@ -11,12 +11,12 @@ public class FishEditor : Editor
 
         if (GUILayout.Button("Start Fish", GUILayout.Height(30)))
         {
-            script.StartFishParticles();
+            script.StartGameEvent();
         }
 
         if (GUILayout.Button("Stop Fish", GUILayout.Height(30)))
         {
-            script.StopFishParticles();
+            script.StopGameEvent();
         }
     }
 }

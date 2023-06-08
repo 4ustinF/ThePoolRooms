@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         StartCoroutine(FadeInAudioListener(2.0f));
-        StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -161,11 +161,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(5, 3, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 0.5f));
         StartCoroutine(PlaySubtitle(5, 4, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 8f));
 
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length + _dialougeClip6.length + 8.5f, _fishManager.StartFishParticles));
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length + _dialougeClip6.length + 8.5f, _fishManager.StartGameEvent));
 
         float waitTime = _dialougeClip6.length + _dialougeClip7.length + _dialougeClip8.length + 17.0f;
-        StartCoroutine(WaitAndInvokeFunc(waitTime, _waterFallManager.StopWaterFall));
-        StartCoroutine(WaitAndInvokeFunc(waitTime, _fishManager.StopFishParticles));
+        StartCoroutine(WaitAndInvokeFunc(waitTime, _waterFallManager.StopGameEvent));
+        StartCoroutine(WaitAndInvokeFunc(waitTime, _fishManager.StopGameEvent));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.5f, PlayDialog6));
     }
 
@@ -230,7 +230,7 @@ public class GameManager : MonoBehaviour
 
     private void TurnOnWaterFall()
     {
-        _waterFallManager?.StartWaterFall();
+        _waterFallManager.StartGameEvent();
         StartCoroutine(WaitAndInvokeFunc(0.5f, PlayBallEnterTunnel)); // Time for waterfall to finish full throttle
     }
 

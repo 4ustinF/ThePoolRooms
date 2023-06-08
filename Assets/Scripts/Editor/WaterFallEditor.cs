@@ -11,12 +11,12 @@ public class WaterFallEditor : Editor
 
         if (GUILayout.Button("Start WaterFall", GUILayout.Height(30)))
         {
-            script.StartWaterFall();
+            script.StartGameEvent();
         }
 
         if (GUILayout.Button("Stop WaterFall", GUILayout.Height(30)))
         {
-            script.StopWaterFall();
+            script.StopGameEvent();
         }
     }
 }
