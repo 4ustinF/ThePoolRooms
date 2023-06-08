@@ -41697,7 +41697,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c4ae722d2dd2b4646a710642695733b8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f1795f97b63dcde4d9277a389b5b0a49, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -85062,9 +85062,9 @@ MonoBehaviour:
   - {x: 0.9127935, y: 0.4056859, z: 0.047189523, w: -1}
   - {x: 0.9923571, y: -0.11014101, z: -0.055646572, w: -1}
   - {x: 0.78279954, y: -0.6025408, z: -0.15546525, w: -1}
-  - {x: -1, y: 0.00000001927497, z: 0.000000015618323, w: -1}
-  - {x: -1, y: -0.0000000032124656, z: 0.000000006227262, w: -1}
-  - {x: -1, y: -0.0000000032124656, z: 0.000000006227262, w: -1}
+  - {x: NaN, y: NaN, z: NaN, w: -1}
+  - {x: NaN, y: NaN, z: NaN, w: -1}
+  - {x: NaN, y: NaN, z: NaN, w: -1}
   - {x: -1, y: -0.0000000256999, z: -0.0000000031637997, w: -1}
   m_Colors: []
   m_UnwrapParameters:
@@ -85430,6 +85430,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
+    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
+        type: 3}
+      propertyPath: m_Name
+      value: SimplifiedHandrail (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -85500,11 +85505,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
-        type: 3}
-      propertyPath: m_Name
-      value: SimplifiedHandrail (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8406280007082530948, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -85540,6 +85540,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
+    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
+        type: 3}
+      propertyPath: m_Name
+      value: Ladder_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6926988229668184341, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -85610,16 +85620,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
-        type: 3}
-      propertyPath: m_Name
-      value: Ladder_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926988229668184340, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3109261259616330675, guid: 1ec701fc80c5e6e4c9d4703534715e2f,
         type: 3}
       propertyPath: m_BoxSize.x
@@ -85656,6 +85656,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
+    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
+        type: 3}
+      propertyPath: m_Name
+      value: SimplifiedHandrail
+      objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -85726,16 +85731,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
-        type: 3}
-      propertyPath: m_Name
-      value: SimplifiedHandrail
-      objectReference: {fileID: 0}
     - target: {fileID: 8406280007082530948, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8fc5e81e93b2ea4a96843824a53f84c, type: 2}
+      objectReference: {fileID: 2100000, guid: 4aa5948e79e9b5b46bb46474983bc20f, type: 2}
     - target: {fileID: 6817810494770892938, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_BoxSize.x

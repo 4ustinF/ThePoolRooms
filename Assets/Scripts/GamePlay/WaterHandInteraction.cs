@@ -31,6 +31,7 @@ public class WaterHandInteraction : MonoBehaviour, IPointerClickHandler
 
     private void SplashWater(Vector3 pos)
     {
+        _audioSource.pitch = Random.Range(0.85f, 1.15f);
         _audioSource.Play();
 
         foreach (GameObject p in _waterSplashes)
