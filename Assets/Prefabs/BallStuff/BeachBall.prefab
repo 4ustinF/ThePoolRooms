@@ -135,8 +135,8 @@ MonoBehaviour:
   _ripples: {fileID: 4960841590552182937}
   _waterSplashPS: {fileID: 4960841591447355135}
   _audioSource: {fileID: 1145129132}
-  _splashAudioClip: {fileID: 8300000, guid: c4ae722d2dd2b4646a710642695733b8, type: 3}
-  _ballBounceAudioClip: {fileID: 8300000, guid: ca626e708e0086346bf63828708df011,
+  _impactAudioClip: {fileID: 8300000, guid: c5f3fb47c0b96c240be06156a8fbc7a9, type: 3}
+  _ballBounceAudioClip: {fileID: 8300000, guid: f00b8d415e8ced84fbe6edacf4c25345,
     type: 3}
 --- !u!82 &1145129132
 AudioSource:
