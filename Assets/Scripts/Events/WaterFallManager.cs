@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class WaterFallManager : MonoBehaviour
+public class WaterFallManager : MonoBehaviour, IGameEvent
 {
     [SerializeField] private AudioSource _audioSource = null;
     [SerializeField] private ParticleSystem _waterFallPS = null;
@@ -15,7 +15,7 @@ public class WaterFallManager : MonoBehaviour
     [SerializeField] private float _fadeOutMultiplier = 0.5f;
     [SerializeField] private float _waitTime = 1.5f;
 
-    public void StartWaterFall()
+    public void StartGameEvent()
     {
         _waterFallPS.Play();
         _dustFallPS.Play();
@@ -25,16 +25,7 @@ public class WaterFallManager : MonoBehaviour
         StartCoroutine(WaterFallVolumeFadeIn());
     }
 
-    private IEnumerator StartWaterDebris()
-    {
-        yield return new WaitForSeconds(_waitTime);
-        _wavesPS.Play();
-        _sprinklesPS.Play();
-        _surfaceDust1PS.Play();
-        _surfaceDust2PS.Play();
-    }
-
-    public void StopWaterFall()
+    public void StopGameEvent()
     {
         // Stop particle spawning
         _waterFallPS.Stop();
@@ -46,6 +37,15 @@ public class WaterFallManager : MonoBehaviour
 
         // Stop audio
         StartCoroutine(WaterFallVolumeFadeOut());
+    }
+
+    private IEnumerator StartWaterDebris()
+    {
+        yield return new WaitForSeconds(_waitTime);
+        _wavesPS.Play();
+        _sprinklesPS.Play();
+        _surfaceDust1PS.Play();
+        _surfaceDust2PS.Play();
     }
 
     private IEnumerator WaterFallVolumeFadeIn()
@@ -74,4 +74,6 @@ public class WaterFallManager : MonoBehaviour
         _audioSource.volume = 0.0f;
         _audioSource.Stop();
     }
+
+
 }

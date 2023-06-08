@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class FishManager : MonoBehaviour
+public class FishManager : MonoBehaviour, IGameEvent
 {
     [Header("References")]
     [SerializeField] private AudioSource _audioSource = null;
@@ -12,13 +12,13 @@ public class FishManager : MonoBehaviour
     [SerializeField] private float _fadeInTime = 1.5f;
     [SerializeField] private float _fadeOutTime = 3.0f;
 
-    public void StartFishParticles()
+    public void StartGameEvent()
     {
         _fishParticles.Play();
         StartCoroutine(FishVolumeFadeIn());
     }
 
-    public void StopFishParticles()
+    public void StopGameEvent()
     {
         _fishParticles.Stop();
         StartCoroutine(FishVolumeFadeOut());
