@@ -50,8 +50,8 @@ public class WaterFallManager : MonoBehaviour
 
     private IEnumerator WaterFallVolumeFadeIn()
     {
-        _audioSource.Play();
         _audioSource.volume = 0.0f;
+        _audioSource.Play();
 
         while (_audioSource.volume < _maxVolume)
         {
