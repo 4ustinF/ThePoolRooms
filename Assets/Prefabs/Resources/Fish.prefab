@@ -51,7 +51,7 @@ MonoBehaviour:
   _fishParticles: {fileID: 1308143636}
   _maxVolume: 0.3
   _fadeInTime: 1.5
-  _fadeOutTime: 3
+  _fadeOutTime: 12
 --- !u!199 &4005702645473322636
 ParticleSystemRenderer:
   serializedVersion: 6
