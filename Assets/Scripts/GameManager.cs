@@ -161,10 +161,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(5, 3, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 0.5f));
         StartCoroutine(PlaySubtitle(5, 4, 6.0f, _dialougeClip7.length + _dialougeClip6.length + 8f));
 
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length + _dialougeClip6.length + 8.5f, _fishManager.StartGameEvent));
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length + _dialougeClip6.length + 13.5f, _fishManager.StartGameEvent));
 
-        float waitTime = _dialougeClip6.length + _dialougeClip7.length + _dialougeClip8.length + 17.0f;
-        StartCoroutine(WaitAndInvokeFunc(waitTime, _waterFallManager.StopGameEvent));
+        float waitTime = _dialougeClip6.length + _dialougeClip7.length + _dialougeClip8.length + 22.0f;
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip7.length + _dialougeClip6.length + 8.5f, _waterFallManager.StopGameEvent));
         StartCoroutine(WaitAndInvokeFunc(waitTime, _fishManager.StopGameEvent));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.5f, PlayDialog6));
     }
