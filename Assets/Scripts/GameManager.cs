@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator _ballAnimator = null;
     [SerializeField] private FishManager _fishManager = null;
     [SerializeField] private LeafEvent _leafEvent = null;
+    [SerializeField] private ParticleSystem _waterJet = null;
 
     [Header("DialougeAudioClips")]
     [SerializeField] private AudioClip _dialougeClip1 = null;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(FadeInAudioListener(2.0f));
         StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
+        //PlayBallIdle2();
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -79,11 +81,16 @@ public class GameManager : MonoBehaviour
         }
         _endingExpereince = true;
 
-        StartCoroutine(FadeAndExit(2.0f));
+        _waterJet.Play();
+        _ballAnimator.CrossFadeInFixedTime("Ending", 0.5f);
+
+        StartCoroutine(FadeAndExit(7.0f));
 
         // This coroutine fades the camera and audio simultaneously over the same length of time.
         IEnumerator FadeAndExit(float fadeTime)
         {
+            yield return new WaitForSeconds(2.0f);
+
             var elapsedTime = 0.0f; // Instantiate a float with a value of 0 for use as a timer.
             var startingVolume = AudioListener.volume; // This gets the current volume of the audio listener so that we can fade it to 0 over time.
 
@@ -226,13 +233,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        _ballAnimator?.Play("Falling");
+        _ballAnimator.Play("Falling");
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle1));
     }
 
     private void PlayBallIdle1()
     {
-        _ballAnimator?.CrossFadeInFixedTime("Idle", 0.1f);
+        _ballAnimator.CrossFadeInFixedTime("Idle", 0.1f);
     }
 
     private void TurnOnWaterFall()
@@ -243,7 +250,7 @@ public class GameManager : MonoBehaviour
 
     private void PlayBallEnterTunnel()
     {
-        _ballAnimator?.CrossFadeInFixedTime("EnterTunnel", 0.5f);
+        _ballAnimator.CrossFadeInFixedTime("EnterTunnel", 0.5f);
     }
 
     private void PlayBallExitTunnel()
@@ -259,13 +266,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        _ballAnimator?.Play("ExitTunnel");
+        _ballAnimator.Play("ExitTunnel");
         StartCoroutine(WaitAndInvokeFunc(waitTime, PlayBallIdle2));
     }
 
     private void PlayBallIdle2()
     {
-        _ballAnimator?.CrossFadeInFixedTime("Idle2", 0.5f);
+        _ballAnimator.CrossFadeInFixedTime("Idle2", 0.5f);
         _canEndExpereince = true;
     }
 

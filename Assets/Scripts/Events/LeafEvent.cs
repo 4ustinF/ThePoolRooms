@@ -10,7 +10,7 @@ public class LeafEvent : MonoBehaviour, IGameEvent
     [Header("Varibles")]
     [SerializeField] private float _maxVolume = 0.7f;
     [SerializeField] private float _fadeInTime = 1.5f;
-    [SerializeField] private float _fadeOutTime = 5.0f;
+    [SerializeField] private float _fadeOutTime = 10.0f;
 
     public void StartGameEvent()
     {
