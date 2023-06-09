@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource _audioSource = null;
     [SerializeField] private Animator _ballAnimator = null;
     [SerializeField] private FishManager _fishManager = null;
+    [SerializeField] private LeafEvent _leafEvent = null;
 
     [Header("DialougeAudioClips")]
     [SerializeField] private AudioClip _dialougeClip1 = null;
@@ -126,17 +127,23 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(2, 2, 5.0f, time2));
 
         StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 3.0f, PlayDialog3));
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip2.length + 2.0f, _leafEvent.StartGameEvent));
     }
 
     private void PlayDialog3()
     {
         _audioSource.PlayOneShot(_dialougeClip3);
+
+        // PlayDialog4
         StartCoroutine(WaitAndInvokeAudio(_dialougeClip3.length + 1.25f, _dialougeClip4));
 
         StartCoroutine(PlaySubtitle(3, 1, _dialougeClip3.length - 2.0f, 0.5f));
         StartCoroutine(PlaySubtitle(3, 2, _dialougeClip4.length - 2.0f, _dialougeClip3.length + 1.75f));
 
-        float waitTime = _dialougeClip3.length + _dialougeClip4.length + 7.0f;
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip3.length + 7.5f, _leafEvent.StopGameEvent));
+
+        // PlayDialog5
+        float waitTime = _dialougeClip3.length + _dialougeClip4.length + 11.0f;
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog4));
     }

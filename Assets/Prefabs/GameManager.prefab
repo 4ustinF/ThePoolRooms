@@ -52,6 +52,7 @@ MonoBehaviour:
   _audioSource: {fileID: 5471877001889788838}
   _ballAnimator: {fileID: 0}
   _fishManager: {fileID: 0}
+  _leafEvent: {fileID: 0}
   _dialougeClip1: {fileID: 8300000, guid: f1efbf8aff3da75438738778ce776b93, type: 3}
   _dialougeClip2: {fileID: 8300000, guid: 04770f14bb08cf545ae8a6ce0081295d, type: 3}
   _dialougeClip3: {fileID: 8300000, guid: cfb55645f12877449a2499141a013c04, type: 3}
@@ -151,7 +152,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
