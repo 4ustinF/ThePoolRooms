@@ -10,7 +10,7 @@ public class FishManager : MonoBehaviour, IGameEvent
     [Header("Varibles")]
     [SerializeField] private float _maxVolume = 0.3f;
     [SerializeField] private float _fadeInTime = 1.5f;
-    [SerializeField] private float _fadeOutTime = 3.0f;
+    [SerializeField] private float _fadeOutTime = 12.0f;
 
     public void StartGameEvent()
     {
@@ -31,7 +31,7 @@ public class FishManager : MonoBehaviour, IGameEvent
 
         while (_audioSource.volume < _maxVolume)
         {
-            _audioSource.volume += Time.deltaTime / _fadeInTime;
+            _audioSource.volume += _maxVolume * (Time.deltaTime / _fadeInTime);
             yield return null;
         }
 
@@ -43,7 +43,7 @@ public class FishManager : MonoBehaviour, IGameEvent
         _audioSource.volume = _maxVolume;
         while (_audioSource.volume > 0.0f)
         {
-            _audioSource.volume -= Time.deltaTime / _fadeOutTime;
+            _audioSource.volume -= _maxVolume * (Time.deltaTime / _fadeOutTime);
             yield return null;
         }
 
