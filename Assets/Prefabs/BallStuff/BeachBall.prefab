@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 964662674967381088}
   - component: {fileID: 964662674967381095}
   - component: {fileID: 964662674967381094}
-  - component: {fileID: 964662674967381114}
   - component: {fileID: 1095428756}
   - component: {fileID: 604251836}
   - component: {fileID: 1145129132}
@@ -84,22 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &964662674967381114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964662674967381093}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5073f2b1a97fa48a5fc60be1cf0a9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotAmplitude: 0.2
-  _rotFrequency: 0.5
-  _amplitude: 0.15
-  _frequency: 1
 --- !u!95 &1095428756
 Animator:
   serializedVersion: 3
@@ -209,7 +192,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2777778
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -224,7 +207,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.03
       inSlope: 0
       outSlope: 0
       tangentMode: 0
