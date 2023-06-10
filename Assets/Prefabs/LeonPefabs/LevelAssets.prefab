@@ -15590,7 +15590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &466696928
 Transform:
   m_ObjectHideFlags: 0
@@ -26621,9 +26621,93 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 00000000
+  m_SelectedEdges:
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  m_SelectedVertices: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!23 &801051689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41447,7 +41531,7 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedVertices: 6b000000
 --- !u!23 &1110095445
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55497,7 +55581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1494011089
 Transform:
   m_ObjectHideFlags: 0
@@ -65060,9 +65144,33 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 00000000
+  m_SelectedEdges:
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  m_SelectedVertices: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!23 &1773464238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -76447,23 +76555,6 @@ MonoBehaviour:
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
-  - m_Indexes: 1f000000200000001e0000001e000000200000001b0000001b0000001c0000001d0000001b0000001d0000001e000000
-    m_SmoothingGroup: 0
-    m_Uv:
-      m_UseWorldSpace: 0
-      m_FlipU: 0
-      m_FlipV: 0
-      m_SwapUV: 0
-      m_Fill: 1
-      m_Scale: {x: 1.0000004, y: 1}
-      m_Offset: {x: 33.95029, y: 0.23663409}
-      m_Rotation: 360
-      m_Anchor: 9
-    m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
-    m_ManualUV: 0
-    elementGroup: -1
-    m_TextureGroup: -1
   - m_Indexes: 130000000000000014000000000000000100000014000000
     m_SmoothingGroup: 0
     m_Uv:
@@ -76481,7 +76572,7 @@ MonoBehaviour:
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
-  - m_Indexes: 06000000070000000a000000060000000a000000080000000a00000009000000080000000a0000000f00000009000000090000000f0000002100000021000000230000000900000023000000220000000900000022000000190000001a000000220000001a00000009000000
+  - m_Indexes: 06000000070000000a000000060000000a000000080000000a00000009000000080000000a0000000f00000009000000090000000f0000001b0000001b0000001d000000090000001d0000001c000000090000001c000000190000001a0000001c0000001a00000009000000
     m_SmoothingGroup: 0
     m_Uv:
       m_UseWorldSpace: 0
@@ -76504,16 +76595,15 @@ MonoBehaviour:
   - m_Vertices: 040000000c000000
   - m_Vertices: 05000000
   - m_Vertices: 0e000000100000000a000000
-  - m_Vertices: 0d000000110000001d000000
-  - m_Vertices: 120000001c0000000f000000
+  - m_Vertices: 0d00000011000000
+  - m_Vertices: 120000000f000000
   - m_Vertices: 150000001a000000
   - m_Vertices: 1600000019000000
   - m_Vertices: 17000000
   - m_Vertices: 18000000
-  - m_Vertices: 1f00000022000000
-  - m_Vertices: 1e000000
-  - m_Vertices: 2000000023000000
-  - m_Vertices: 1b00000021000000
+  - m_Vertices: 1c000000
+  - m_Vertices: 1d000000
+  - m_Vertices: 1b000000
   - m_Vertices: 13000000
   - m_Vertices: 00000000
   - m_Vertices: 1400000009000000
@@ -76548,12 +76638,6 @@ MonoBehaviour:
   - {x: 0.3824762, y: 0, z: -1}
   - {x: -5, y: 0, z: -1.0000014}
   - {x: 4.7500014, y: 4.6261253, z: -1.0000004}
-  - {x: 5.1308947, y: 4.5, z: -1}
-  - {x: 6.0509486, y: 4.5, z: 0}
-  - {x: 1.3824766, y: 4.6261253, z: 0.00000028401325}
-  - {x: 1.3824757, y: 4.2390556, z: -0.9999998}
-  - {x: 3.0662425, y: 4.487613, z: -1.0000006}
-  - {x: 4.7500014, y: 4.6261253, z: -1.0000004}
   - {x: 1.3824757, y: 4.2390556, z: -0.9999998}
   - {x: 3.0662425, y: 4.487613, z: -1.0000006}
   m_Textures0:
@@ -76584,12 +76668,6 @@ MonoBehaviour:
   - {x: -34.382477, y: 0}
   - {x: 0.3824762, y: 0.00000004360708}
   - {x: -5, y: 0.00000004360714}
-  - {x: -38.80055, y: -0.7959563}
-  - {x: -39.178585, y: -0.80892223}
-  - {x: -40.09842, y: 0.18447135}
-  - {x: -35.43383, y: 0.2065007}
-  - {x: -35.425346, y: -0.82615954}
-  - {x: -37.11416, y: -0.80575305}
   - {x: 4.7500014, y: 4.6261253}
   - {x: 1.3824757, y: 4.2390556}
   - {x: 3.0662425, y: 4.487613}
@@ -76623,12 +76701,6 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0.000000265772, w: -1}
   - {x: 1, y: 0, z: 0.00000025895974, w: -1}
-  - {x: -0.99631363, y: 0.085188724, z: -0.01010196, w: -1}
-  - {x: -0.9516687, y: 0.3054949, z: -0.031615164, w: -1}
-  - {x: -0.9855948, y: 0.16812259, z: -0.018372994, w: -1}
-  - {x: -0.9979053, y: -0.064562425, z: 0.004079948, w: -1}
-  - {x: -0.9898522, y: -0.14162529, z: 0.011617597, w: -1}
-  - {x: -0.99380916, y: -0.110772744, z: 0.008529119, w: -1}
   - {x: 1, y: 0, z: 0.0000011619, w: -1}
   - {x: 1, y: 0, z: 0.000000052616866, w: -1}
   - {x: 1, y: -2.2326788e-21, z: -0.0000001112843, w: -1}
@@ -77254,8 +77326,10 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedEdges:
+  - a: 0
+    b: 0
+  m_SelectedVertices: 0000000000000000
 --- !u!23 &1239374985099658902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -78144,7 +78218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9147535357322150058
 Transform:
   m_ObjectHideFlags: 0
@@ -84639,7 +84713,7 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedVertices: 18000000
 --- !u!23 &2170050772264235928
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -84702,7 +84776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4360844631154271182
 Transform:
   m_ObjectHideFlags: 0
@@ -84833,13 +84907,13 @@ MonoBehaviour:
   - m_Vertices: 03000000
   m_SharedTextures: []
   m_Positions:
-  - {x: 2.7080002, y: 0, z: -9.147213}
-  - {x: 2.7080002, y: 0, z: 37.147213}
+  - {x: 8.589539, y: 0, z: -9.147213}
+  - {x: 8.589539, y: 0, z: 37.147213}
   - {x: 53.292, y: 0, z: -9.147213}
   - {x: 53.292, y: 0, z: 37.147213}
   m_Textures0:
-  - {x: 2.7080002, y: -9.147213}
-  - {x: 2.7080002, y: 37.147213}
+  - {x: 8.589539, y: -9.147213}
+  - {x: 8.589539, y: 37.147213}
   - {x: 53.292, y: -9.147213}
   - {x: 53.292, y: 37.147213}
   m_Textures2: []
@@ -84924,7 +84998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6198884349253770681
 Transform:
   m_ObjectHideFlags: 0
@@ -84991,6 +85065,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
+    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
+        type: 3}
+      propertyPath: m_Name
+      value: SimplifiedHandrail (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -85060,11 +85139,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
-        type: 3}
-      propertyPath: m_Name
-      value: SimplifiedHandrail (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8406280007082530948, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
@@ -85217,6 +85291,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1740205630550520875}
     m_Modifications:
+    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
+        type: 3}
+      propertyPath: m_Name
+      value: SimplifiedHandrail
+      objectReference: {fileID: 0}
     - target: {fileID: 6543331086768512587, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -85286,11 +85365,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7824385518586391640, guid: 5d6bc5b754e80d54ca682b19aa83124d,
-        type: 3}
-      propertyPath: m_Name
-      value: SimplifiedHandrail
       objectReference: {fileID: 0}
     - target: {fileID: 8406280007082530948, guid: 5d6bc5b754e80d54ca682b19aa83124d,
         type: 3}
