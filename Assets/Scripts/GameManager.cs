@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         StartCoroutine(FadeInAudioListener(2.0f));
-        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
         //PlayBallIdle2();
         //PlayBallExitTunnel();
     }
