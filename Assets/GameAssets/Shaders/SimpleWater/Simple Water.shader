@@ -45,7 +45,7 @@
 				struct v2f
 				{
 					float2 uv : TEXCOORD3;
-					UNITY_FOG_COORDS(1)
+					//UNITY_FOG_COORDS(1)
 					float4 vertex : SV_POSITION;
 					float4 scrPos : TEXCOORD2;
 					float4 worldPos : TEXCOORD4;
@@ -75,7 +75,7 @@
 
 					o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 					o.scrPos = ComputeScreenPos(o.vertex);
-					UNITY_TRANSFER_FOG(o,o.vertex);
+					//UNITY_TRANSFER_FOG(o,o.vertex);
 					return o;
 				}
 
