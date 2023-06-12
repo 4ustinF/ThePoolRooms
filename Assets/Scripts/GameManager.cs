@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator _ballAnimator = null;
     [SerializeField] private FishManager _fishManager = null;
     [SerializeField] private LeafEvent _leafEvent = null;
-    [SerializeField] private ParticleSystem _waterJet = null;
+    [SerializeField] private WaterJetEvent _waterJetEvent = null;
 
     [Header("DialougeAudioClips")]
     [SerializeField] private AudioClip _dialougeClip1 = null;
@@ -42,8 +42,9 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         StartCoroutine(FadeInAudioListener(2.0f));
-        StartCoroutine(WaitAndInvokeFunc(10.0f, PlayDialog1));
+        StartCoroutine(WaitAndInvokeFunc(1.0f, PlayDialog1));
         //PlayBallIdle2();
+        //PlayBallExitTunnel();
     }
 
     private IEnumerator WaitAndInvokeFunc(float waitTime, UnityAction func)
@@ -81,7 +82,7 @@ public class GameManager : MonoBehaviour
         }
         _endingExpereince = true;
 
-        _waterJet.Play();
+        _waterJetEvent.StartGameEvent();
         _ballAnimator.CrossFadeInFixedTime("Ending", 0.5f);
 
         StartCoroutine(FadeAndExit(7.0f));
