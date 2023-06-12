@@ -653,6 +653,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1146795359, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1494011088, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4134,6 +4138,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984204348}
   m_CullTransparentMesh: 0
+--- !u!114 &1991421383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 340384208322883924, guid: a8aac6d123751b74aa55aa649bb14e28,
+    type: 3}
+  m_PrefabInstance: {fileID: 2199673789826746855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0971f2be006a8e742879636863a88c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2044475996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4231,6 +4247,11 @@ PrefabInstance:
       propertyPath: _waterJetEvent
       value: 
       objectReference: {fileID: 658829975}
+    - target: {fileID: 6590902186508690131, guid: a52384f069e6cc94fb1427540ce6d116,
+        type: 3}
+      propertyPath: _gameEventManager
+      value: 
+      objectReference: {fileID: 1991421383}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52384f069e6cc94fb1427540ce6d116, type: 3}
 --- !u!4 &2044475997 stripped
@@ -4348,7 +4369,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4012
+  m_Name: pb_Mesh-6386
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4517,11 +4538,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameEventManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2816424390090476198, guid: a8aac6d123751b74aa55aa649bb14e28,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4989934934468588573, guid: a8aac6d123751b74aa55aa649bb14e28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4577,11 +4593,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8182452885295047368, guid: a8aac6d123751b74aa55aa649bb14e28,
+    - target: {fileID: 2959378414366284871, guid: a8aac6d123751b74aa55aa649bb14e28,
         type: 3}
-      propertyPath: m_Volume
-      value: 0.15
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh2
+      value: 
+      objectReference: {fileID: 7834934524071737294, guid: ae51ad94fa7d3764d957aa512d506d00,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8aac6d123751b74aa55aa649bb14e28, type: 3}
 --- !u!4 &2199673789826746856 stripped

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private FishManager _fishManager = null;
     [SerializeField] private LeafEvent _leafEvent = null;
     [SerializeField] private WaterJetEvent _waterJetEvent = null;
+    [SerializeField] private GameEventManager _gameEventManager = null;
 
     [Header("DialougeAudioClips")]
     [SerializeField] private AudioClip _dialougeClip1 = null;
@@ -275,6 +276,7 @@ public class GameManager : MonoBehaviour
     {
         _ballAnimator.CrossFadeInFixedTime("Idle2", 0.5f);
         _canEndExpereince = true;
+        _gameEventManager.StartRandomEvents();
     }
 
     #endregion ---Events---
