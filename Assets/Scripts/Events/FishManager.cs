@@ -14,7 +14,9 @@ public class FishManager : MonoBehaviour, IGameEvent
 
     public void StartGameEvent()
     {
+        _fishParticles.Simulate(3.9f, true);
         _fishParticles.Play();
+
         StartCoroutine(FishVolumeFadeIn());
     }
 

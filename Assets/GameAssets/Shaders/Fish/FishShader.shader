@@ -7,6 +7,7 @@
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Amplitude("Amplitude", Float) = 0
         _Frequency("Frequency", Float) = 0
+        _Intensity("Intensity", Float) = 1
     }
     SubShader
     {
@@ -24,6 +25,7 @@
         uniform float _OffsetSin;
         uniform float _Frequency;
         uniform float _Amplitude;
+        uniform float _Intensity;
 
         struct Input
         {
@@ -54,7 +56,7 @@
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
-            fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color * IN.color * 2;
+            fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color * IN.color * _Intensity;
             o.Albedo = c.rgb;
             // Metallic and smoothness come from slider variables
             o.Smoothness = _Glossiness;
