@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
 
         // PlayDialog5
         float waitTime = _dialougeClip3a.length + _dialougeClip3b.length + 11.0f;
-        StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, TurnOnWaterFall));
+        StartCoroutine(WaitAndInvokeFunc(waitTime - 0.75f, TurnOnWaterFall));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.25f, PlayDialog4));
     }
 
@@ -177,10 +177,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PlaySubtitle(5, 3, 6.0f, _dialougeClip5b.length + _dialougeClip5a.length + 0.5f));
         StartCoroutine(PlaySubtitle(5, 4, 6.0f, _dialougeClip5b.length + _dialougeClip5a.length + 8f));
 
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5b.length + _dialougeClip5a.length + 12.5f, _fishManager.StartGameEvent));
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5b.length + _dialougeClip5a.length + 11.5f, _fishManager.StartGameEvent));
 
-        float waitTime = _dialougeClip5a.length + _dialougeClip5b.length + _dialougeClip5c.length + 22.0f;
-        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5b.length + _dialougeClip5a.length + 7.5f, _waterFallManager.StopGameEvent));
+        float waitTime = _dialougeClip5a.length + _dialougeClip5b.length + _dialougeClip5c.length + 20.0f;
+        StartCoroutine(WaitAndInvokeFunc(_dialougeClip5b.length + _dialougeClip5a.length + 6.5f, _waterFallManager.StopGameEvent));
         StartCoroutine(WaitAndInvokeFunc(waitTime, _fishManager.StopGameEvent));
         StartCoroutine(WaitAndInvokeFunc(waitTime + 0.5f, PlayDialog6));
     }

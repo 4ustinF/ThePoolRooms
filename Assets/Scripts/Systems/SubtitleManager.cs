@@ -101,7 +101,7 @@ public class SubtitleManager : MonoBehaviour
                 _timeSinceBeginningOfLine = 0f;
 
                 // resets the opacity to full, after the previous fade out
-                _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1);
+                _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, .8f);
                 ShowText(lineTime);
             }
             else
@@ -114,17 +114,7 @@ public class SubtitleManager : MonoBehaviour
                 {
                     _startedReadingLine = false;
                     _readLine = false;
-                    if (_subtitles[_currentLine].Count - 1 == _currentLinePart)
-                    {
-                        _currentLine++;
-                        _currentLinePart = 0;
-                        StartFade(2f);
-                    }
-                    else
-                    {
-                        _currentLinePart++;
-                        StartFade(1f);
-                    }
+                    StartFade(2f);
                 }
             }
             yield return null;
@@ -138,7 +128,7 @@ public class SubtitleManager : MonoBehaviour
 
     private IEnumerator FadeTextToZeroAlpha(float t)
     {
-        _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1f);
+        _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 0.8f);
         while (_subtitleText.color.a > 0.0f)
         {
             if (_readLine == true)
