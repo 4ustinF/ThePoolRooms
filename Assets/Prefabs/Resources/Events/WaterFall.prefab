@@ -9625,14 +9625,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 8001531098003890733}
   _waterFallPS: {fileID: 1867007801}
-  _dustFallPS: {fileID: 136374482}
   _sprinklesPS: {fileID: 1285439235}
-  _surfaceDust1PS: {fileID: 1539501915}
   _surfaceDust2PS: {fileID: 869748803}
-  _maxVolume: 0.2
-  _fadeInMultiplier: 0.075
-  _fadeOutMultiplier: 0.075
-  _waitTime: 0.5
+  _maxVolume: 0.1
+  _fadeInTime: 3
+  _fadeOutTime: 1.5
 --- !u!82 &8001531098003890733
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14523,7 +14520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7393507434480393065
 Transform:
   m_ObjectHideFlags: 0
@@ -19290,7 +19287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7393507434764479606
 Transform:
   m_ObjectHideFlags: 0
