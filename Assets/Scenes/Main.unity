@@ -673,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 113155775}
     - target: {fileID: 466696927, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1146795359, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
       propertyPath: m_IsActive
@@ -681,22 +681,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1494011088, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7478462961579848786, guid: a2c5eeb0e497d854c98628176d37d1a7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9099248260455012653, guid: a2c5eeb0e497d854c98628176d37d1a7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3596897571352990106, guid: a2c5eeb0e497d854c98628176d37d1a7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1110095445, guid: a2c5eeb0e497d854c98628176d37d1a7, type: 3}
       propertyPath: m_ScaleInLightmap
@@ -931,27 +931,27 @@ PrefabInstance:
     - target: {fileID: 175393837736214435, guid: ae42893ee70d4c84284ba1bea97822fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 175393838859324782, guid: ae42893ee70d4c84284ba1bea97822fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3098300136836390968, guid: ae42893ee70d4c84284ba1bea97822fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3098300137875335912, guid: ae42893ee70d4c84284ba1bea97822fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6640102500069388211, guid: ae42893ee70d4c84284ba1bea97822fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae42893ee70d4c84284ba1bea97822fb, type: 3}
@@ -1036,6 +1036,11 @@ PrefabInstance:
       propertyPath: _collider
       value: 
       objectReference: {fileID: 512478162}
+    - target: {fileID: 964662674967381094, guid: f33719485ee3a8a489b3be611dd0a6c7,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f33719485ee3a8a489b3be611dd0a6c7, type: 3}
 --- !u!4 &164972400 stripped
@@ -2858,7 +2863,7 @@ PrefabInstance:
     - target: {fileID: 3377217612274512602, guid: e1dbd5f348d79b343ace1cf2128634dc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3377217612274512601, guid: e1dbd5f348d79b343ace1cf2128634dc,
         type: 3}
@@ -3676,7 +3681,7 @@ PrefabInstance:
     - target: {fileID: 1669622154312625717, guid: 43922ba794035d240be70a97942b305b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1669622154312625718, guid: 43922ba794035d240be70a97942b305b,
         type: 3}
