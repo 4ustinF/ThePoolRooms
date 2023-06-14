@@ -24,7 +24,7 @@ public class FishManager : MonoBehaviour, IGameEvent
 
         StartCoroutine(FishVolumeFadeIn());
 
-        _rippleRoutine = RippleRoutine(Random.Range(_waitTime.x, _waitTime.y));
+        _rippleRoutine = RippleRoutine(5.0f);
         StartCoroutine(_rippleRoutine);
     }
 
@@ -72,7 +72,7 @@ public class FishManager : MonoBehaviour, IGameEvent
             GameObject drip = _ripples[Random.Range(0, _ripples.Count)];
             if (drip.activeInHierarchy == false)
             {
-                drip.transform.position = new Vector3(Random.Range(-24.5f, 14.5f), 1.75f, Random.Range(11.0f, 13.0f));
+                drip.transform.position = new Vector3(Random.Range(-24.5f, 14.5f), 0.05f, Random.Range(11.0f, 13.0f));
                 drip.SetActive(true);
                 break;
             }
