@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 0}
-  _collider: {fileID: 0}
+  _collider: {fileID: 1435539203}
   _ripples: {fileID: 4960841590552182937}
   _waterSplashPS: {fileID: 4960841591447355135}
   _shimmerPS: {fileID: 4619723565623295298}
@@ -213,7 +213,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.03
+      value: 1.08
       inSlope: 0
       outSlope: 0
       tangentMode: 0
