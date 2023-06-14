@@ -124,16 +124,6 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 7393507434764479611, guid: 53a3947ca3a25494cb09863ead67dec1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393507434480393070, guid: 53a3947ca3a25494cb09863ead67dec1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a3947ca3a25494cb09863ead67dec1, type: 3}
 --- !u!4 &8655298903336035892 stripped
@@ -221,12 +211,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 4005702645473322636, guid: 93eef2a8e03633e4f82e4320a03deef4,
-        type: 3}
-      propertyPath: m_Mesh2
-      value: 
-      objectReference: {fileID: 7834934524071737294, guid: ae51ad94fa7d3764d957aa512d506d00,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93eef2a8e03633e4f82e4320a03deef4, type: 3}
 --- !u!4 &2959378414366284865 stripped
