@@ -57,17 +57,17 @@ MonoBehaviour:
   _gameEventManager: {fileID: 0}
   _dialougeClip1: {fileID: 8300000, guid: f1efbf8aff3da75438738778ce776b93, type: 3}
   _dialougeClip2: {fileID: 8300000, guid: 04770f14bb08cf545ae8a6ce0081295d, type: 3}
-  _dialougeClip3: {fileID: 8300000, guid: cfb55645f12877449a2499141a013c04, type: 3}
-  _dialougeClip4: {fileID: 8300000, guid: ec1735726560b8749be67ad5fee12447, type: 3}
-  _dialougeClip5: {fileID: 8300000, guid: 653ec2b0d6a6399498dac12f030ba66b, type: 3}
-  _dialougeClip6: {fileID: 8300000, guid: a1fc487f1ba982a42a150f73211c4f85, type: 3}
-  _dialougeClip7: {fileID: 8300000, guid: c4f54b3636021644abbd70aab0cc9795, type: 3}
-  _dialougeClip8: {fileID: 8300000, guid: c1977bc66ae45634885d372a8610dd27, type: 3}
-  _dialougeClip9: {fileID: 8300000, guid: 05c4561f1c83c1248b10df796e1c0205, type: 3}
-  _dialougeClip10: {fileID: 8300000, guid: 3c851a8072b9ac9458e4f2c153fdb900, type: 3}
-  _dialougeClip11: {fileID: 8300000, guid: b15426e9cabbe7e4c8eca015fa3425b4, type: 3}
-  _dialougeClip12: {fileID: 8300000, guid: a23ce49d370964a4fab20eacb874f974, type: 3}
-  _dialougeClip13: {fileID: 8300000, guid: fcd04ec52547c1c4ca9bf82e1ef13dc1, type: 3}
+  _dialougeClip3a: {fileID: 8300000, guid: cfb55645f12877449a2499141a013c04, type: 3}
+  _dialougeClip3b: {fileID: 8300000, guid: ec1735726560b8749be67ad5fee12447, type: 3}
+  _dialougeClip4: {fileID: 8300000, guid: 653ec2b0d6a6399498dac12f030ba66b, type: 3}
+  _dialougeClip5a: {fileID: 8300000, guid: a1fc487f1ba982a42a150f73211c4f85, type: 3}
+  _dialougeClip5b: {fileID: 8300000, guid: c4f54b3636021644abbd70aab0cc9795, type: 3}
+  _dialougeClip5c: {fileID: 8300000, guid: c1977bc66ae45634885d372a8610dd27, type: 3}
+  _dialougeClip6a: {fileID: 8300000, guid: 05c4561f1c83c1248b10df796e1c0205, type: 3}
+  _dialougeClip6b: {fileID: 8300000, guid: 3c851a8072b9ac9458e4f2c153fdb900, type: 3}
+  _dialougeClip7a: {fileID: 8300000, guid: b15426e9cabbe7e4c8eca015fa3425b4, type: 3}
+  _dialougeClip7b: {fileID: 8300000, guid: a23ce49d370964a4fab20eacb874f974, type: 3}
+  _dialougeClip7c: {fileID: 8300000, guid: fcd04ec52547c1c4ca9bf82e1ef13dc1, type: 3}
 --- !u!82 &5471877001889788838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0

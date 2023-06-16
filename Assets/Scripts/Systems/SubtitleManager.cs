@@ -43,6 +43,7 @@ public class SubtitleManager : MonoBehaviour
         {
             _subtitles.Add(new List<string>());
         }
+        //loads all subtitles
         _subtitles[0].Add("Life begins with a stumble");
         _subtitles[1].Add("Just as this ball awkwardly descends the stairs, everyone begins their journey clumsily,");
         _subtitles[1].Add("Relying on momentum and instinct over purposeful smooth decision making.");
@@ -74,11 +75,13 @@ public class SubtitleManager : MonoBehaviour
             yield break;
         }
 
+        //makes sure to stop ReadText if there is a current Coroutine running it before starting a new Coroutine so they don't overlap
         if (_readLine == true)
         {
             _readLine = false;
             yield return null;
         }
+
         _readLine = true;
         _startedReadingLine = false;
         _currentLine = lineNum - 1;
@@ -92,10 +95,13 @@ public class SubtitleManager : MonoBehaviour
         {
             if (_startedReadingLine == false)
             {
+                //intializes all important subtitle 
                 _currentSubtitle = _subtitles[_currentLine][_currentLinePart];
                 _startedReadingLine = true;
                 _timeSinceBeginningOfLine = 0f;
-                _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1);
+
+                // resets the opacity to full, after the previous fade out
+                _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, .8f);
                 ShowText(lineTime);
             }
             else
@@ -108,17 +114,7 @@ public class SubtitleManager : MonoBehaviour
                 {
                     _startedReadingLine = false;
                     _readLine = false;
-                    if (_subtitles[_currentLine].Count - 1 == _currentLinePart)
-                    {
-                        _currentLine++;
-                        _currentLinePart = 0;
-                        StartFade(2f);
-                    }
-                    else
-                    {
-                        _currentLinePart++;
-                        StartFade(1f);
-                    }
+                    StartFade(2f);
                 }
             }
             yield return null;
@@ -132,7 +128,7 @@ public class SubtitleManager : MonoBehaviour
 
     private IEnumerator FadeTextToZeroAlpha(float t)
     {
-        _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 1f);
+        _subtitleText.color = new Color(_subtitleText.color.r, _subtitleText.color.g, _subtitleText.color.b, 0.8f);
         while (_subtitleText.color.a > 0.0f)
         {
             if (_readLine == true)
